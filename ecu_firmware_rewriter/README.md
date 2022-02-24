@@ -1,5 +1,34 @@
 # ECU Firmware Rewriting Tool
 
+[ArmUtils.py](https://github.com/purseclab/ShadowAuth/blob/main/ecu_firmware_rewriter/src/ArmUtils.py)
+has various static and independent functions to help detour-based rewriting.  
+It supports well-known technical features, such as `move`, `store`, `load`, forward and backward `jump` and `call`, and instruction length detection.
+
+Also, there are bit-level documentations per each instruction for debugging purpose.  
+E.g.,
+
+```python
+@staticmethod
+def jump(size: int) -> bytearray:
+  """
+  Takes pre-calculated PC-relative length, returns a forward jump instruction
+  15                        0 15                        0
+  1111 0S[ I M M 1 0        ] 10[J1]1 [J2][ I M M 1 1   ]
+  1111 00[ I M M 1 0        ] 1011    1[  I  M  M  1  1 ]
+  I = NOT(J EOR S)
+  S:I1:I2:imm10:imm11:'0'
+  """
+  if size < 0:
+      return ArmUtils.jump_back(-size)
+  size = size - 4
+  size = size >> 1
+  imm10 = (size & 0b111111111100000000000) >> 11
+  imm11 = size & 0b11111111111
+  high = (0b111100 << 10) | imm10
+  low = (0b10111 << 11) | imm11
+  return high.to_bytes(2, 'little') + low.to_bytes(2, 'little') 
+```
+
 ## Setup
 
 (Optional)
@@ -7,10 +36,6 @@
 * arm-none-eabi-objcopy
 
 ## Usage
-
-[ArmUtils.py](https://github.com/purseclab/ShadowAuth/blob/main/ecu_firmware_rewriter/src/ArmUtils.py)
-has various static and independent functions to help detour-based rewriting.  
-It supports well-known technical features, such as `move`, `store`, `load`, forward and backward `jump` and `call`, and instruction length detection.
 
 [patcher.py](https://github.com/purseclab/ShadowAuth/blob/main/ecu_firmware_rewriter/patcher.py) includes an use-case of those functions as follows:
 
