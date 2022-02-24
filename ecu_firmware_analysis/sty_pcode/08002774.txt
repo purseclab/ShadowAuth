@@ -1,0 +1,138 @@
+mult_addr = sp
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x58:4]
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x2c:4]
+sp = mult_addr
+
+r2 = r0
+
+r0 = 0x0
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x114b0:4] = sp + 0x0
+*[ram]unique[0x114b0:4] = register[0x20:4]
+
+unique[0x114b0:4] = sp + 0x0
+*[ram]unique[0x114b0:4] = register[0x28:4]
+
+unique[0xfe50:4] = 0x28
+shift_carry = CY
+tmpCY = carry(r1, unique[0xfe50:4])
+tmpOV = scarry(r1, unique[0xfe50:4])
+r0 = r1 + unique[0xfe50:4]
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+
+unique[0x114b0:4] = sp + 0x0
+r3 = *[ram]unique[0x114b0:4]
+
+r0 = r0 + r3
+
+unique[0x114b0:4] = sp + 0x0
+*[ram]unique[0x114b0:4] = register[0x20:4]
+
+unique[0x114b0:4] = sp + 0x0
+r0 = *[ram]unique[0x114b0:4]
+
+unique[0x11420:4] = r0 + 0x0
+r0 = *[ram]unique[0x11420:4]
+
+unique[0x1a1b0:2] = SUBPIECE r0, 0x0
+r0 = zext(unique[0x1a1b0:2])
+
+mult_addr = sp
+r3 = *[ram]mult_addr
+mult_addr = mult_addr + 0x4
+pc = *[ram]mult_addr
+mult_addr = mult_addr + 0x4
+sp = mult_addr
+unique[0x0:4] = pc & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = pc & 0xfffffffe
+return pc
+
+mult_addr = sp
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x58:4]
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x30:4]
+sp = mult_addr
+
+r3 = r1
+
+r1 = 0x0
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x1a070:1] = SUBPIECE r3, 0x0
+r1 = zext(unique[0x1a070:1])
+
+r4 = 0x1
+tmpNG = r4 s< 0x0
+tmpZR = r4 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x128d0:4] = r1 & 0xff
+unique[0x126c0:4] = unique[0x128d0:4] - 0x1
+unique[0x126d0:4] = r4 << unique[0x126c0:4]
+unique[0x126f0:4] = unique[0x126d0:4] & 0x80000000
+unique[0x12700:1] = unique[0x128d0:4] == 0x0
+unique[0x12710:1] = unique[0x12700:1] && CY
+unique[0x12720:1] = unique[0x128d0:4] != 0x0
+unique[0x12730:1] = unique[0x126f0:4] != 0x0
+unique[0x12740:1] = unique[0x12720:1] && unique[0x12730:1]
+tmpCY = unique[0x12710:1] || unique[0x12740:1]
+r1 = r4 << unique[0x128d0:4]
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+
+unique[0x11bf0:1] = r2 == 0x0
+if (unique[0x11bf0:1]) goto ram[0x80027a8:4]
+
+unique[0x11420:4] = r0 + 0x4
+r4 = *[ram]unique[0x11420:4]
+
+r4 = r4 | r1
+tmpNG = r4 s< 0x0
+tmpZR = r4 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x11420:4] = r0 + 0x4
+*[ram]unique[0x11420:4] = register[0x30:4]
+
+goto ram[0x80027ae:4]
+
+unique[0x11420:4] = r0 + 0x4
+r4 = *[ram]unique[0x11420:4]
+
+unique[0x11a40:4] = ~r1
+r4 = r4 & unique[0x11a40:4]
+tmpNG = r4 s< 0x0
+tmpZR = r4 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x11420:4] = r0 + 0x4
+*[ram]unique[0x11420:4] = register[0x30:4]
+
+mult_addr = sp
+r4 = *[ram]mult_addr
+mult_addr = mult_addr + 0x4
+pc = *[ram]mult_addr
+mult_addr = mult_addr + 0x4
+sp = mult_addr
+unique[0x0:4] = pc & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = pc & 0xfffffffe
+return pc
+

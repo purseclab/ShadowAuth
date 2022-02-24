@@ -1,0 +1,6 @@
+OV = tmpOV
+goto ram[0x8043af0:4]
+
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG

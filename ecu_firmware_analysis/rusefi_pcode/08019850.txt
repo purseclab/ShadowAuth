@@ -1,0 +1,26 @@
+sp = mult_addr
+call ram[0x8019680:4]
+call ram[0x80197d0:4]
+r3 = ram[0x801986c:4]
+r1 = ram[0x8019870:4]
+r2 = *[ram]unique[0x11420:4]
+r0 = ram[0x8019874:4]
+sp = mult_addr
+goto ram[0x8016520:4]
+
+r4 = zext(unique[0x11eb0:1])
+NG = tmpNG
+r1 = mult_addr
+NG = tmpNG
+mult_addr = mult_addr + 0x4
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+sp = mult_addr + 0x4
+r3 = ram[0x8019950:4]
+sp = sp - unique[0xfdd0:4]
+r4 = r0
+r0 = *[ram]unique[0x11420:4]

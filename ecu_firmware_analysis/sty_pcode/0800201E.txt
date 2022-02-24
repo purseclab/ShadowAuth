@@ -1,0 +1,26 @@
+r1 = ram[0x8002084:4]
+
+unique[0x11420:4] = r1 + 0x0
+*[ram]unique[0x11420:4] = register[0x20:4]
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+
+unique[0x11bf0:1] = r1 == 0x0
+if (unique[0x11bf0:1]) goto ram[0x8002036:4]
+
+r2 = ram[0x8002058:4]
+
+tmpCY = carry(r2, 0x30)
+tmpOV = scarry(r2, 0x30)
+r2 = r2 + 0x30
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+

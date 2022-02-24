@@ -1,0 +1,16 @@
+CY = shift_carry
+if (unique[0xf6c0:1]) goto ram[0x803a428:4]
+return pc
+sp = mult_addr
+r0 = ram[0x803a430:4]
+call ram[0x8040b00:4]
+r4 = zext(unique[0x11f10:2])
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+r5 = *[ram]unique[0x12270:4]

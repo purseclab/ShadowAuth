@@ -1,0 +1,60 @@
+r3 = zext(unique[0x12120:1])
+tmpZR = r3 == 0x0
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x80409a0:4]
+NG = tmpNG
+return pc
+r3 = zext(unique[0x12120:1])
+OV = tmpOV
+if (unique[0xf7b0:1]) goto ram[0x80409bc:4]
+OV = tmpOV
+if (unique[0xf7e0:1]) goto ram[0x804099c:4]
+r3 = ram[0x80409cc:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+NG = tmpNG
+NG = tmpNG
+*[ram]unique[0x17820:4] = register[0x2c:4]
+NG = tmpNG
+return pc
+OV = tmpOV
+if (unique[0xf6c0:1]) goto ram[0x804099c:4]
+NG = tmpNG
+*[ram]unique[0x17820:4] = register[0x2c:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+NG = tmpNG
+return pc
+NG = tmpNG
+NG = tmpNG
+goto ram[0x80409d0:4]
+
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+CALLOTHER 0x111, r3
+r3 = ram[0x8040a30:4]
+r3 = *[ram]unique[0x11420:4]
+NG = tmpNG
+if (unique[0xf6c0:1]) goto ram[0x80409f6:4]
+CALLOTHER 0x111, r3
+return pc
+r3 = CALLOTHER 0x9, 0xa, 0x7, 0x0, cr1, cr0
+r3 = CALLOTHER 0x10a
+r2 = ram[0x8040a34:4]
+tmpZR = r1 == 0x0
+r2 = *[ram]unique[0x11420:4]
+*[ram]unique[0x11300:4] = register[0x28:4]
+*[ram]unique[0x11300:4] = register[0x24:4]
+tmpZR = r2 == 0x0
+CALLOTHER 0x110, r2
+r2 = ram[0x8040a38:4]
+r1 = *[ram]unique[0x11420:4]
+r2 = *[ram]unique[0x11420:4]
+r1 = *[ram]unique[0x11420:4]
+r2 = *[ram]unique[0x11420:4]
+OV = tmpOV
+unique[0xfbd0:1] = CY && unique[0xfbb0:1]
+r2 = ram[0x8040a3c:4]

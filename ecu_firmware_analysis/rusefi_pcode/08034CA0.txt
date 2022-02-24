@@ -1,0 +1,12 @@
+s15 = *[ram]unique[0x42b0:4]
+s0 = s0 f/ s15
+goto ram[0x8030a20:4]
+NG = tmpNG
+r4 = r4 + r6
+sp = mult_addr + 0x4
+mult_addr = mult_addr + 0x8
+r4 = r0
+r6 = r1
+NG = tmpNG
+s17 = s0
+r8 = zext(unique[0x12120:1])

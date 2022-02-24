@@ -1,0 +1,23 @@
+unique[0x11420:4] = r0 + 0x24
+*[ram]unique[0x11420:4] = register[0x24:4]
+
+unique[0x11420:4] = r0 + 0x28
+*[ram]unique[0x11420:4] = register[0x28:4]
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+
+r2 = r1
+
+r1 = 0x0
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x11420:4] = r0 + 0x4
+r1 = *[ram]unique[0x11420:4]
+

@@ -1,0 +1,8 @@
+r2 = ram[0x8019378:4]
+r1 = ram[0x801937c:4]
+goto ram[0x8018eb0:4]
+r7 = mult_addr
+NG = tmpNG
+*[ram]unique[0x11440:4] = unique[0x176d0:2]
+NG = tmpNG
+r2 = ram[0x8019388:4]

@@ -1,0 +1,34 @@
+r1 = ram[0x800206c:4]
+
+tmpCY = 0x40 <= r1
+tmpOV = sborrow(r1, 0x40)
+r1 = r1 - 0x40
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0x11420:4] = r1 + 0x0
+*[ram]unique[0x11420:4] = register[0x20:4]
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+
+r1 = ram[0x8002080:4]
+
+unique[0x11420:4] = r1 + 0x0
+*[ram]unique[0x11420:4] = register[0x20:4]
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+
+r1 = r0
+

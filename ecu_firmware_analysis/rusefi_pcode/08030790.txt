@@ -1,0 +1,16 @@
+r3 = ram[0x80307a0:4]
+r1 = ram[0x80307a4:4]
+r2 = *[ram]unique[0x11420:4]
+r0 = *[ram]unique[0x11420:4]
+r3 = *[ram]unique[0x11420:4]
+r1 = ram[0x80307a8:4]
+goto ram[0x8016520:4]
+if (unique[0xf860:1]) goto ram[0x80306c4:4]
+NG = tmpNG
+if (unique[0xf6e0:1]) goto ram[0x80307a8:4]
+NG = tmpNG
+r0 = r10
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+r1 = ram[0x8030844:4]

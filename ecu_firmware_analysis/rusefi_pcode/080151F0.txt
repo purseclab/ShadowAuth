@@ -1,0 +1,29 @@
+r3 = ram[0x8015224:4]
+r0 = ram[0x8015228:4]
+r2 = *[ram]unique[0x112a0:4]
+r3 = ram[0x801522c:4]
+r1 = ram[0x8015230:4]
+OV = tmpOV
+unique[0xfc20:1] = NG == OV
+tmpZR = r2 == 0x0
+sp = mult_addr
+OV = tmpOV
+r5 = ram[0x8015234:4]
+unique[0xfc40:1] = NG == OV
+tmpZR = r2 == 0x0
+NG = tmpNG
+*[ram]unique[0x11420:4] = register[0x28:4]
+*[ram]unique[0x11420:4] = register[0x30:4]
+tmpZR = r2 == 0x0
+*[ram]unique[0x112d0:4] = register[0x24:4]
+OV = tmpOV
+if (unique[0xf6c0:1]) goto ram[0x8015216:4]
+sp = mult_addr
+return pc
+
+r0 = zext(unique[0x11eb0:1])
+NG = tmpNG
+r4 = *[ram]unique[0x11420:4]
+NG = tmpNG
+r0 = *[ram]unique[0x11420:4]
+NG = tmpNG

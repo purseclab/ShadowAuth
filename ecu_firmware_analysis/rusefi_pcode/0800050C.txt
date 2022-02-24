@@ -1,0 +1,94 @@
+sp = mult_addr
+mult_addr = mult_addr + 0x8
+s16 = s0
+call ram[0x80005e4:4]
+r3 = ram[0x800056c:4]
+r3 = sext(unique[0x12420:1])
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x800054e:4]
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+if (unique[0xf760:1]) goto ram[0x800054e:4]
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+if (unique[0xf860:1]) goto ram[0x800054e:4]
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+if (unique[0xf6c0:1]) goto ram[0x8000554:4]
+call ram[0x8002144:4]
+NG = tmpNG
+s0 = *[ram]unique[0x42b0:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+mult_addr = mult_addr + 0x8
+return pc
+call ram[0x8002144:4]
+mult_addr = mult_addr + 0x8
+NG = tmpNG
+*[ram]unique[0x11420:4] = register[0x2c:4]
+r0 = ram[0x8000574:4]
+sp = mult_addr
+goto ram[0x80013f4:4]
+
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+d6 = d6 & unique[0x2b20:8]
+NG = tmpNG
+sp = mult_addr
+mult_addr = mult_addr + 0x8
+s16 = s0
+call ram[0x80007d8:4]
+r3 = ram[0x80005d8:4]
+r3 = sext(unique[0x12420:1])
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x80005ba:4]
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+if (unique[0xf760:1]) goto ram[0x80005ba:4]
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+if (unique[0xf7b0:1]) goto ram[0x80005ba:4]
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+if (unique[0xf6c0:1]) goto ram[0x80005c0:4]
+call ram[0x8002144:4]
+NG = tmpNG
+s0 = *[ram]unique[0x42b0:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+mult_addr = mult_addr + 0x8
+return pc
+call ram[0x8002144:4]
+mult_addr = mult_addr + 0x8
+NG = tmpNG
+*[ram]unique[0x11420:4] = register[0x2c:4]
+r0 = ram[0x80005e0:4]
+sp = mult_addr
+goto ram[0x80013f4:4]
+
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+d6 = d6 & unique[0x2b20:8]
+NG = tmpNG
+r3 = s0
+NG = tmpNG
+if (unique[0xf6a0:1]) goto ram[0x800064a:4]
+OV = tmpOV
+if (unique[0xf820:1]) goto ram[0x8000658:4]
+OV = tmpOV
+if (unique[0xf800:1]) goto ram[0x8000678:4]
+OV = tmpOV
+sp = mult_addr
+if (unique[0xf820:1]) goto ram[0x8000666:4]
+NG = tmpNG
+r2 = ram[0x8000798:4]
+r1 = ram[0x800079c:4]
+r4 = r4 >> unique[0x19d40:4]
+r2 = r2 + r4
+tmpZR = r2 == 0x0
+NG = tmpNG
+tmpZR = r0 == 0x0
+OV = tmpOV
+NG = tmpNG
+r3 = r3 + r5
+s0 = r0

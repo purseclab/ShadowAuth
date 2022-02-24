@@ -1,0 +1,92 @@
+sp = mult_addr
+r5 = r1
+r4 = r0
+call ram[0x8040ca0:4]
+if (unique[0x11bf0:1]) goto ram[0x8040d02:4]
+r3 = *[ram]unique[0x11420:4]
+OV = tmpOV
+OV = tmpOV
+if (unique[0xf700:1]) goto ram[0x8040d02:4]
+r3 = *[ram]unique[0x11420:4]
+if (unique[0x11bf0:1]) goto ram[0x8040d08:4]
+r3 = *[ram]unique[0x11420:4]
+r1 = *[ram]unique[0x11420:4]
+*[ram]unique[0x11420:4] = register[0x34:4]
+r0 = *[ram]unique[0x11420:4]
+r2 = *[ram]unique[0x11420:4]
+r3 = r3 + r0
+OV = tmpOV
+*[ram]unique[0x11420:4] = register[0x2c:4]
+unique[0xfb00:1] = CY != 0x0
+r3 = *[ram]unique[0x11420:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+OV = tmpOV
+r3 = *[ram]unique[0x11420:4]
+*[ram]unique[0x11420:4] = register[0x28:4]
+NG = tmpNG
+*[ram]unique[0x11420:4] = register[0x28:4]
+if (unique[0x11bf0:1]) goto ram[0x8040d1a:4]
+r0 = r4
+sp = mult_addr
+goto [pc]
+r0 = ram[0x8040d1c:4]
+call ram[0x8040b00:4]
+tmpZR = r0 == 0x0
+r2 = ram[0x8040d20:4]
+r1 = ram[0x8040d24:4]
+call ram[0x8015240:4]
+r0 = ram[0x8040d20:4]
+call ram[0x8040b00:4]
+return pc
+*[ram]unique[0x11420:4] = register[0x30:4]
+NG = tmpNG
+*[ram]unique[0x11420:4] = register[0x20:4]
+NG = tmpNG
+r0 = zext(unique[0x11ed0:1])
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+r4 = r0
+call ram[0x8040ca0:4]
+r3 = *[ram]unique[0x11420:4]
+if (unique[0x11bf0:1]) goto ram[0x8040d64:4]
+r0 = *[ram]unique[0x12270:4]
+r3 = *[ram]unique[0x11420:4]
+r2 = *[ram]unique[0x11420:4]
+r3 = r3 + r0
+OV = tmpOV
+*[ram]unique[0x11420:4] = register[0x2c:4]
+unique[0xfb00:1] = CY != 0x0
+r3 = *[ram]unique[0x11420:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+OV = tmpOV
+r3 = *[ram]unique[0x11420:4]
+*[ram]unique[0x11420:4] = register[0x28:4]
+NG = tmpNG
+*[ram]unique[0x11420:4] = register[0x28:4]
+if (unique[0x11bf0:1]) goto ram[0x8040d76:4]
+r0 = r4
+sp = mult_addr
+goto [pc]
+tmpZR = r0 == 0x0
+r2 = ram[0x8040d78:4]
+r1 = ram[0x8040d7c:4]
+call ram[0x8015240:4]
+r0 = ram[0x8040d78:4]
+call ram[0x8040b00:4]
+return pc
+*[ram]unique[0x11420:4] = register[0x30:4]
+NG = tmpNG
+r0 = zext(unique[0x11ed0:1])
+NG = tmpNG
+sp = mult_addr
+r4 = ram[0x8040dc4:4]
+r6 = *[ram]unique[0x11420:4]
+r5 = r0
+call ram[0x8040ca0:4]
+r3 = *[ram]unique[0x11420:4]
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+r2 = *[ram]unique[0x11420:4]

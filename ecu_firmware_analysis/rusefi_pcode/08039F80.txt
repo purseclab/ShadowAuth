@@ -1,0 +1,24 @@
+OV = tmpOV
+if (unique[0xf7b0:1]) goto ram[0x8039f94:4]
+if (unique[0x11bf0:1]) goto ram[0x8039f94:4]
+r3 = *[ram]unique[0x11420:4]
+CY = shift_carry
+unique[0xfac0:1] = ZR != 0x0
+tmpZR = r0 == 0x0
+tmpZR = r0 == 0x0
+return pc
+NG = tmpNG
+return pc
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+OV = tmpOV
+if (unique[0xf7b0:1]) goto ram[0x8039fb8:4]
+if (unique[0x11bf0:1]) goto ram[0x8039fb8:4]
+r2 = *[ram]unique[0x11420:4]
+NG = tmpNG
+tmpZR = r1 == 0x0
+NG = unique[0x184e0:4] s< 0x0
+unique[0xfae0:1] = ZR != 0x0
+r0 = r3

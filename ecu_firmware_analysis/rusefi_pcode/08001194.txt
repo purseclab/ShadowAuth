@@ -1,0 +1,118 @@
+sp = mult_addr
+r3 = s0
+tmpZR = r2 == 0x0
+OV = tmpOV
+mult_addr = mult_addr + 0x8
+s14 = s0
+if (unique[0xf800:1]) goto ram[0x80011d0:4]
+CALLOTHER 0x1, 0xa, 0xf, 0x6, cr7, cr13, cr0
+r1 = s15
+if (unique[0x11bd0:1]) goto ram[0x80011fa:4]
+OV = tmpOV
+NG = tmpNG
+if (unique[0xf8b0:1]) goto ram[0x8001304:4]
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x80012be:4]
+mult_addr = mult_addr + 0x8
+s15 = 0xbf800000
+s0 = s15 f/ s14
+return pc
+r1 = ram[0x8001314:4]
+OV = tmpOV
+if (unique[0xf890:1]) goto ram[0x80011fa:4]
+OV = tmpOV
+s15 = *[ram]unique[0x42b0:4]
+s13 = *[ram]unique[0x42b0:4]
+unique[0xfc40:1] = NG == OV
+s1 = 0x0 f- s1
+s14 = 0x0 f- s0
+s14 = s15 f- s14
+s15 = s13 f- s1
+s1 = *[ram]unique[0x42b0:4]
+s14 = s15 f+ s14
+s13 = s14 f* s14
+s0 = *[ram]unique[0x42b0:4]
+s4 = *[ram]unique[0x42b0:4]
+s16 = *[ram]unique[0x42b0:4]
+s3 = *[ram]unique[0x42b0:4]
+s6 = *[ram]unique[0x42b0:4]
+s5 = *[ram]unique[0x42b0:4]
+s8 = *[ram]unique[0x42b0:4]
+s7 = *[ram]unique[0x42b0:4]
+s10 = *[ram]unique[0x42b0:4]
+s9 = *[ram]unique[0x42b0:4]
+s12 = *[ram]unique[0x42b0:4]
+s11 = *[ram]unique[0x42b0:4]
+s2 = *[ram]unique[0x42b0:4]
+r1 = ram[0x8001314:4]
+s15 = s13 f* s13
+OV = tmpOV
+CALLOTHER 0x1, 0xa, 0xa, 0x4, cr2, cr7, cr0
+CALLOTHER 0x1, 0xa, 0xe, 0x4, cr1, cr7, cr8
+CALLOTHER 0x1, 0xa, 0xa, 0x1, cr3, cr2, cr7
+CALLOTHER 0x1, 0xa, 0xe, 0x5, cr2, cr1, cr7
+CALLOTHER 0x1, 0xa, 0xa, 0x1, cr4, cr3, cr7
+CALLOTHER 0x1, 0xa, 0xe, 0x5, cr3, cr2, cr7
+CALLOTHER 0x1, 0xa, 0xa, 0x1, cr5, cr4, cr7
+CALLOTHER 0x1, 0xa, 0xe, 0x5, cr4, cr3, cr7
+CALLOTHER 0x1, 0xa, 0xa, 0x1, cr6, cr5, cr7
+CALLOTHER 0x1, 0xa, 0xe, 0x5, cr5, cr4, cr7
+s15 = s12
+CALLOTHER 0x1, 0xa, 0xe, 0x5, cr7, cr5, cr6
+s12 = s14 f* s13
+s11 = s1
+CALLOTHER 0x1, 0xa, 0xe, 0x4, cr5, cr7, cr6
+CALLOTHER 0x1, 0xa, 0xe, 0x5, cr0, cr5, cr6
+CALLOTHER 0x1, 0xa, 0xe, 0x0, cr0, cr6, cr1
+s0 = s14 f+ s1
+if (unique[0xf860:1]) goto ram[0x80012c4:4]
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x80012be:4]
+s15 = 0xbf800000
+s13 = s15 f/ s0
+r3 = ram[0x8001358:4]
+r2 = s0
+NG = tmpNG
+s12 = r2
+r2 = s13
+NG = tmpNG
+s0 = r3
+s15 = 0x3f800000
+CALLOTHER 0x1, 0xa, 0xe, 0x0, cr7, cr6, cr0
+s14 = s12 f- s14
+s1 = s1 f- s14
+CALLOTHER 0x1, 0xa, 0xe, 0x4, cr7, cr0, cr0
+CALLOTHER 0x1, 0xa, 0xa, 0x5, cr0, cr7, cr6
+mult_addr = mult_addr + 0x8
+return pc
+s15 = r0
+s13 = CALLOTHER 0xc4, s15, unique[0x31a0:1]
+s11 = s0 f* s0
+s15 = s0 f+ s13
+NG = tmpNG
+s12 = s11 f/ s15
+tmpZR = r3 == 0x0
+tmpZR = r3 == 0x0
+mult_addr = mult_addr + 0x8
+s11 = 0x40000000
+s1 = s12 f- s1
+s15 = r3
+s14 = s14 f- s1
+s15 = CALLOTHER 0xc4, s15, unique[0x31a0:1]
+CALLOTHER 0x1, 0xa, 0xe, 0x3, cr6, cr7, cr5
+s0 = s13 f* s15
+return pc
+call ram[0x800135c:4]
+s15 = 0x3f800000
+s0 = s15 f/ s0
+goto ram[0x80012be:4]
+
+r1 = 0x8001414
+OV = tmpOV
+NG = tmpNG
+OV = tmpOV
+NG = tmpNG
+OV = tmpOV
+NG = tmpNG
+NG = tmpNG
+r6 = unique[0xfdc0:4]

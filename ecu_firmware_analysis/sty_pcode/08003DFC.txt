@@ -1,0 +1,111 @@
+unique[0x11bf0:1] = r1 == 0x0
+if (unique[0x11bf0:1]) goto ram[0x8003e08:4]
+
+unique[0x11440:4] = r0 + 0x0
+unique[0x11ef0:2] = *[ram]unique[0x11440:4]
+r2 = zext(unique[0x11ef0:2])
+
+unique[0xfe50:4] = 0x80
+shift_carry = CY
+r2 = r2 | unique[0xfe50:4]
+tmpCY = shift_carry
+tmpOV = OV
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+
+unique[0x11440:4] = r0 + 0x0
+unique[0x176d0:2] = SUBPIECE r2, 0x0
+*[ram]unique[0x11440:4] = unique[0x176d0:2]
+
+goto ram[0x8003e12:4]
+
+unique[0x11440:4] = r0 + 0x0
+unique[0x11ef0:2] = *[ram]unique[0x11440:4]
+r2 = zext(unique[0x11ef0:2])
+
+r3 = zext(0xff7f)
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+r2 = r2 & r3
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x11440:4] = r0 + 0x0
+unique[0x176d0:2] = SUBPIECE r2, 0x0
+*[ram]unique[0x11440:4] = unique[0x176d0:2]
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+
+unique[0x11440:4] = r0 + 0x0
+unique[0x11ef0:2] = *[ram]unique[0x11440:4]
+r2 = zext(unique[0x11ef0:2])
+
+r3 = zext(0xfff7)
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+r2 = r2 & r3
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x11440:4] = r0 + 0x0
+unique[0x176d0:2] = SUBPIECE r2, 0x0
+*[ram]unique[0x11440:4] = unique[0x176d0:2]
+
+unique[0x11440:4] = r0 + 0x0
+unique[0x11ef0:2] = *[ram]unique[0x11440:4]
+r2 = zext(unique[0x11ef0:2])
+
+r2 = r2 | r1
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x11440:4] = r0 + 0x0
+unique[0x176d0:2] = SUBPIECE r2, 0x0
+*[ram]unique[0x11440:4] = unique[0x176d0:2]
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+
+unique[0x11440:4] = r0 + 0x0
+unique[0x11ef0:2] = *[ram]unique[0x11440:4]
+r2 = zext(unique[0x11ef0:2])
+
+r3 = zext(0xfcff)
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+r2 = r2 & r3
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x11440:4] = r0 + 0x0
+unique[0x176d0:2] = SUBPIECE r2, 0x0
+*[ram]unique[0x11440:4] = unique[0x176d0:2]
+
+unique[0x11440:4] = r0 + 0x0
+unique[0x11ef0:2] = *[ram]unique[0x11440:4]
+r2 = zext(unique[0x11ef0:2])
+
+r2 = r2 | r1
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+ZR = tmpZR
+NG = tmpNG
+

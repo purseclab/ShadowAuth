@@ -1,0 +1,22 @@
+sp = mult_addr
+call ram[0x8002b34:4]
+r3 = ram[0x8002b60:4]
+r0 = *[ram]unique[0x11420:4]
+call ram[0x8002b64:4]
+sp = mult_addr
+goto ram[0x8002b38:4]
+
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr + 0x4
+sp = sp - unique[0xfdd0:4]
+r6 = r0
+call ram[0x8003210:4]
+r1 = ram[0x8002e6c:4]
+r5 = ram[0x8002e70:4]
+r8 = r0
+r0 = r6
+call ram[0x8003200:4]
+r4 = r0
+OV = tmpOV
+if (unique[0xf8b0:1]) goto ram[0x8002d96:4]

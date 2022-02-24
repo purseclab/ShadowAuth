@@ -1,0 +1,16 @@
+OV = tmpOV
+unique[0xfc00:1] = CY && unique[0xfbe0:1]
+r3 = ram[0x800531c:4]
+r0 = zext(unique[0x11ed0:1])
+tmpZR = r0 == 0x0
+tmpZR = r0 == 0x0
+return pc
+*[ram]unique[0x11480:4] = register[0x34:4]
+NG = tmpNG
+if (unique[0x11bf0:1]) goto ram[0x8005334:4]
+sp = mult_addr
+r1 = ram[0x8005354:4]
+r0 = r2
+r4 = r2
+call ram[0x8003ac8:4]
+if (unique[0x11bd0:1]) goto ram[0x8005338:4]

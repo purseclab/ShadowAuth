@@ -1,0 +1,18 @@
+OV = tmpOV
+unique[0xfc00:1] = CY && unique[0xfbe0:1]
+r0 = CALLOTHER 0x0, r0
+tmpZR = r0 == 0x0
+tmpZR = r0 == 0x0
+tmpZR = r0 == 0x0
+return pc
+
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+r2 = ram[0x803a110:4]
+r1 = ram[0x803a114:4]
+r3 = *[ram]unique[0x11420:4]
+NG = tmpNG

@@ -1,0 +1,4 @@
+NG = tmpNG
+return pc
+r1 = ram[0x800507c:4]
+goto ram[0x80052b0:4]

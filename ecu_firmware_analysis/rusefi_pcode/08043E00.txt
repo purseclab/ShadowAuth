@@ -1,0 +1,16 @@
+if (unique[0x11bf0:1]) goto ram[0x8043e08:4]
+OV = tmpOV
+goto ram[0x8043cb0:4]
+sp = mult_addr
+r0 = ram[0x8043e10:4]
+call ram[0x8040b00:4]
+*[ram]unique[0x11420:4] = register[0x20:4]
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+NG = tmpNG

@@ -1,0 +1,4 @@
+r0 = r3
+return pc
+NG = tmpNG
+NG = tmpNG

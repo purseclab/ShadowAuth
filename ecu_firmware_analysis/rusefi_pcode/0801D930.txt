@@ -1,0 +1,16 @@
+r3 = ram[0x801d940:4]
+r2 = r0
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+tmpZR = r0 == 0x0
+goto ram[0x801d120:4]
+r0 = zext(unique[0x11eb0:1])
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+r3 = ram[0x801d960:4]
+r2 = r0
+*[ram]unique[0x112a0:4] = unique[0x17760:1]

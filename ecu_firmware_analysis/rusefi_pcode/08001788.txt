@@ -1,0 +1,34 @@
+CY = shift_carry
+unique[0xfac0:1] = ZR != 0x0
+tmpZR = r1 == 0x0
+return pc
+sp = mult_addr
+tmpZR = r4 == 0x0
+tmpZR = r4 == 0x0
+NG = tmpNG
+unique[0xfb40:1] = NG != 0x0
+tmpZR = r0 == 0x0
+tmpZR = r1 == 0x0
+goto ram[0x8001628:4]
+
+NG = tmpNG
+tmpZR = r1 == 0x0
+tmpZR = r1 == 0x0
+tmpZR = r0 == 0x0
+unique[0xfae0:1] = ZR != 0x0
+NG = tmpNG
+CY = shift_carry
+tmpZR = r1 == 0x0
+return pc
+NG = tmpNG
+unique[0xfac0:1] = ZR != 0x0
+return pc
+CY = shift_carry
+unique[0xfac0:1] = ZR != 0x0
+tmpZR = r1 == 0x0
+return pc
+sp = mult_addr
+tmpZR = r4 == 0x0
+tmpZR = r5 == 0x0
+tmpZR = r1 == 0x0
+goto ram[0x8001628:4]

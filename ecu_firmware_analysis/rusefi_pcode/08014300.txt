@@ -1,0 +1,6 @@
+sp = mult_addr
+call ram[0x80142d0:4]
+
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG

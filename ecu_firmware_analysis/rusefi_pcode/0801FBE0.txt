@@ -1,0 +1,4 @@
+goto ram[0x801fb50:4]
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG

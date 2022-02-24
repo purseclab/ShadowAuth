@@ -1,0 +1,132 @@
+mult_addr = sp
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x58:4]
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x30:4]
+sp = mult_addr
+
+r2 = r1
+
+r1 = 0x0
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+r3 = 0x0
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x11420:4] = r0 + 0x38
+r1 = *[ram]unique[0x11420:4]
+
+unique[0xfed0:4] = 0x300000
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+unique[0x11a60:4] = ~unique[0xfed0:4]
+r1 = r1 & unique[0x11a60:4]
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+
+tmpCY = 0x1 <= r2
+tmpOV = sborrow(r2, 0x1)
+r3 = r2 - 0x1
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0xff50:4] = 0x20 - 0x14
+unique[0xff60:4] = r3 >> unique[0xff50:4]
+unique[0xff80:4] = unique[0xff60:4] & 0x1
+shift_carry = SUBPIECE unique[0xff80:4], 0x0
+unique[0xffb0:4] = r3 << 0x14
+r1 = r1 | unique[0xffb0:4]
+tmpCY = shift_carry
+tmpOV = OV
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+
+unique[0x11420:4] = r0 + 0x38
+*[ram]unique[0x11420:4] = register[0x24:4]
+
+mult_addr = sp
+r4 = *[ram]mult_addr
+mult_addr = mult_addr + 0x4
+pc = *[ram]mult_addr
+mult_addr = mult_addr + 0x4
+sp = mult_addr
+unique[0x0:4] = pc & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = pc & 0xfffffffe
+return pc
+
+mult_addr = sp
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x58:4]
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x2c:4]
+sp = mult_addr
+
+r3 = 0x0
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x114b0:4] = sp + 0x0
+*[ram]unique[0x114b0:4] = register[0x2c:4]
+
+unique[0x114b0:4] = sp + 0x0
+*[ram]unique[0x114b0:4] = register[0x20:4]
+
+unique[0x114b0:4] = sp + 0x0
+r3 = *[ram]unique[0x114b0:4]
+
+r3 = r3 + r1
+
+unique[0x114b0:4] = sp + 0x0
+*[ram]unique[0x114b0:4] = register[0x2c:4]
+
+unique[0x114b0:4] = sp + 0x0
+r3 = *[ram]unique[0x114b0:4]
+
+unique[0x11420:4] = r3 + 0x0
+*[ram]unique[0x11420:4] = register[0x28:4]
+
+mult_addr = sp
+r3 = *[ram]mult_addr
+mult_addr = mult_addr + 0x4
+pc = *[ram]mult_addr
+mult_addr = mult_addr + 0x4
+sp = mult_addr
+unique[0x0:4] = pc & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = pc & 0xfffffffe
+return pc
+
+r2 = r1
+
+r1 = 0x0
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x11420:4] = r0 + 0x8
+r1 = *[ram]unique[0x11420:4]
+
+unique[0xfed0:4] = 0xf0000
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+unique[0x11a60:4] = ~unique[0xfed0:4]
+r1 = r1 & unique[0x11a60:4]
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+

@@ -1,0 +1,26 @@
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+if (unique[0xf890:1]) goto ram[0x8030d14:4]
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+if (unique[0xf720:1]) goto ram[0x8030d16:4]
+return pc
+goto ram[0x8030cd0:4]
+
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+OV = tmpOV
+OV = tmpOV
+OV = tmpOV
+mult_addr = mult_addr + 0x8
+s15 = r2
+r6 = r0
+r5 = r1
+s17 = s1
+s22 = s2
+s18 = s3
+s19 = s4
+if (unique[0xf890:1]) goto ram[0x8030de6:4]
+s14 = CALLOTHER 0xc4, s15, unique[0x31a0:1]
+s15 = 0x3f800000

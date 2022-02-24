@@ -1,0 +1,20 @@
+r3 = ram[0x801ed04:4]
+r3 = *[ram]unique[0x11420:4]
+tmpZR = r0 == 0x0
+r0 = *[ram]unique[0x11420:4]
+if (unique[0x11bf0:1]) goto ram[0x801ed02:4]
+r3 = *[ram]unique[0x11420:4]
+r3 = *[ram]unique[0x11420:4]
+goto [pc]
+return pc
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+return pc
+
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG

@@ -1,0 +1,25 @@
+r1 = r0
+
+unique[0x11420:4] = r1 + 0x40
+r0 = *[ram]unique[0x11420:4]
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+
+unique[0x11440:4] = r1 + 0x0
+unique[0x11ef0:2] = *[ram]unique[0x11440:4]
+r2 = zext(unique[0x11ef0:2])
+
+unique[0x11440:4] = r1 + 0x2
+unique[0x11ef0:2] = *[ram]unique[0x11440:4]
+r3 = zext(unique[0x11ef0:2])
+
+r2 = r2 | r3
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+ZR = tmpZR
+NG = tmpNG
+

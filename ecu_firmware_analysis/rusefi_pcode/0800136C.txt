@@ -1,0 +1,43 @@
+r2 = s0
+tmpZR = r1 == 0x0
+NG = tmpNG
+OV = tmpOV
+OV = tmpOV
+if (unique[0xf860:1]) goto ram[0x80013ce:4]
+OV = tmpOV
+if (unique[0xf820:1]) goto ram[0x80013b2:4]
+r1 = ram[0x80013e8:4]
+NG = tmpNG
+NG = unique[0x184e0:4] s< 0x0
+if (unique[0xf6a0:1]) goto ram[0x80013cc:4]
+s15 = *[ram]unique[0x42b0:4]
+s15 = s0 f+ s15
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+if (unique[0xf890:1]) goto ram[0x80013cc:4]
+OV = tmpOV
+if (unique[0xf800:1]) goto ram[0x80013a8:4]
+tmpZR = r0 == 0x0
+tmpZR = r3 == 0x0
+r2 = r2 + r3
+tmpZR = r3 == 0x0
+s0 = r3
+return pc
+s15 = *[ram]unique[0x42b0:4]
+s15 = s0 f+ s15
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+if (unique[0xf890:1]) goto ram[0x80013cc:4]
+OV = tmpOV
+if (unique[0xf820:1]) goto ram[0x80013da:4]
+s0 = *[ram]unique[0x42b0:4]
+return pc
+OV = tmpOV
+if (unique[0xf700:1]) goto ram[0x80013cc:4]
+s0 = s0 f+ s0
+return pc
+OV = tmpOV
+s15 = 0xbf800000
+unique[0xfae0:1] = ZR != 0x0
+s0 = s15
+return pc

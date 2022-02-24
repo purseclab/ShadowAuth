@@ -1,0 +1,22 @@
+if (unique[0x11bf0:1]) goto ram[0x8005058:4]
+r3 = ram[0x8005064:4]
+r1 = r0
+r0 = *[ram]unique[0x11420:4]
+goto ram[0x8005018:4]
+r3 = ram[0x8005068:4]
+r1 = ram[0x800506c:4]
+r0 = *[ram]unique[0x11420:4]
+goto ram[0x80052b0:4]
+
+NG = tmpNG
+NG = tmpNG
+r7 = ram[0x80051bc:4]
+NG = tmpNG
+*[ram]unique[0x11480:4] = register[0x24:4]
+NG = tmpNG
+NG = tmpNG
+return pc
+r1 = ram[0x800507c:4]
+goto ram[0x80052b0:4]
+
+r5 = sext(unique[0x11f50:2])

@@ -1,0 +1,6 @@
+r3 = ram[0x801eff8:4]
+*[ram]unique[0x11420:4] = register[0x20:4]
+return pc
+
+NG = tmpNG
+NG = tmpNG

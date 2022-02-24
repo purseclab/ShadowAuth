@@ -1,0 +1,1865 @@
+sp = mult_addr + 0x4
+mult_addr = mult_addr + 0x8
+sp = sp - unique[0xfdd0:4]
+r4 = r0
+r7 = *[ram]unique[0x114b0:4]
+r8 = *[ram]unique[0x112a0:4]
+r0 = r8
+r5 = r3
+r6 = r2
+call ram[0x8032580:4]
+r3 = r8
+r2 = r0
+r0 = r1
+r1 = ram[0x8036008:4]
+call ram[0x8016520:4]
+r2 = *[ram]unique[0x11420:4]
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+NG = tmpNG
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+OV = tmpOV
+if (unique[0xf9c0:1]) goto ram[0x8038078:4]
+goto [pc]
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8031590:4]
+r2 = zext(unique[0x11eb0:1])
+r3 = *[ram]unique[0x11420:4]
+OV = tmpOV
+if (unique[0xf8b0:1]) goto ram[0x8038042:4]
+tmpZR = r3 == 0x0
+r3 = CALLOTHER 0x0, r3
+NG = tmpNG
+if (unique[0x11bd0:1]) goto ram[0x8035d72:4]
+r2 = zext(unique[0x11eb0:1])
+tmpZR = r2 == 0x0
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x8035d72:4]
+r1 = ram[0x803600c:4]
+tmpZR = r0 == 0x0
+call ram[0x8015240:4]
+r3 = *[ram]unique[0x11420:4]
+r2 = zext(unique[0x11eb0:1])
+OV = tmpOV
+*[ram]unique[0x11420:4] = register[0x2c:4]
+if (unique[0x11bd0:1]) goto ram[0x8035da0:4]
+r3 = *[ram]unique[0x112a0:4]
+r1 = *[ram]unique[0x112a0:4]
+OV = tmpOV
+OV = tmpOV
+unique[0xfc00:1] = CY && unique[0xfbe0:1]
+r2 = ram[0x8036010:4]
+s0 = *[ram]unique[0x42b0:4]
+tmpZR = r3 == 0x0
+s0 = *[ram]unique[0x41f0:4]
+tmpZR = r0 == 0x0
+call ram[0x8015800:4]
+r3 = zext(unique[0x11eb0:1])
+if (unique[0x11bf0:1]) goto ram[0x8035daa:4]
+OV = tmpOV
+if (unique[0xf8d0:1]) goto ram[0x8038050:4]
+sp = sp + unique[0xfdd0:4]
+mult_addr = mult_addr + 0x8
+return pc
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030240:4]
+r0 = r4
+s0 = *[ram]unique[0x42b0:4]
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+call ram[0x8034ea0:4]
+r0 = r4
+call ram[0x8034ea0:4]
+r0 = r4
+call ram[0x8034ea0:4]
+r1 = r6
+NG = tmpNG
+s0 = 0x3e000000
+r0 = r4
+call ram[0x8030a20:4]
+r0 = r4
+s0 = *[ram]unique[0x42b0:4]
+call ram[0x8034ea0:4]
+r0 = r4
+call ram[0x8034ea0:4]
+r0 = r4
+call ram[0x8034ea0:4]
+r2 = r6
+r1 = r6
+s0 = 0x3e800000
+r0 = r4
+call ram[0x8030a20:4]
+r0 = r4
+s0 = *[ram]unique[0x42b0:4]
+call ram[0x8034ea0:4]
+r0 = r4
+call ram[0x8034ea0:4]
+r0 = r4
+call ram[0x8034ea0:4]
+r1 = r6
+NG = tmpNG
+s0 = 0x3ec00000
+r0 = r4
+call ram[0x8030a20:4]
+r0 = r4
+s0 = *[ram]unique[0x42b0:4]
+call ram[0x8034ea0:4]
+r0 = r4
+call ram[0x8034ea0:4]
+r0 = r4
+call ram[0x8034ea0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+r2 = r6
+r1 = r6
+s0 = 0x3f000000
+r0 = r4
+call ram[0x8030a20:4]
+r0 = r4
+s0 = *[ram]unique[0x42b0:4]
+call ram[0x8034ea0:4]
+r0 = r4
+call ram[0x8034ea0:4]
+r0 = r4
+call ram[0x8034ea0:4]
+r1 = r6
+NG = tmpNG
+s0 = 0x3f200000
+r0 = r4
+call ram[0x8030a20:4]
+r0 = r4
+s0 = *[ram]unique[0x42b0:4]
+call ram[0x8034ea0:4]
+r0 = r4
+call ram[0x8034ea0:4]
+r0 = r4
+call ram[0x8034ea0:4]
+r2 = r6
+r1 = r6
+s0 = 0x3f400000
+r0 = r4
+call ram[0x8030a20:4]
+r0 = r4
+s0 = *[ram]unique[0x42b0:4]
+call ram[0x8034ea0:4]
+r0 = r4
+call ram[0x8034ea0:4]
+r0 = r4
+call ram[0x8034ea0:4]
+r1 = r6
+NG = tmpNG
+s0 = 0x3f600000
+r0 = r4
+call ram[0x8030a20:4]
+r0 = r4
+s0 = *[ram]unique[0x42b0:4]
+call ram[0x8034ea0:4]
+r0 = r4
+call ram[0x8034ea0:4]
+r0 = r4
+call ram[0x8034ea0:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+r0 = r4
+call ram[0x8030a20:4]
+r2 = r6
+r1 = r6
+s0 = 0x3f800000
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r2 = zext(unique[0x11eb0:1])
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+goto ram[0x8035d4a:4]
+NG = tmpNG
+NG = tmpNG
+s0 = *[ram]unique[0x42b0:4]
+*[ram]unique[0x114b0:4] = register[0x24:4]
+NG = tmpNG
+r0 = r4
+call ram[0x8034cb0:4]
+NG = tmpNG
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+goto ram[0x8035d4a:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030240:4]
+s0 = *[ram]unique[0x42b0:4]
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+r0 = r4
+call ram[0x8030210:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r1 = r6
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r1 = r6
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+r0 = r4
+call ram[0x8030a20:4]
+r2 = r6
+NG = tmpNG
+s0 = 0x3f800000
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r2 = zext(unique[0x11eb0:1])
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+goto ram[0x8035d4a:4]
+NG = tmpNG
+NG = tmpNG
+*[ram]unique[0x114b0:4] = register[0x2c:4]
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+NG = tmpNG
+r0 = r4
+call ram[0x8034cb0:4]
+NG = tmpNG
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+goto ram[0x8035d4a:4]
+
+r7 = ram[0x80361ec:4]
+NG = tmpNG
+r7 = ram[0x8036340:4]
+NG = tmpNG
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+NG = tmpNG
+NG = tmpNG
+r4 = r4 + r6
+NG = tmpNG
+OV = tmpOV
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+r2 = unique[0xfdc0:4]
+OV = tmpOV
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+r7 = r7 + r0
+*[ram]unique[0x11440:4] = unique[0x176d0:2]
+r5 = r5 + r3
+*[ram]unique[0x11480:4] = unique[0x176b0:1]
+OV = tmpOV
+*[ram]unique[0x11480:4] = unique[0x176f0:2]
+OV = tmpOV
+if (unique[0xf890:1]) goto ram[0x8036116:4]
+OV = tmpOV
+r7 = mult_addr
+OV = tmpOV
+CALLOTHER 0x11, 0x77
+OV = tmpOV
+r4 = *[ram]unique[0x114b0:4]
+OV = tmpOV
+r1 = zext(unique[0x11ef0:2])
+OV = tmpOV
+*[ram]unique[0x11420:4] = register[0x3c:4]
+OV = tmpOV
+*[ram]unique[0x11420:4] = register[0x24:4]
+OV = tmpOV
+*[ram]unique[0x11420:4] = register[0x28:4]
+OV = tmpOV
+r0 = *[ram]unique[0x11420:4]
+OV = tmpOV
+*[ram]unique[0x11420:4] = register[0x24:4]
+OV = tmpOV
+OV = tmpOV
+OV = tmpOV
+mult_addr = mult_addr + 0x4
+OV = tmpOV
+*[ram]unique[0x11420:4] = register[0x38:4]
+OV = tmpOV
+OV = tmpOV
+OV = tmpOV
+OV = tmpOV
+OV = tmpOV
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+OV = tmpOV
+r2 = unique[0xfdc0:4]
+OV = tmpOV
+r1 = zext(unique[0x11ef0:2])
+OV = tmpOV
+r2 = unique[0xfdc0:4]
+OV = tmpOV
+goto ram[0x80367ac:4]
+OV = tmpOV
+OV = tmpOV
+OV = tmpOV
+r2 = unique[0xfdc0:4]
+OV = tmpOV
+r7 = mult_addr
+OV = tmpOV
+*[ram]unique[0x11480:4] = unique[0x176b0:1]
+OV = tmpOV
+*[ram]unique[0x11480:4] = unique[0x176b0:1]
+OV = tmpOV
+goto ram[0x80367c4:4]
+OV = tmpOV
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+OV = tmpOV
+NG = tmpNG
+NG = tmpNG
+r1 = *[ram]unique[0x11420:4]
+OV = tmpOV
+*[ram]unique[0x11480:4] = unique[0x176f0:2]
+OV = tmpOV
+NG = tmpNG
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+r3 = r6
+NG = tmpNG
+r0 = r4
+call ram[0x8034bc0:4]
+r2 = zext(unique[0x11eb0:1])
+goto ram[0x8035d4a:4]
+NG = tmpNG
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+r3 = r6
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8034bc0:4]
+r2 = zext(unique[0x11eb0:1])
+goto ram[0x8035d4a:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030240:4]
+s0 = *[ram]unique[0x4270:4]
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+r2 = r6
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = 0x3e800000
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+r2 = r6
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = 0x3f000000
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+r2 = r6
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = 0x3f400000
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+r2 = r6
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = 0x3f800000
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+r2 = r6
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+goto ram[0x8035d4a:4]
+r0 = r4
+call ram[0x80351d0:4]
+r2 = zext(unique[0x11eb0:1])
+goto ram[0x8035d4a:4]
+NG = tmpNG
+r0 = r4
+call ram[0x8030240:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = 0x3f000000
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = 0x3f800000
+r0 = r4
+call ram[0x8030a20:4]
+s0 = 0x40c00000
+r0 = r4
+call ram[0x8030210:4]
+r2 = zext(unique[0x11eb0:1])
+goto ram[0x8035d4a:4]
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8034fa0:4]
+r2 = zext(unique[0x11eb0:1])
+goto ram[0x8035d4a:4]
+NG = tmpNG
+r0 = r4
+call ram[0x8030240:4]
+s1 = *[ram]unique[0x4270:4]
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030230:4]
+NG = tmpNG
+r3 = ram[0x80365f4:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+NG = tmpNG
+s0 = *[ram]unique[0x42b0:4]
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+r2 = r6
+r1 = r6
+r0 = r4
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r6
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r7
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r7
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r6
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r6
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r7
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r6
+r0 = r4
+call ram[0x8030a20:4]
+r2 = r7
+r1 = r7
+s0 = 0x3f800000
+r0 = r4
+call ram[0x8030a20:4]
+r2 = zext(unique[0x11eb0:1])
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+goto ram[0x8035d4a:4]
+NG = tmpNG
+r0 = r4
+NG = tmpNG
+NG = tmpNG
+call ram[0x8030240:4]
+s0 = *[ram]unique[0x42b0:4]
+r0 = r4
+call ram[0x8030210:4]
+s0 = *[ram]unique[0x42b0:4]
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+r2 = r6
+r1 = r6
+r0 = r4
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r7
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r7
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r7
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r7
+r1 = r6
+r0 = r4
+call ram[0x8034ca0:4]
+r2 = r6
+s0 = *[ram]unique[0x42b0:4]
+r1 = r7
+r0 = r4
+call ram[0x8034ca0:4]
+r2 = zext(unique[0x11eb0:1])
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+goto ram[0x8035d4a:4]
+NG = tmpNG
+r0 = r4
+NG = tmpNG
+call ram[0x8030240:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+r1 = r6
+NG = tmpNG
+s0 = 0x3f000000
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+r0 = r4
+call ram[0x8030a20:4]
+r2 = r6
+NG = tmpNG
+s0 = *[ram]unique[0x42b0:4]
+r0 = r4
+call ram[0x8030a20:4]
+r2 = r6
+r1 = r6
+goto ram[0x8035fd8:4]
+r2 = *[ram]unique[0x12270:4]
+r3 = r6
+r0 = r4
+call ram[0x8034bc0:4]
+r2 = zext(unique[0x11eb0:1])
+goto ram[0x8035d4a:4]
+
+NG = tmpNG
+NG = tmpNG
+r4 = 0x8036858
+OV = tmpOV
+r4 = *[ram]unique[0x11420:4]
+OV = tmpOV
+OV = tmpOV
+OV = tmpOV
+r5 = *[ram]unique[0x11420:4]
+OV = tmpOV
+*[ram]unique[0x11420:4] = register[0x38:4]
+OV = tmpOV
+OV = tmpOV
+OV = tmpOV
+r5 = 0x80369d4
+OV = tmpOV
+r3 = unique[0xfdc0:4]
+OV = tmpOV
+OV = tmpOV
+OV = tmpOV
+r5 = mult_addr
+OV = tmpOV
+r3 = zext(unique[0x1a1b0:2])
+OV = tmpOV
+r4 = *[ram]unique[0x114b0:4]
+OV = tmpOV
+NG = tmpNG
+NG = unique[0x184e0:4] s< 0x0
+NG = tmpNG
+NG = unique[0x184e0:4] s< 0x0
+NG = tmpNG
+OV = tmpOV
+NG = tmpNG
+OV = tmpOV
+NG = tmpNG
+OV = tmpOV
+NG = tmpNG
+OV = tmpOV
+NG = tmpNG
+OV = tmpOV
+NG = tmpNG
+OV = tmpOV
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+*[ram]unique[0x11440:4] = unique[0x176d0:2]
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+*[ram]unique[0x11440:4] = unique[0x176d0:2]
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+*[ram]unique[0x11440:4] = unique[0x176d0:2]
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+*[ram]unique[0x11440:4] = unique[0x176d0:2]
+NG = tmpNG
+*[ram]unique[0x11440:4] = unique[0x176d0:2]
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+*[ram]unique[0x11440:4] = unique[0x176d0:2]
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+*[ram]unique[0x11440:4] = unique[0x176d0:2]
+r5 = r5 + r0
+r0 = mult_addr
+r2 = r2 + r1
+*[ram]unique[0x11440:4] = unique[0x176d0:2]
+r0 = r0 + r2
+NG = tmpNG
+r5 = r5 + r2
+NG = tmpNG
+r6 = r6 + r2
+r0 = mult_addr
+r3 = r3 + r3
+NG = tmpNG
+r5 = r5 + r3
+NG = tmpNG
+r3 = r3 + r4
+NG = tmpNG
+r4 = r4 + r4
+NG = tmpNG
+r4 = r4 + r6
+NG = tmpNG
+OV = tmpOV
+r0 = sext(unique[0x11f50:2])
+OV = tmpOV
+*[ram]unique[0x11440:4] = unique[0x176d0:2]
+OV = tmpOV
+r7 = unique[0xfdc0:4]
+OV = tmpOV
+mult_addr = mult_addr + 0x4
+OV = tmpOV
+r4 = sext(unique[0x11f30:1])
+OV = tmpOV
+mult_addr = mult_addr + 0x4
+OV = tmpOV
+r4 = sext(unique[0x11f30:1])
+OV = tmpOV
+NG = tmpNG
+r0 = r4
+call ram[0x8030240:4]
+r3 = *[ram]unique[0x112a0:4]
+OV = tmpOV
+OV = tmpOV
+if (unique[0xf9c0:1]) goto ram[0x8038064:4]
+r2 = ram[0x8036758:4]
+s15 = *[ram]unique[0x42b0:4]
+tmpZR = r3 == 0x0
+s17 = *[ram]unique[0x41f0:4]
+s17 = s17 f* s15
+s18 = 0x3f000000
+s18 = s17 f* s18
+NG = tmpNG
+NG = tmpNG
+s0 = 0x3f800000
+r0 = r4
+call ram[0x8030f20:4]
+NG = tmpNG
+r1 = r2
+s0 = 0x40a00000
+r0 = r4
+call ram[0x8030f20:4]
+NG = tmpNG
+s15 = r6
+s16 = CALLOTHER 0xc4, s15, unique[0x31a0:1]
+NG = tmpNG
+s16 = s16 f* s17
+r1 = r2
+s0 = s16 f- s18
+r0 = r4
+r6 = r6 + r2
+call ram[0x8030f20:4]
+s0 = s16
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030f20:4]
+OV = tmpOV
+if (unique[0xf6c0:1]) goto ram[0x8036724:4]
+goto ram[0x8037eb0:4]
+
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+NG = tmpNG
+NG = tmpNG
+OV = tmpOV
+OV = tmpOV
+OV = tmpOV
+r2 = unique[0xfdc0:4]
+OV = tmpOV
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+OV = tmpOV
+r2 = unique[0xfdc0:4]
+OV = tmpOV
+OV = tmpOV
+OV = tmpOV
+*[ram]unique[0x11480:4] = unique[0x176b0:1]
+OV = tmpOV
+r7 = mult_addr
+OV = tmpOV
+r1 = zext(unique[0x11ef0:2])
+OV = tmpOV
+r2 = unique[0xfdc0:4]
+OV = tmpOV
+OV = tmpOV
+OV = tmpOV
+*[ram]unique[0x11480:4] = unique[0x176b0:1]
+OV = tmpOV
+r1 = zext(unique[0x11ef0:2])
+OV = tmpOV
+r2 = unique[0xfdc0:4]
+OV = tmpOV
+goto ram[0x8036eb4:4]
+OV = tmpOV
+OV = tmpOV
+OV = tmpOV
+r2 = unique[0xfdc0:4]
+OV = tmpOV
+r7 = mult_addr
+OV = tmpOV
+*[ram]unique[0x11480:4] = unique[0x176b0:1]
+OV = tmpOV
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+OV = tmpOV
+OV = tmpOV
+OV = tmpOV
+r2 = unique[0xfdc0:4]
+OV = tmpOV
+r7 = mult_addr
+OV = tmpOV
+*[ram]unique[0x11480:4] = unique[0x176b0:1]
+OV = tmpOV
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+OV = tmpOV
+r7 = mult_addr
+OV = tmpOV
+*[ram]unique[0x11480:4] = unique[0x176b0:1]
+OV = tmpOV
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+OV = tmpOV
+OV = tmpOV
+OV = tmpOV
+r2 = unique[0xfdc0:4]
+OV = tmpOV
+r7 = mult_addr
+OV = tmpOV
+*[ram]unique[0x11480:4] = unique[0x176b0:1]
+OV = tmpOV
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+OV = tmpOV
+goto ram[0x8036f00:4]
+OV = tmpOV
+r2 = unique[0xfdc0:4]
+OV = tmpOV
+r1 = zext(unique[0x11ef0:2])
+OV = tmpOV
+*[ram]unique[0x11480:4] = unique[0x176b0:1]
+OV = tmpOV
+goto ram[0x8036f10:4]
+OV = tmpOV
+r2 = unique[0xfdc0:4]
+OV = tmpOV
+OV = tmpOV
+OV = tmpOV
+goto ram[0x8036f1c:4]
+OV = tmpOV
+r2 = unique[0xfdc0:4]
+OV = tmpOV
+r1 = zext(unique[0x11ef0:2])
+OV = tmpOV
+*[ram]unique[0x11480:4] = unique[0x176b0:1]
+OV = tmpOV
+OV = tmpOV
+OV = tmpOV
+r1 = zext(unique[0x11ef0:2])
+OV = tmpOV
+*[ram]unique[0x11480:4] = unique[0x176b0:1]
+OV = tmpOV
+goto ram[0x8036f38:4]
+OV = tmpOV
+r2 = unique[0xfdc0:4]
+OV = tmpOV
+OV = tmpOV
+OV = tmpOV
+r1 = zext(unique[0x11ef0:2])
+OV = tmpOV
+*[ram]unique[0x11480:4] = unique[0x176b0:1]
+OV = tmpOV
+goto ram[0x8036f4c:4]
+OV = tmpOV
+r2 = unique[0xfdc0:4]
+OV = tmpOV
+OV = tmpOV
+OV = tmpOV
+goto ram[0x8036f58:4]
+OV = tmpOV
+r2 = unique[0xfdc0:4]
+OV = tmpOV
+OV = tmpOV
+OV = tmpOV
+r1 = zext(unique[0x11ef0:2])
+OV = tmpOV
+*[ram]unique[0x11480:4] = unique[0x176b0:1]
+OV = tmpOV
+goto ram[0x8036f6c:4]
+OV = tmpOV
+r2 = unique[0xfdc0:4]
+OV = tmpOV
+NG = tmpNG
+r0 = r4
+call ram[0x8030240:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+NG = tmpNG
+s0 = 0x3e000000
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+NG = tmpNG
+s0 = 0x3e800000
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+NG = tmpNG
+s0 = 0x3ea00000
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+NG = tmpNG
+s0 = 0x3ec00000
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+NG = tmpNG
+s0 = 0x3ee00000
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+NG = tmpNG
+s0 = 0x3f000000
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+NG = tmpNG
+s0 = 0x3f200000
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+NG = tmpNG
+s0 = 0x3f400000
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+NG = tmpNG
+s0 = 0x3f500000
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+NG = tmpNG
+s0 = 0x3f600000
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+NG = tmpNG
+s0 = 0x3f700000
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x4270:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x4270:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+NG = tmpNG
+s0 = 0x3f800000
+r0 = r4
+call ram[0x8030a20:4]
+r0 = r4
+s0 = *[ram]unique[0x42b0:4]
+s1 = 0x41100000
+call ram[0x8030230:4]
+r3 = *[ram]unique[0x11420:4]
+r1 = ram[0x8036f90:4]
+r0 = ram[0x8036f94:4]
+*[ram]unique[0x11420:4] = register[0x24:4]
+OV = tmpOV
+unique[0xfc40:1] = NG == OV
+tmpZR = r3 == 0x0
+NG = tmpNG
+*[ram]unique[0x11420:4] = register[0x2c:4]
+NG = tmpNG
+r2 = zext(unique[0x11eb0:1])
+*[ram]unique[0x11420:4] = register[0x20:4]
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+goto ram[0x8035d4a:4]
+NG = tmpNG
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+r3 = r6
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8034bc0:4]
+r2 = zext(unique[0x11eb0:1])
+goto ram[0x8035d4a:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030240:4]
+s1 = 0x40400000
+r1 = r6
+s0 = 0x40000000
+r0 = r4
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+call ram[0x80301c0:4]
+s0 = *[ram]unique[0x42b0:4]
+r1 = r6
+NG = tmpNG
+r0 = r4
+call ram[0x8030f20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8030f20:4]
+s0 = *[ram]unique[0x42b0:4]
+r1 = r6
+NG = tmpNG
+r0 = r4
+call ram[0x8030f20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8030f20:4]
+s0 = *[ram]unique[0x42b0:4]
+r1 = r6
+NG = tmpNG
+r0 = r4
+call ram[0x8030f20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8030f20:4]
+s0 = *[ram]unique[0x42b0:4]
+r1 = r6
+NG = tmpNG
+r0 = r4
+call ram[0x8030f20:4]
+r2 = r6
+s0 = *[ram]unique[0x42b0:4]
+r1 = r6
+r0 = r4
+call ram[0x8030f20:4]
+r2 = zext(unique[0x11eb0:1])
+goto ram[0x8035d4a:4]
+NG = tmpNG
+r0 = r4
+call ram[0x8030240:4]
+s0 = 0x40400000
+r0 = r4
+call ram[0x8030210:4]
+r3 = *[ram]unique[0x112a0:4]
+OV = tmpOV
+OV = tmpOV
+if (unique[0xf9c0:1]) goto ram[0x8038070:4]
+r2 = ram[0x8036fb8:4]
+tmpZR = r3 == 0x0
+s14 = *[ram]unique[0x41f0:4]
+s15 = 0x41400000
+s18 = s14 f/ s15
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+NG = tmpNG
+s0 = 0x41800000
+call ram[0x8030f20:4]
+NG = tmpNG
+r1 = r2
+s0 = 0x41a00000
+r0 = r4
+call ram[0x8030f20:4]
+s17 = 0x40800000
+s15 = r6
+s16 = CALLOTHER 0xc4, s15, unique[0x31a0:1]
+NG = tmpNG
+s16 = s16 f* s18
+NG = tmpNG
+s0 = s16 f- s17
+r0 = r4
+call ram[0x8030f20:4]
+NG = tmpNG
+OV = tmpOV
+s0 = s16
+r1 = r2
+r0 = r4
+call ram[0x8030f20:4]
+OV = tmpOV
+if (unique[0xf6c0:1]) goto ram[0x8036d9a:4]
+r2 = zext(unique[0x11eb0:1])
+goto ram[0x8035d4a:4]
+NG = tmpNG
+r0 = r4
+call ram[0x8030240:4]
+r0 = r4
+call ram[0x8030f60:4]
+r2 = zext(unique[0x11eb0:1])
+goto ram[0x8035d4a:4]
+NG = tmpNG
+goto ram[0x8036dd0:4]
+NG = tmpNG
+r0 = r4
+call ram[0x8030240:4]
+s1 = 0x41600000
+s0 = *[ram]unique[0x42b0:4]
+r0 = r4
+call ram[0x8030230:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+NG = tmpNG
+s0 = 0x3f000000
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+NG = tmpNG
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+s0 = *[ram]unique[0x42b0:4]
+r1 = r2
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+NG = tmpNG
+s0 = 0x3f800000
+r0 = r4
+call ram[0x8030a20:4]
+r2 = zext(unique[0x11eb0:1])
+goto ram[0x8035d4a:4]
+NG = tmpNG
+r0 = r4
+NG = tmpNG
+call ram[0x8030240:4]
+NG = tmpNG
+*[ram]unique[0x11420:4] = register[0x2c:4]
+s0 = *[ram]unique[0x42b0:4]
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+r0 = r4
+call ram[0x8030210:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8030a20:4]
+r1 = r6
+NG = tmpNG
+s0 = 0x3e800000
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8030a20:4]
+r1 = r6
+NG = tmpNG
+s0 = 0x3f000000
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8030a20:4]
+r1 = r6
+NG = tmpNG
+s0 = 0x3f400000
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+r1 = r6
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r6
+s0 = 0x3f800000
+r0 = r4
+call ram[0x8030a20:4]
+r2 = zext(unique[0x11eb0:1])
+goto ram[0x8035d4a:4]
+NG = tmpNG
+r0 = r4
+call ram[0x8030240:4]
+NG = tmpNG
+r3 = ram[0x8036fe4:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+s0 = *[ram]unique[0x42b0:4]
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+r2 = r6
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = 0x3e800000
+r0 = r4
+call ram[0x8030a20:4]
+s0 = *[ram]unique[0x42b0:4]
+r2 = r6
+NG = tmpNG
+r0 = r4
+call ram[0x8030a20:4]
+NG = tmpNG
+r1 = r2
+s0 = 0x3f800000
+r0 = r4
+call ram[0x8030a20:4]
+s0 = 0x40400000
+r0 = r4
+call ram[0x8030210:4]
+r2 = zext(unique[0x11eb0:1])
+goto ram[0x8035d4a:4]
+NG = tmpNG
+r0 = r4
+call ram[0x8030240:4]
+NG = tmpNG
+r3 = ram[0x8036fe8:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+r1 = r4
+tmpZR = r0 == 0x0
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+call ram[0x8034ee0:4]
+r1 = r4
+NG = tmpNG
+call ram[0x8034ee0:4]
+NG = tmpNG
+s0 = 0x3f000000
+r1 = r6
+r0 = r4
+call ram[0x8030a20:4]
+r1 = r4
+tmpZR = r0 == 0x0
+call ram[0x8034ee0:4]
+r1 = r4
+tmpZR = r0 == 0x0
+call ram[0x8034ee0:4]
+r2 = r6
+goto ram[0x8036e44:4]
+OV = tmpOV
+OV = tmpOV
+r4 = mult_addr
+NG = tmpNG
+r1 = *[ram]unique[0x114b0:4]
+OV = tmpOV
+NG = tmpNG
+OV = tmpOV
+NG = tmpNG
+NG = unique[0x184e0:4] s< 0x0
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+r1 = r1 + r2
+NG = tmpNG
+r4 = r4 + r6
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+OV = tmpOV
+OV = tmpOV

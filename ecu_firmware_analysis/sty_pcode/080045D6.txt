@@ -1,0 +1,22 @@
+r1 = r0
+
+unique[0x11420:4] = r1 + 0x38
+r0 = *[ram]unique[0x11420:4]
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+
+r1 = r0
+
+unique[0x11420:4] = r1 + 0x3c
+r0 = *[ram]unique[0x11420:4]
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+

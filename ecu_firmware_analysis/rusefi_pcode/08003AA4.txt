@@ -1,0 +1,8 @@
+r1 = sext(unique[0x12560:2])
+goto ram[0x803f060:4]
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG

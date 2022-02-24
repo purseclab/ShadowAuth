@@ -1,0 +1,32 @@
+sp = mult_addr
+r4 = r0
+sp = sp - unique[0xfdd0:4]
+r0 = r1
+*[ram]unique[0x17820:4] = register[0x28:4]
+call ram[0x8014690:4]
+r2 = *[ram]unique[0x12270:4]
+r1 = r4
+sp = sp + unique[0xfdd0:4]
+sp = mult_addr
+goto ram[0x8017fc0:4]
+sp = mult_addr
+r5 = ram[0x80180ec:4]
+r1 = ram[0x80180f0:4]
+r4 = ram[0x80180f4:4]
+r0 = *[ram]unique[0x11420:4]
+call ram[0x8016520:4]
+tmpZR = r3 == 0x0
+tmpZR = r2 == 0x0
+*[ram]unique[0x17820:4] = register[0x28:4]
+call ram[0x800a650:4]
+tmpZR = r3 == 0x0
+r2 = r0
+r0 = ram[0x80180f8:4]
+*[ram]unique[0x11480:4] = unique[0x176b0:1]
+call ram[0x800a6a0:4]
+r0 = ram[0x80180f8:4]
+call ram[0x800a820:4]
+r4 = r0
+r0 = ram[0x80180fc:4]
+call ram[0x800a6a0:4]
+r0 = ram[0x80180fc:4]

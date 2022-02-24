@@ -1,0 +1,32 @@
+sp = mult_addr
+call ram[0x8014d10:4]
+call ram[0x80417c0:4]
+r0 = ram[0x8040780:4]
+call ram[0x803abd0:4]
+call ram[0x8041790:4]
+call ram[0x8014d00:4]
+sp = mult_addr
+goto ram[0x80409e0:4]
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+call ram[0x8014d10:4]
+call ram[0x80417c0:4]
+r0 = ram[0x80407b0:4]
+call ram[0x803ac40:4]
+call ram[0x8041790:4]
+call ram[0x8014d00:4]
+sp = mult_addr
+goto ram[0x80409e0:4]
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG

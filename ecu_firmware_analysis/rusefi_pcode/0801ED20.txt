@@ -1,0 +1,8 @@
+NG = tmpNG
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+return pc
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+r3 = zext(unique[0x11eb0:1])

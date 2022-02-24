@@ -1,0 +1,20 @@
+sp = mult_addr
+r4 = r1
+r3 = r2
+r1 = r0
+r2 = r4
+NG = tmpNG
+sp = sp + 0x4
+goto ram[0x800f770:4]
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+r2 = ram[0x8021244:4]
+r3 = s0
+OV = tmpOV
+sp = mult_addr
+r4 = r0
+if (unique[0xf6a0:1]) goto ram[0x802123c:4]

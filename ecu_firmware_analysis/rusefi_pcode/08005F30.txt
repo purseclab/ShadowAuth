@@ -1,0 +1,26 @@
+if (unique[0x11bf0:1]) goto ram[0x8005f46:4]
+OV = tmpOV
+if (unique[0xf7b0:1]) goto ram[0x8005f3c:4]
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+NG = tmpNG
+return pc
+NG = tmpNG
+*[ram]unique[0x11420:4] = register[0x2c:4]
+tmpZR = r0 == 0x0
+return pc
+r0 = r1
+return pc
+
+sp = mult_addr
+if (unique[0x11bf0:1]) goto ram[0x8005f60:4]
+r5 = r0
+r4 = r1
+if (unique[0x11bf0:1]) goto ram[0x8005f5a:4]
+r3 = *[ram]unique[0x11420:4]
+if (unique[0x11bf0:1]) goto ram[0x8005fbc:4]
+r3 = sext(unique[0x12560:2])
+if (unique[0x11bd0:1]) goto ram[0x8005f66:4]
+NG = tmpNG
+r0 = r6
+return pc
+r1 = r4

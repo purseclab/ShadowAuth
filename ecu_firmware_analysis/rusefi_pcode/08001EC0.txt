@@ -1,0 +1,6 @@
+tmpZR = r0 == 0x0
+goto ram[0x8001ecc:4]
+
+tmpZR = r1 == 0x0
+NG = tmpNG
+unique[0xfae0:1] = ZR != 0x0

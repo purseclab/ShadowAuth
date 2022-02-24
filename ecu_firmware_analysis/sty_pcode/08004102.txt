@@ -1,0 +1,18 @@
+unique[0x11420:4] = r0 + 0x34
+*[ram]unique[0x11420:4] = register[0x24:4]
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+
+unique[0x11420:4] = r0 + 0x38
+*[ram]unique[0x11420:4] = register[0x24:4]
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+

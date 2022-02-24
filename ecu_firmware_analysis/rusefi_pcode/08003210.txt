@@ -1,0 +1,4 @@
+r0 = ram[0x8003214:4]
+return pc
+OV = tmpOV
+NG = tmpNG

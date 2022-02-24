@@ -1,0 +1,22 @@
+r3 = ram[0x8022d38:4]
+r3 = zext(unique[0x12120:1])
+NG = tmpNG
+if (unique[0xf740:1]) goto ram[0x8022d32:4]
+r3 = ram[0x8022d3c:4]
+s0 = *[ram]unique[0x41f0:4]
+return pc
+goto ram[0x8022cf0:4]
+
+r0 = zext(unique[0x11eb0:1])
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+r3 = ram[0x8022d5c:4]
+r3 = zext(unique[0x12120:1])
+if (unique[0x11bd0:1]) goto ram[0x8022d56:4]
+r2 = ram[0x8022d60:4]
+r3 = ram[0x8022d64:4]
+r0 = *[ram]unique[0x11420:4]
+OV = tmpOV
+unique[0xfae0:1] = ZR != 0x0
+tmpZR = r0 == 0x0

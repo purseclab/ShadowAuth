@@ -1,0 +1,4 @@
+goto ram[0x8004a98:4]
+
+goto ram[0x8004a9a:4]
+

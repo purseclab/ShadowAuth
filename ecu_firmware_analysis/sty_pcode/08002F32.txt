@@ -1,0 +1,65 @@
+r1 = r0
+
+r0 = 0x0
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x11420:4] = r1 + 0x18
+r2 = *[ram]unique[0x11420:4]
+
+unique[0xfe50:4] = 0x70
+shift_carry = CY
+r0 = r2 & unique[0xfe50:4]
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+
+r1 = r0
+
+r0 = 0x0
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x11420:4] = r1 + 0x18
+r2 = *[ram]unique[0x11420:4]
+
+unique[0x12850:4] = 0x18
+unique[0x127a0:4] = unique[0x12850:4] - 0x1
+unique[0x127b0:4] = r2 >> unique[0x127a0:4]
+unique[0x127d0:4] = unique[0x127b0:4] & 0x1
+unique[0x127e0:1] = unique[0x12850:4] == 0x0
+unique[0x127f0:1] = unique[0x127e0:1] && CY
+unique[0x12800:1] = unique[0x12850:4] != 0x0
+unique[0x12810:1] = unique[0x127d0:4] != 0x0
+unique[0x12820:1] = unique[0x12800:1] && unique[0x12810:1]
+tmpCY = unique[0x127f0:1] || unique[0x12820:1]
+r0 = r2 >> 0x18
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+
+r1 = r0
+
+r0 = 0x0
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+ZR = tmpZR
+NG = tmpNG
+

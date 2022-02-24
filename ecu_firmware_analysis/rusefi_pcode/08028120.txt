@@ -1,0 +1,20 @@
+s15 = *[ram]unique[0x4230:4]
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+unique[0xfc20:1] = NG == OV
+tmpZR = r0 == 0x0
+tmpZR = r0 == 0x0
+return pc
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+s12 = *[ram]unique[0x4230:4]
+s15 = *[ram]unique[0x4230:4]
+s14 = *[ram]unique[0x42b0:4]
+s13 = s0 f/ s12
+CALLOTHER 0x1, 0xa, 0xe, 0x4, cr7, cr6, cr7
+s0 = s15
+return pc

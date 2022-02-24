@@ -1,0 +1,12 @@
+s1 = *[ram]unique[0x42b0:4]
+s0 = *[ram]unique[0x42b0:4]
+goto ram[0x8015970:4]
+r0 = mult_addr
+OV = tmpOV
+NG = tmpNG
+r0 = r0 + r9
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG

@@ -1,0 +1,6 @@
+r0 = *[ram]unique[0x11420:4]
+goto ram[0x80410a0:4]
+
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG

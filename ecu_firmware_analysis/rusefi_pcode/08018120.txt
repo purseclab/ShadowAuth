@@ -1,0 +1,14 @@
+sp = mult_addr
+call ram[0x80239a0:4]
+sp = mult_addr
+goto ram[0x8018070:4]
+
+sp = mult_addr
+r2 = ram[0x8018148:4]
+r3 = ram[0x801814c:4]
+r1 = *[ram]unique[0x11420:4]
+r0 = *[ram]unique[0x11420:4]
+call ram[0x800b6d0:4]
+sp = mult_addr
+goto ram[0x8018070:4]
+

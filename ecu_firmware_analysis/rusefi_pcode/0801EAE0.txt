@@ -1,0 +1,6 @@
+r3 = *[ram]unique[0x11420:4]
+r3 = *[ram]unique[0x11420:4]
+goto [pc]
+
+NG = tmpNG
+NG = tmpNG

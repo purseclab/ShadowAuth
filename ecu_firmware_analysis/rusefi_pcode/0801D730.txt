@@ -1,0 +1,24 @@
+sp = mult_addr
+r4 = ram[0x801d748:4]
+*[ram]unique[0x112a0:4] = register[0x20:4]
+call ram[0x8031860:4]
+tmpZR = r0 == 0x0
+sp = mult_addr
+goto ram[0x801d120:4]
+r0 = zext(unique[0x11eb0:1])
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+r4 = ram[0x801d768:4]
+*[ram]unique[0x112a0:4] = register[0x20:4]
+call ram[0x8031860:4]
+tmpZR = r0 == 0x0
+sp = mult_addr
+goto ram[0x801d120:4]
+r0 = zext(unique[0x11eb0:1])
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+r4 = ram[0x801d788:4]

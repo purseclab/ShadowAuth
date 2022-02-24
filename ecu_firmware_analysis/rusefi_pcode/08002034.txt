@@ -1,0 +1,28 @@
+NG = tmpNG
+unique[0xfb40:1] = NG != 0x0
+tmpZR = r0 == 0x0
+NG = tmpNG
+unique[0xfac0:1] = ZR != 0x0
+return pc
+tmpZR = r3 == 0x0
+r1 = r0
+tmpZR = r0 == 0x0
+goto ram[0x800208a:4]
+OV = tmpOV
+unique[0xfac0:1] = ZR != 0x0
+return pc
+tmpZR = r3 == 0x0
+goto ram[0x8002074:4]
+
+OV = tmpOV
+unique[0xfac0:1] = ZR != 0x0
+return pc
+NG = tmpNG
+if (unique[0xf740:1]) goto ram[0x8002074:4]
+OV = tmpOV
+tmpZR = r1 == 0x0
+NG = tmpNG
+unique[0xfac0:1] = ZR != 0x0
+r12 = r0
+r1 = r0
+tmpZR = r0 == 0x0

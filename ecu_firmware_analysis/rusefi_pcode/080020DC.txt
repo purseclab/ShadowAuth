@@ -1,0 +1,40 @@
+s15 = r0
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+if (unique[0xf720:1]) goto ram[0x80020ee:4]
+goto ram[0x8002104:4]
+s15 = 0x0 f- s15
+sp = mult_addr
+r0 = s15
+call ram[0x8002104:4]
+OV = tmpOV
+tmpZR = r1 == 0x0
+return pc
+sp = mult_addr
+call ram[0x80017ac:4]
+r3 = ram[0x800213c:4]
+NG = tmpNG
+r6 = r0
+r7 = r1
+call ram[0x800185c:4]
+call ram[0x8001de0:4]
+r4 = r0
+call ram[0x8001768:4]
+r3 = ram[0x8002140:4]
+NG = tmpNG
+call ram[0x800185c:4]
+r2 = r0
+r3 = r1
+r0 = r6
+r1 = r7
+call ram[0x80014ec:4]
+call ram[0x8001de0:4]
+r1 = r4
+return pc
+NG = tmpNG
+OV = tmpOV
+NG = tmpNG
+NG = tmpNG
+r3 = ram[0x800214c:4]
+r0 = *[ram]unique[0x11420:4]
+return pc

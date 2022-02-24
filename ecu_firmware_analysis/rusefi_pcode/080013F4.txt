@@ -1,0 +1,6 @@
+s0 = *[ram]unique[0x42b0:4]
+return pc
+
+NG = tmpNG
+r0 = zext(unique[0x11eb0:1])
+sp = sp - unique[0xfdd0:4]

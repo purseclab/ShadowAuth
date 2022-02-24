@@ -1,0 +1,40 @@
+sp = mult_addr
+sp = sp - unique[0xfdd0:4]
+r1 = CALLOTHER 0x10a
+NG = tmpNG
+r0 = sp
+call ram[0x8005448:4]
+r3 = r3 | unique[0x12d50:4]
+r3 = ram[0x803b5b8:4]
+r2 = *[ram]unique[0x11420:4]
+r2 = *[ram]unique[0x11420:4]
+r2 = *[ram]unique[0x11420:4]
+r2 = *[ram]unique[0x11420:4]
+r2 = *[ram]unique[0x11420:4]
+r3 = *[ram]unique[0x11420:4]
+CALLOTHER 0x11, 0x0
+call ram[0x8039db0:4]
+CALLOTHER 0xc, 0x0, cr14, unique[0x114f0:4]
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+sp = sp - unique[0xfdd0:4]
+r1 = CALLOTHER 0x10a
+NG = tmpNG
+r0 = sp
+call ram[0x8005448:4]
+r3 = r3 | unique[0x12d50:4]
+r3 = ram[0x803b5e8:4]
+r2 = *[ram]unique[0x11420:4]
+r2 = *[ram]unique[0x11420:4]
+r2 = *[ram]unique[0x11420:4]
+r2 = *[ram]unique[0x11420:4]
+r2 = *[ram]unique[0x11420:4]
+r3 = *[ram]unique[0x11420:4]
+CALLOTHER 0x11, 0x0
+call ram[0x8039db0:4]
+CALLOTHER 0xc, 0x0, cr14, unique[0x114f0:4]
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+sp = sp - unique[0xfdd0:4]

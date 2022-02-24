@@ -1,0 +1,7 @@
+sp = mult_addr
+r2 = r0
+r1 = ram[0x8016224:4]
+tmpZR = r0 == 0x0
+call ram[0x8015f20:4]
+s0 = *[ram]unique[0x42b0:4]
+return pc

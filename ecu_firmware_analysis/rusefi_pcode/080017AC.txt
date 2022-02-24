@@ -1,0 +1,66 @@
+NG = tmpNG
+tmpZR = r1 == 0x0
+tmpZR = r1 == 0x0
+tmpZR = r0 == 0x0
+unique[0xfae0:1] = ZR != 0x0
+NG = tmpNG
+CY = shift_carry
+tmpZR = r1 == 0x0
+return pc
+NG = tmpNG
+unique[0xfac0:1] = ZR != 0x0
+return pc
+CY = shift_carry
+unique[0xfac0:1] = ZR != 0x0
+tmpZR = r1 == 0x0
+return pc
+sp = mult_addr
+tmpZR = r4 == 0x0
+tmpZR = r5 == 0x0
+tmpZR = r1 == 0x0
+goto ram[0x8001628:4]
+
+OV = tmpOV
+unique[0xfac0:1] = ZR != 0x0
+return pc
+sp = mult_addr
+tmpZR = r5 == 0x0
+goto ram[0x8001816:4]
+OV = tmpOV
+unique[0xfac0:1] = ZR != 0x0
+return pc
+sp = mult_addr
+NG = tmpNG
+if (unique[0xf740:1]) goto ram[0x8001816:4]
+OV = tmpOV
+tmpZR = r1 == 0x0
+tmpZR = r4 == 0x0
+tmpZR = r4 == 0x0
+NG = tmpNG
+if (unique[0xf8b0:1]) goto ram[0x80015d6:4]
+tmpZR = r2 == 0x0
+NG = tmpNG
+unique[0xfae0:1] = ZR != 0x0
+tmpZR = r2 == 0x0
+NG = tmpNG
+unique[0xfae0:1] = ZR != 0x0
+tmpZR = r2 == 0x0
+tmpZR = r2 == 0x0
+tmpZR = r3 == 0x0
+tmpZR = r12 == 0x0
+tmpZR = r0 == 0x0
+tmpZR = lr == 0x0
+tmpZR = r0 == 0x0
+tmpZR = r1 == 0x0
+r4 = r4 + r2
+goto ram[0x80015d6:4]
+
+sp = mult_addr
+tmpZR = r12 == 0x0
+tmpZR = r12 == 0x0
+NG = tmpNG
+unique[0xfae0:1] = ZR != 0x0
+NG = tmpNG
+CY = shift_carry
+CY = shift_carry
+call ram[0x8001a38:4]

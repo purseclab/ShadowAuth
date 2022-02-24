@@ -1,0 +1,14 @@
+r3 = zext(unique[0x11eb0:1])
+OV = tmpOV
+OV = tmpOV
+unique[0xfc00:1] = CY && unique[0xfbe0:1]
+tmpZR = r3 == 0x0
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+return pc
+
+sp = mult_addr
+mult_addr = mult_addr + 0x8
+sp = sp - unique[0xfdd0:4]
+r3 = unique[0xfdc0:4]
+mult_addr = mult_addr - 0x4
+r2 = zext(unique[0x11eb0:1])

@@ -1,0 +1,14 @@
+r2 = ram[0x802ac30:4]
+r3 = *[ram]unique[0x11420:4]
+OV = tmpOV
+r0 = zext(unique[0x1a070:1])
+*[ram]unique[0x11420:4] = register[0x2c:4]
+goto ram[0x800a140:4]
+
+OV = tmpOV
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG

@@ -1,0 +1,35 @@
+r1 = r0
+
+unique[0x11420:4] = r1 + 0x4c
+r0 = *[ram]unique[0x11420:4]
+
+unique[0x1a1b0:2] = SUBPIECE r0, 0x0
+r0 = zext(unique[0x1a1b0:2])
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+
+r0 = ram[0x80027b8:4]
+
+tmpCY = carry(r0, 0x4)
+tmpOV = scarry(r0, 0x4)
+r0 = r0 + 0x4
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0x11420:4] = r0 + 0x0
+r0 = *[ram]unique[0x11420:4]
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+

@@ -1,0 +1,18 @@
+sp = mult_addr
+r4 = ram[0x8005b5c:4]
+r3 = r2
+r2 = r1
+r1 = r0
+r0 = *[ram]unique[0x11420:4]
+sp = sp + 0x4
+goto ram[0x80059f8:4]
+
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr + 0x4
+sp = sp - unique[0xfdd0:4]
+r7 = r3
+*[ram]unique[0x114b0:4] = register[0x28:4]
+*[ram]unique[0x17820:4] = register[0x20:4]
+r3 = r1
+r2 = ram[0x8005cec:4]

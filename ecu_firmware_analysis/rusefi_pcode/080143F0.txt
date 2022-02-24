@@ -1,0 +1,10 @@
+s2 = *[ram]unique[0x42b0:4]
+r0 = ram[0x8014400:4]
+goto ram[0x8032e40:4]
+
+if (unique[0xf780:1]) goto ram[0x8014414:4]
+OV = tmpOV
+r0 = mult_addr
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG

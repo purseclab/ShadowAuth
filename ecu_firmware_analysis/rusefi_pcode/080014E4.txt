@@ -1,0 +1,6 @@
+tmpZR = r1 == 0x0
+goto ram[0x80014f0:4]
+
+tmpZR = r3 == 0x0
+sp = mult_addr
+tmpZR = r4 == 0x0

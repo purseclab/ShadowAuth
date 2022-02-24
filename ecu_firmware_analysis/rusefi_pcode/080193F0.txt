@@ -1,0 +1,8 @@
+r2 = ram[0x80193f8:4]
+r1 = ram[0x80193fc:4]
+goto ram[0x8018eb0:4]
+mult_addr = mult_addr + 0x4
+NG = tmpNG
+r4 = zext(unique[0x11eb0:1])
+NG = tmpNG
+sp = mult_addr

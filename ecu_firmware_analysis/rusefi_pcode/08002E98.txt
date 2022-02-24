@@ -1,0 +1,22 @@
+sp = mult_addr
+r4 = r0
+call ram[0x8002b34:4]
+r0 = r4
+call ram[0x8002b64:4]
+sp = mult_addr
+goto ram[0x8002b38:4]
+
+OV = tmpOV
+sp = mult_addr
+r3 = r1 / r2
+r4 = r1 - unique[0x13290:4]
+if (unique[0xf820:1]) goto ram[0x8002eda:4]
+OV = tmpOV
+if (unique[0xf820:1]) goto ram[0x8002ecc:4]
+*[ram]unique[0x17820:4] = register[0x30:4]
+sp = sp + 0x4
+return pc
+OV = tmpOV
+OV = tmpOV
+*[ram]unique[0x17820:4] = register[0x30:4]
+sp = sp + 0x4

@@ -1,0 +1,6 @@
+tmpZR = r0 == 0x0
+return pc
+
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG

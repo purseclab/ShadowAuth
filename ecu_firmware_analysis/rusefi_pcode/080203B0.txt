@@ -1,0 +1,19 @@
+OV = tmpOV
+OV = tmpOV
+if (unique[0xf7e0:1]) goto ram[0x80203b8:4]
+return pc
+r3 = ram[0x80203dc:4]
+r1 = ram[0x80203e0:4]
+sp = mult_addr
+r4 = r0
+r2 = r4
+r0 = *[ram]unique[0x11420:4]
+call ram[0x8016520:4]
+call ram[0x8020100:4]
+s15 = r4
+r3 = ram[0x80203e4:4]
+s15 = CALLOTHER 0xc4, s15, unique[0x31a0:1]
+*[ram]unique[0x4230:4] = register[0x33c:4]
+return pc
+mult_addr = mult_addr + 0x4
+NG = tmpNG

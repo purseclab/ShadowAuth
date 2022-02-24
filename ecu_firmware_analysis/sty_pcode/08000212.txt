@@ -1,0 +1,22 @@
+lr = 0x8000216 | 0x1
+ISAModeSwitch = 0x1
+TB = ISAModeSwitch
+call ram[0x8000228:4]
+
+lr = 0x800021a | 0x1
+ISAModeSwitch = 0x1
+TB = ISAModeSwitch
+call ram[0x8004b10:4]
+
+mult_addr = sp
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x24:4]
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x20:4]
+sp = mult_addr
+
+lr = 0x8000220 | 0x1
+ISAModeSwitch = 0x1
+TB = ISAModeSwitch
+call ram[0x8000204:4]
+

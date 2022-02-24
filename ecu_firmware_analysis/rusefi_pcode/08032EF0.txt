@@ -1,0 +1,21 @@
+sp = mult_addr
+r4 = ram[0x8032f3c:4]
+mult_addr = mult_addr + 0x8
+r0 = r4
+s16 = s0
+s17 = s1
+s2 = 0x3f800000
+call ram[0x8032e40:4]
+s1 = s17
+s0 = s16
+tmpZR = r0 == 0x0
+s2 = 0x3f800000
+call ram[0x8032e40:4]
+s1 = s17
+s0 = s16
+mult_addr = mult_addr + 0x8
+tmpZR = r0 == 0x0
+s2 = 0x3f800000
+sp = mult_addr
+goto ram[0x8032e40:4]
+

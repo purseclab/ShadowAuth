@@ -1,0 +1,16 @@
+r2 = ram[0x8040a60:4]
+r3 = ram[0x8040a64:4]
+r2 = *[ram]unique[0x11420:4]
+NG = tmpNG
+r2 = *[ram]unique[0x11420:4]
+*[ram]unique[0x11420:4] = register[0x24:4]
+*[ram]unique[0x11420:4] = register[0x28:4]
+return pc
+NG = tmpNG
+NG = tmpNG
+CALLOTHER 0x3, 0x0, cr14, unique[0x114d0:4]
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+r2 = ram[0x8040a8c:4]

@@ -1,0 +1,18 @@
+if (unique[0x11bd0:1]) goto ram[0x8039f4e:4]
+r3 = ram[0x8039f54:4]
+r0 = zext(unique[0x11eb0:1])
+OV = tmpOV
+unique[0xfae0:1] = ZR != 0x0
+tmpZR = r0 == 0x0
+return pc
+NG = tmpNG
+return pc
+
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+return pc

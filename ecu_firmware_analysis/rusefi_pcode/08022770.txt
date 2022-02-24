@@ -1,0 +1,14 @@
+sp = mult_addr
+r4 = r0
+r1 = zext(unique[0x11eb0:1])
+call ram[0x8022220:4]
+r0 = r4
+return pc
+
+sp = mult_addr
+mult_addr = mult_addr + 0x8
+sp = sp - unique[0xfdd0:4]
+r5 = r1
+r6 = unique[0xfdc0:4]
+r1 = zext(unique[0x11eb0:1])
+r4 = r0

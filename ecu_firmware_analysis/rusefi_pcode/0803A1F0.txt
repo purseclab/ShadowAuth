@@ -1,0 +1,12 @@
+r2 = ram[0x803a1fc:4]
+r3 = *[ram]unique[0x11420:4]
+tmpZR = r3 == 0x0
+*[ram]unique[0x11420:4] = register[0x2c:4]
+return pc
+NG = tmpNG
+NG = tmpNG
+r2 = ram[0x803a20c:4]
+r3 = *[ram]unique[0x11420:4]
+tmpZR = r3 == 0x0
+*[ram]unique[0x11420:4] = register[0x2c:4]
+return pc

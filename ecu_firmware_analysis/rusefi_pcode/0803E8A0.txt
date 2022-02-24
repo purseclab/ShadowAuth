@@ -1,0 +1,104 @@
+r2 = ram[0x803e908:4]
+NG = tmpNG
+r1 = zext(unique[0x12150:1])
+OV = tmpOV
+if (unique[0xf700:1]) goto ram[0x803e8da:4]
+sp = mult_addr
+r4 = *[ram]unique[0x11420:4]
+r4 = r4 + r1
+OV = tmpOV
+if (unique[0xf700:1]) goto ram[0x803e8e8:4]
+OV = tmpOV
+OV = tmpOV
+tmpZR = r2 == 0x0
+if (unique[0xf6a0:1]) goto ram[0x803e8d2:4]
+r1 = zext(unique[0x12150:1])
+OV = tmpOV
+if (unique[0xf6e0:1]) goto ram[0x803e8ae:4]
+OV = tmpOV
+OV = tmpOV
+tmpZR = r2 == 0x0
+if (unique[0xf6c0:1]) goto ram[0x803e8c0:4]
+NG = tmpNG
+sp = sp + 0x4
+return pc
+OV = tmpOV
+OV = tmpOV
+tmpZR = r2 == 0x0
+if (unique[0xf6c0:1]) goto ram[0x803e8a4:4]
+NG = tmpNG
+return pc
+r2 = ram[0x803e90c:4]
+tmpZR = r3 == 0x0
+tmpZR = r3 == 0x0
+OV = tmpOV
+r0 = *[ram]unique[0x11420:4]
+if (unique[0x11bf0:1]) goto ram[0x803e902:4]
+r0 = *[ram]unique[0x120f0:4]
+OV = tmpOV
+unique[0xfb20:1] = CY != 0x0
+tmpZR = r0 == 0x0
+sp = sp + 0x4
+return pc
+r1 = mult_addr
+NG = tmpNG
+r1 = mult_addr
+NG = tmpNG
+r2 = ram[0x803e96c:4]
+NG = tmpNG
+r1 = zext(unique[0x12150:1])
+OV = tmpOV
+if (unique[0xf700:1]) goto ram[0x803e94a:4]
+sp = mult_addr
+r4 = *[ram]unique[0x11420:4]
+r1 = r1 + r4
+OV = tmpOV
+if (unique[0xf700:1]) goto ram[0x803e958:4]
+OV = tmpOV
+OV = tmpOV
+tmpZR = r2 == 0x0
+if (unique[0xf6a0:1]) goto ram[0x803e942:4]
+r1 = zext(unique[0x12150:1])
+OV = tmpOV
+if (unique[0xf6e0:1]) goto ram[0x803e91e:4]
+OV = tmpOV
+OV = tmpOV
+tmpZR = r2 == 0x0
+if (unique[0xf6c0:1]) goto ram[0x803e930:4]
+NG = tmpNG
+sp = sp + 0x4
+return pc
+OV = tmpOV
+OV = tmpOV
+tmpZR = r2 == 0x0
+if (unique[0xf6c0:1]) goto ram[0x803e914:4]
+NG = tmpNG
+return pc
+r2 = ram[0x803e970:4]
+sp = sp + 0x4
+tmpZR = r3 == 0x0
+tmpZR = r3 == 0x0
+r0 = *[ram]unique[0x11420:4]
+return pc
+
+r1 = mult_addr
+NG = tmpNG
+r1 = mult_addr
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+r3 = ram[0x803e9b0:4]
+sp = mult_addr
+tmpZR = r4 == 0x0
+r2 = zext(unique[0x12150:1])
+OV = tmpOV
+if (unique[0xf700:1]) goto ram[0x803e998:4]
+r1 = *[ram]unique[0x11420:4]
+r1 = r1 + r2
+OV = tmpOV
+if (unique[0xf700:1]) goto ram[0x803e9a8:4]
+OV = tmpOV

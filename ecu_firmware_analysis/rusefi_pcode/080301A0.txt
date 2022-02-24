@@ -1,0 +1,30 @@
+NG = tmpNG
+sp = mult_addr
+*[ram]unique[0x17820:4] = register[0x2c:4]
+*[ram]unique[0x17820:4] = register[0x2c:4]
+*[ram]unique[0x17820:4] = register[0x2c:4]
+*[ram]unique[0x17820:4] = register[0x2c:4]
+sp = sp + 0x4
+*[ram]unique[0x11420:4] = register[0x2c:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+return pc
+
+sp = mult_addr
+NG = tmpNG
+tmpZR = r3 == 0x0
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+r5 = r0
+r4 = r1
+*[ram]unique[0x4230:4] = register[0x300:4]
+*[ram]unique[0x4230:4] = register[0x304:4]
+if (unique[0x11bf0:1]) goto ram[0x80301e6:4]
+r1 = *[ram]unique[0x11420:4]
+OV = tmpOV
+OV = tmpOV
+unique[0xfc40:1] = NG == OV
+r4 = r1
+*[ram]unique[0x11420:4] = register[0x30:4]
+return pc
+s0 = s0 f+ s1
+s15 = 0x3f000000
+s0 = s0 f* s15

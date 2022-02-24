@@ -1,0 +1,10 @@
+r0 = ram[0x801f26c:4]
+NG = tmpNG
+NG = tmpNG
+goto ram[0x800557c:4]
+
+*[ram]unique[0x11420:4] = register[0x20:4]
+NG = tmpNG
+r3 = zext(unique[0x11eb0:1])
+sp = mult_addr + 0x4
+r4 = r0

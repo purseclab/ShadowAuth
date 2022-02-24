@@ -1,0 +1,3 @@
+r3 = ram[0x8013ee8:4]
+r0 = *[ram]unique[0x11420:4]
+goto ram[0x8021d50:4]

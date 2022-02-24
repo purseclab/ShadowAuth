@@ -1,0 +1,8 @@
+r2 = ram[0x8019398:4]
+r1 = ram[0x801939c:4]
+goto ram[0x8018eb0:4]
+r4 = zext(unique[0x11f10:2])
+NG = tmpNG
+r5 = zext(unique[0x11eb0:1])
+NG = tmpNG
+r2 = ram[0x80193a8:4]

@@ -1,0 +1,43 @@
+mult_addr = sp
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x58:4]
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x30:4]
+sp = mult_addr
+
+lr = 0x8001972 | 0x1
+ISAModeSwitch = 0x1
+TB = ISAModeSwitch
+call ram[0x80016be:4]
+
+mult_addr = sp
+r4 = *[ram]mult_addr
+mult_addr = mult_addr + 0x4
+pc = *[ram]mult_addr
+mult_addr = mult_addr + 0x4
+sp = mult_addr
+unique[0x0:4] = pc & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = pc & 0xfffffffe
+return pc
+
+mult_addr = sp
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x58:4]
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x30:4]
+sp = mult_addr
+
+r0 = ram[0x8001998:4]
+
+unique[0x11440:4] = r0 + 0x0
+unique[0x11ef0:2] = *[ram]unique[0x11440:4]
+r0 = zext(unique[0x11ef0:2])
+
+r1 = ram[0x800199c:4]
+
+unique[0x11460:4] = r1 + 0x0
+unique[0x11eb0:1] = *[ram]unique[0x11460:4]
+r1 = zext(unique[0x11eb0:1])
+

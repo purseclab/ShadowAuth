@@ -1,0 +1,34 @@
+sp = mult_addr
+r1 = ram[0x80235f4:4]
+r5 = ram[0x80235f8:4]
+r4 = ram[0x80235fc:4]
+r6 = ram[0x8023600:4]
+r2 = ram[0x8023604:4]
+r3 = ram[0x8023608:4]
+*[ram]unique[0x11420:4] = register[0x38:4]
+*[ram]unique[0x11420:4] = register[0x34:4]
+*[ram]unique[0x11420:4] = register[0x30:4]
+*[ram]unique[0x11420:4] = register[0x24:4]
+sp = mult_addr
+*[ram]unique[0x11420:4] = register[0x28:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+*[ram]unique[0x4230:4] = register[0x300:4]
+return pc
+
+r0 = 0x80235f8
+r12 = r1
+OV = tmpOV
+OV = tmpOV
+NG = tmpNG
+OV = tmpOV
+NG = tmpNG
+r1 = mult_addr
+NG = tmpNG
+OV = tmpOV
+NG = tmpNG
+OV = tmpOV
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+r7 = r3
+r4 = r2

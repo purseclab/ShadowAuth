@@ -1,0 +1,26 @@
+CALLOTHER 0x2e, 0xf
+r1 = ram[0x80142ec:4]
+r3 = ram[0x80142f0:4]
+r2 = *[ram]unique[0x11420:4]
+tmpZR = r2 == 0x0
+NG = tmpNG
+*[ram]unique[0x11420:4] = register[0x2c:4]
+CALLOTHER 0x2e, 0xf
+
+goto ram[0x80142e6:4]
+
+CALLOTHER 0xc, 0x0, cr14, unique[0x114f0:4]
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+call ram[0x80142d0:4]
+
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG

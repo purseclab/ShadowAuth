@@ -1,0 +1,80 @@
+sp = mult_addr
+r6 = ram[0x8032e94:4]
+mult_addr = mult_addr + 0x8
+s19 = *[ram]unique[0x42b0:4]
+s18 = s0
+s17 = s1
+s16 = s2
+r5 = r0
+NG = tmpNG
+s15 = r4
+s3 = s17
+s4 = CALLOTHER 0xc4, s15, unique[0x31a0:1]
+s2 = 0x41700000
+s1 = s18
+r0 = r6
+s0 = s19
+call ram[0x8019a30:4]
+s1 = s16
+call ram[0x8015900:4]
+OV = tmpOV
+OV = tmpOV
+r5 = r5 + unique[0x4020:4]
+if (unique[0xf6c0:1]) goto ram[0x8032e5c:4]
+mult_addr = mult_addr + 0x8
+return pc
+
+r4 = zext(unique[0x11ed0:1])
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+r4 = ram[0x8032edc:4]
+s1 = *[ram]unique[0x42b0:4]
+s0 = *[ram]unique[0x42b0:4]
+mult_addr = mult_addr + 0x8
+s16 = r0
+s2 = 0x41200000
+r0 = r4
+call ram[0x8032e40:4]
+s1 = CALLOTHER 0xc4, s16, unique[0x31a0:1]
+mult_addr = mult_addr + 0x8
+tmpZR = r0 == 0x0
+s0 = s1
+sp = mult_addr
+s2 = 0x41200000
+goto ram[0x8032e40:4]
+
+*[ram]unique[0x11440:4] = unique[0x176d0:2]
+NG = tmpNG
+NG = tmpNG
+OV = tmpOV
+NG = tmpNG
+r2 = mult_addr
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+r4 = ram[0x8032f3c:4]
+mult_addr = mult_addr + 0x8
+r0 = r4
+s16 = s0
+s17 = s1
+s2 = 0x3f800000
+call ram[0x8032e40:4]
+s1 = s17
+s0 = s16
+tmpZR = r0 == 0x0
+s2 = 0x3f800000
+call ram[0x8032e40:4]
+s1 = s17
+s0 = s16
+mult_addr = mult_addr + 0x8
+tmpZR = r0 == 0x0
+s2 = 0x3f800000
+sp = mult_addr
+goto ram[0x8032e40:4]
+

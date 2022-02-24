@@ -1,0 +1,154 @@
+sp = mult_addr + 0x4
+r5 = ram[0x802b74c:4]
+r4 = ram[0x802b750:4]
+r1 = zext(unique[0x12120:1])
+r3 = zext(unique[0x12120:1])
+OV = tmpOV
+if (unique[0xf6c0:1]) goto ram[0x802b700:4]
+r1 = zext(unique[0x12120:1])
+r3 = zext(unique[0x12120:1])
+OV = tmpOV
+if (unique[0xf6c0:1]) goto ram[0x802b718:4]
+r4 = ram[0x802b754:4]
+r6 = ram[0x802b758:4]
+r5 = ram[0x802b75c:4]
+r9 = ram[0x802b764:4]
+OV = tmpOV
+tmpZR = r8 == 0x0
+r3 = zext(unique[0x12150:1])
+r1 = zext(unique[0x12150:1])
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x802b6f6:4]
+r3 = zext(unique[0x11eb0:1])
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x802b726:4]
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+OV = tmpOV
+OV = tmpOV
+if (unique[0xf6c0:1]) goto ram[0x802b6e0:4]
+return pc
+r6 = ram[0x802b760:4]
+r3 = zext(unique[0x11eb0:1])
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x802b73e:4]
+NG = tmpNG
+r1 = zext(unique[0x12120:1])
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+r3 = zext(unique[0x12120:1])
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x802b6d0:4]
+r6 = ram[0x802b760:4]
+r3 = zext(unique[0x11eb0:1])
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x802b732:4]
+NG = tmpNG
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+goto ram[0x802b6d0:4]
+r0 = r9
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x802b6f2:4]
+call ram[0x802b630:4]
+goto ram[0x802b6f2:4]
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x802b720:4]
+r0 = ram[0x802b764:4]
+call ram[0x802b630:4]
+goto ram[0x802b720:4]
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x802b708:4]
+r0 = ram[0x802b764:4]
+call ram[0x802b630:4]
+goto ram[0x802b708:4]
+
+r6 = 0x802b8c0
+NG = tmpNG
+r0 = zext(unique[0x11eb0:1])
+NG = tmpNG
+mult_addr = mult_addr + 0x4
+NG = tmpNG
+r4 = zext(unique[0x11eb0:1])
+NG = tmpNG
+r0 = unique[0xfdc0:4]
+NG = tmpNG
+r3 = mult_addr
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+r4 = ram[0x802b7b8:4]
+r3 = *[ram]unique[0x11420:4]
+sp = sp - unique[0xfdd0:4]
+if (unique[0x11bf0:1]) goto ram[0x802b7ae:4]
+r2 = ram[0x802b7bc:4]
+tmpZR = r1 == 0x0
+tmpZR = r1 == 0x0
+r0 = r3
+call ram[0x8042d40:4]
+r0 = *[ram]unique[0x11420:4]
+call ram[0x8042b50:4]
+r2 = unique[0xfdc0:4]
+NG = tmpNG
+r0 = *[ram]unique[0x11420:4]
+call ram[0x8042810:4]
+r0 = *[ram]unique[0x11420:4]
+call ram[0x8042aa0:4]
+r0 = *[ram]unique[0x11420:4]
+call ram[0x8042bd0:4]
+r0 = *[ram]unique[0x114b0:4]
+r0 = unique[0x14480:4] | unique[0x14430:4]
+sp = sp + unique[0xfdd0:4]
+return pc
+tmpZR = r0 == 0x0
+sp = sp + unique[0xfdd0:4]
+return pc
+
+if (unique[0xf740:1]) goto ram[0x802b77c:4]
+NG = tmpNG
+if (unique[0xf7b0:1]) goto ram[0x802b6f8:4]
+NG = tmpNG
+r3 = ram[0x802b864:4]
+r3 = *[ram]unique[0x11420:4]
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x802b852:4]
+sp = mult_addr
+r5 = ram[0x802b868:4]
+r1 = ram[0x802b86c:4]
+r0 = *[ram]unique[0x11420:4]
+sp = sp - unique[0xfdd0:4]
+call ram[0x8016520:4]
+NG = tmpNG
+call ram[0x802b770:4]
+r3 = ram[0x802b870:4]
+NG = tmpNG
+r4 = r0
+if (unique[0x11bd0:1]) goto ram[0x802b838:4]
+NG = tmpNG
+r0 = *[ram]unique[0x11420:4]
+if (unique[0xf720:1]) goto ram[0x802b84c:4]
+NG = tmpNG
+if (unique[0xf720:1]) goto ram[0x802b85c:4]
+NG = tmpNG
+unique[0xfac0:1] = ZR != 0x0
+r2 = ram[0x802b874:4]
+r2 = ram[0x802b878:4]
+tmpZR = r3 == 0x0
+*[ram]unique[0x114b0:4] = register[0x28:4]
+r1 = ram[0x802b87c:4]
+r2 = r4
+call ram[0x8016520:4]
+r0 = r0 >> unique[0x19d40:4]
+call ram[0x8001788:4]
+r3 = ram[0x802b880:4]
+NG = tmpNG
+call ram[0x800185c:4]
+call ram[0x8001e20:4]
+call ram[0x80017ac:4]
+r2 = r0
+r3 = r1
+r0 = *[ram]unique[0x11420:4]
+r1 = ram[0x802b884:4]
+call ram[0x8016520:4]

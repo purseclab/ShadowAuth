@@ -1,0 +1,105 @@
+tmpCY = 0x4 <= r0
+tmpOV = sborrow(r0, 0x4)
+unique[0x11d20:4] = r0 - 0x4
+tmpNG = unique[0x11d20:4] s< 0x0
+tmpZR = unique[0x11d20:4] == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0xf6c0:1] = ZR == 0x0
+if (unique[0xf6c0:1]) goto ram[0x8002386:4]
+
+unique[0xfe70:4] = 0xe000e000
+shift_carry = CY
+r1 = unique[0xfe70:4]
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+
+unique[0x11420:4] = r1 + 0x10
+r1 = *[ram]unique[0x11420:4]
+
+unique[0xfe50:4] = 0x4
+shift_carry = CY
+r1 = r1 | unique[0xfe50:4]
+tmpCY = shift_carry
+tmpOV = OV
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+
+unique[0xfe70:4] = 0xe000e000
+shift_carry = CY
+r2 = unique[0xfe70:4]
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+
+unique[0x11420:4] = r2 + 0x10
+*[ram]unique[0x11420:4] = register[0x24:4]
+
+goto ram[0x8002396:4]
+
+unique[0xfe70:4] = 0xe000e000
+shift_carry = CY
+r1 = unique[0xfe70:4]
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+
+unique[0x11420:4] = r1 + 0x10
+r1 = *[ram]unique[0x11420:4]
+
+unique[0xfe50:4] = 0x4
+shift_carry = CY
+unique[0x11a60:4] = ~unique[0xfe50:4]
+r1 = r1 & unique[0x11a60:4]
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+
+unique[0xfe70:4] = 0xe000e000
+shift_carry = CY
+r2 = unique[0xfe70:4]
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+
+unique[0x11420:4] = r2 + 0x10
+*[ram]unique[0x11420:4] = register[0x24:4]
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+
+r0 = r0
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x126c0:4] = 0x17 - 0x1
+unique[0x126d0:4] = r7 << unique[0x126c0:4]
+unique[0x126f0:4] = unique[0x126d0:4] & 0x80000000
+unique[0x12700:1] = 0x17 == 0x0
+unique[0x12710:1] = unique[0x12700:1] && CY
+unique[0x12720:1] = 0x17 != 0x0
+unique[0x12730:1] = unique[0x126f0:4] != 0x0
+unique[0x12740:1] = unique[0x12720:1] && unique[0x12730:1]
+tmpCY = unique[0x12710:1] || unique[0x12740:1]
+r2 = r7 << 0x17
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x114f0:4] = r12 + 0x0
+CALLOTHER 0xc, 0x0, cr14, unique[0x114f0:4]
+
+goto ram[0x8001ba4:4]
+
+goto ram[0x80023a6:4]
+
+goto ram[0x80026a8:4]
+
+goto ram[0x80023aa:4]
+

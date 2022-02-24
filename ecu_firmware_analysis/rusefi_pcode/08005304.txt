@@ -1,0 +1,6 @@
+NG = tmpNG
+goto ram[0x800530c:4]
+
+OV = tmpOV
+unique[0xfc00:1] = CY && unique[0xfbe0:1]
+r3 = ram[0x800531c:4]

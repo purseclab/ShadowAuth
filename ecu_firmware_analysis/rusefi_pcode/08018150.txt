@@ -1,0 +1,102 @@
+sp = mult_addr + 0x4
+r3 = ram[0x80181b8:4]
+r5 = ram[0x80181bc:4]
+r6 = *[ram]unique[0x112a0:4]
+r7 = *[ram]unique[0x11420:4]
+tmpZR = r3 == 0x0
+sp = sp - unique[0xfdd0:4]
+r4 = r0
+r0 = *[ram]unique[0x11420:4]
+call ram[0x80017ac:4]
+r3 = r1
+r2 = r0
+*[ram]unique[0x17820:4] = register[0x2c:4]
+r1 = ram[0x80181c0:4]
+r2 = r6
+r0 = r7
+call ram[0x8016520:4]
+r0 = r6
+r6 = *[ram]unique[0x11420:4]
+call ram[0x80344a0:4]
+r0 = s0
+call ram[0x80017ac:4]
+tmpZR = r3 == 0x0
+r4 = r0
+r0 = *[ram]unique[0x11420:4]
+r5 = r1
+call ram[0x80017ac:4]
+r8 = r0
+r9 = r1
+*[ram]unique[0x17820:4] = register[0x44:4]
+r1 = ram[0x80181c4:4]
+r2 = r4
+r3 = r5
+r0 = r6
+call ram[0x8016520:4]
+sp = sp + unique[0xfdd0:4]
+return pc
+
+OV = tmpOV
+NG = tmpNG
+if (unique[0xf6a0:1]) goto ram[0x8018248:4]
+NG = tmpNG
+unique[0xfb20:1] = CY != 0x0
+tmpZR = r4 == 0x0
+unique[0xfb60:1] = NG != 0x0
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+r2 = *[ram]unique[0x11420:4]
+NG = tmpNG
+sp = mult_addr
+r4 = r0
+*[ram]unique[0x11420:4] = register[0x2c:4]
+if (unique[0x11bd0:1]) goto ram[0x80181e4:4]
+NG = tmpNG
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+return pc
+r0 = ram[0x8018210:4]
+r1 = ram[0x8018214:4]
+r0 = *[ram]unique[0x11420:4]
+*[ram]unique[0x11420:4] = register[0x28:4]
+tmpZR = r0 == 0x0
+*[ram]unique[0x11420:4] = register[0x2c:4]
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+OV = tmpOV
+*[ram]unique[0x11420:4] = register[0x24:4]
+call ram[0x803b460:4]
+r3 = ram[0x8018218:4]
+r1 = ram[0x801821c:4]
+r0 = *[ram]unique[0x11420:4]
+call ram[0x8016520:4]
+NG = tmpNG
+*[ram]unique[0x112a0:4] = unique[0x17760:1]
+return pc
+
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+r0 = zext(unique[0x11eb0:1])
+r7 = mult_addr
+NG = tmpNG
+unique[0xfb80:1] = OV != 0x0
+tmpZR = r4 == 0x0
+r2 = ram[0x8018230:4]
+r3 = ram[0x8018234:4]
+r2 = *[ram]unique[0x11420:4]
+r0 = *[ram]unique[0x11420:4]
+r1 = ram[0x8018238:4]
+goto ram[0x8016520:4]
+
+r0 = *[ram]unique[0x11420:4]
+NG = tmpNG
+r7 = mult_addr
+NG = tmpNG
+unique[0xfba0:1] = OV != 0x0
+tmpZR = r4 == 0x0
+NG = tmpNG
+NG = tmpNG
+r2 = r0
+r1 = ram[0x801824c:4]

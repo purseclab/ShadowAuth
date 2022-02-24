@@ -1,0 +1,16 @@
+sp = mult_addr
+r1 = ram[0x80239b0:4]
+r0 = ram[0x80239b4:4]
+tmpZR = r2 == 0x0
+call ram[0x8005448:4]
+return pc
+r0 = zext(unique[0x11eb0:1])
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+tmpZR = r4 == 0x0

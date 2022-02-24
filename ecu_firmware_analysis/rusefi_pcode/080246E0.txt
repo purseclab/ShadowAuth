@@ -1,0 +1,58 @@
+OV = tmpOV
+if (unique[0xf7e0:1]) goto ram[0x8024708:4]
+tmpZR = r3 == 0x0
+OV = tmpOV
+if (unique[0xf7e0:1]) goto ram[0x8024708:4]
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x802470e:4]
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x802470e:4]
+OV = tmpOV
+OV = tmpOV
+if (unique[0xf7e0:1]) goto ram[0x8024714:4]
+OV = tmpOV
+OV = tmpOV
+unique[0xfc00:1] = CY && unique[0xfbe0:1]
+tmpZR = r0 == 0x0
+tmpZR = r0 == 0x0
+return pc
+tmpZR = r0 == 0x0
+return pc
+tmpZR = r0 == 0x0
+return pc
+tmpZR = r0 == 0x0
+return pc
+
+NG = tmpNG
+NG = tmpNG
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x8024738:4]
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x8024738:4]
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x8024738:4]
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x8024748:4]
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x8024748:4]
+NG = tmpNG
+return pc
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x8024744:4]
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x8024744:4]
+OV = tmpOV
+if (unique[0xf6c0:1]) goto ram[0x802472c:4]
+r0 = ram[0x8024758:4]
+return pc
+OV = tmpOV
+r0 = ram[0x802475c:4]
+if (unique[0xf6a0:1]) goto ram[0x8024756:4]
+OV = tmpOV
+unique[0xfae0:1] = ZR != 0x0
+tmpZR = r0 == 0x0
+return pc
+return pc
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG

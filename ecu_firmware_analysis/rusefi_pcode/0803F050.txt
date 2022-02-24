@@ -1,0 +1,10 @@
+NG = tmpNG
+*[ram]unique[0x11420:4] = register[0x2c:4]
+tmpZR = r0 == 0x0
+return pc
+
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+return pc
+NG = tmpNG

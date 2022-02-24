@@ -1,0 +1,16 @@
+r2 = ram[0x803a110:4]
+r1 = ram[0x803a114:4]
+r3 = *[ram]unique[0x11420:4]
+NG = tmpNG
+r3 = r3 + r0
+*[ram]unique[0x11420:4] = register[0x2c:4]
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+return pc
+r0 = sext(unique[0x11f50:2])
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG

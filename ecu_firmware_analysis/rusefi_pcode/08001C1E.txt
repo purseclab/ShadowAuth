@@ -1,0 +1,98 @@
+tmpZR = r5 == 0x0
+CY = shift_carry
+unique[0xfac0:1] = ZR != 0x0
+CY = shift_carry
+if (unique[0xf8b0:1]) goto ram[0x8001aa6:4]
+CY = shift_carry
+if (unique[0xf6c0:1]) goto ram[0x8001c4c:4]
+OV = tmpOV
+if (unique[0xf8d0:1]) goto ram[0x8001aa6:4]
+CY = shift_carry
+if (unique[0xf8d0:1]) goto ram[0x8001a90:4]
+r0 = r2
+r1 = r3
+goto ram[0x8001aa6:4]
+CY = shift_carry
+if (unique[0xf6c0:1]) goto ram[0x8001c60:4]
+OV = tmpOV
+if (unique[0xf8b0:1]) goto ram[0x8001a54:4]
+r0 = r2
+r1 = r3
+goto ram[0x8001aa6:4]
+OV = tmpOV
+unique[0xfae0:1] = ZR != 0x0
+OV = tmpOV
+if (unique[0xf8d0:1]) goto ram[0x80019f8:4]
+OV = tmpOV
+if (unique[0xf8d0:1]) goto ram[0x8001a90:4]
+OV = tmpOV
+if (unique[0xf8d0:1]) goto ram[0x8001a54:4]
+goto ram[0x8001aa6:4]
+tmpZR = r12 == 0x0
+goto ram[0x8001c94:4]
+
+tmpZR = r12 == 0x0
+goto ram[0x8001c94:4]
+
+tmpZR = r12 == 0x0
+*[ram]sp = register[0x50:4]
+tmpZR = r12 == 0x0
+NG = tmpNG
+tmpZR = r12 == 0x0
+unique[0xfae0:1] = ZR != 0x0
+NG = tmpNG
+if (unique[0xf6a0:1]) goto ram[0x8001ce4:4]
+sp = sp + unique[0xfdd0:4]
+OV = tmpOV
+unique[0xfac0:1] = ZR != 0x0
+OV = tmpOV
+CY = shift_carry
+unique[0xfac0:1] = ZR != 0x0
+CY = shift_carry
+tmpZR = r0 == 0x0
+return pc
+OV = tmpOV
+CY = shift_carry
+unique[0xfb60:1] = NG != 0x0
+OV = tmpOV
+unique[0xfac0:1] = ZR != 0x0
+OV = tmpOV
+unique[0xfb00:1] = CY != 0x0
+tmpZR = r0 == 0x0
+tmpZR = r0 == 0x0
+tmpZR = r0 == 0x0
+return pc
+tmpZR = r12 == 0x0
+NG = tmpNG
+if (unique[0xf6c0:1]) goto ram[0x8001cf4:4]
+OV = tmpOV
+if (unique[0xf6c0:1]) goto ram[0x8001d04:4]
+tmpZR = r12 == 0x0
+NG = tmpNG
+if (unique[0xf6c0:1]) goto ram[0x8001cac:4]
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x8001cac:4]
+sp = sp + 0x4
+return pc
+
+r12 = r0
+r0 = r2
+r2 = r12
+r12 = r1
+r1 = r3
+r3 = r12
+goto ram[0x8001d1c:4]
+
+sp = mult_addr
+call ram[0x8001c90:4]
+OV = tmpOV
+unique[0xfb40:1] = NG != 0x0
+OV = tmpOV
+return pc
+*[ram]unique[0x11320:4] = register[0x58:4]
+call ram[0x8001d1c:4]
+unique[0xfac0:1] = ZR != 0x0
+tmpZR = r0 == 0x0
+tmpZR = r0 == 0x0
+goto [pc]
+

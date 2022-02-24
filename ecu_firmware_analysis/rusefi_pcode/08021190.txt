@@ -1,0 +1,20 @@
+sp = mult_addr
+r4 = r1
+r3 = r2
+r1 = r0
+r2 = r4
+NG = tmpNG
+sp = sp + 0x4
+goto ram[0x800f770:4]
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+r4 = r1
+r3 = r2
+r1 = r0
+r2 = r4
+NG = tmpNG

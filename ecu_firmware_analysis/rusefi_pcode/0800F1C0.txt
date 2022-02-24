@@ -1,0 +1,166 @@
+sp = mult_addr
+r5 = ram[0x800f268:4]
+r2 = *[ram]unique[0x11420:4]
+OV = tmpOV
+if (unique[0xf7b0:1]) goto ram[0x800f258:4]
+NG = tmpNG
+r3 = r3 * r2
+r4 = ram[0x800f26c:4]
+s14 = *[ram]unique[0x42b0:4]
+r6 = ram[0x800f274:4]
+*[ram]unique[0x11480:4] = register[0x20:4]
+s15 = s0 f+ s0
+r4 = r4 + r3
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+r2 = *[ram]unique[0x112a0:4]
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+OV = unique[0x4780:1] & 0x1
+*[ram]unique[0x11420:4] = register[0x28:4]
+if (unique[0xf7b0:1]) goto ram[0x800f25a:4]
+s15 = *[ram]unique[0x42b0:4]
+s0 = s0 f* s15
+s0 = s0 f/ s14
+call ram[0x80004b0:4]
+s14 = *[ram]unique[0x42b0:4]
+s15 = s0 f/ s14
+s13 = 0x3f800000
+s0 = s0 f* s0
+s11 = s15 f+ s13
+s14 = s0 f- s13
+s11 = s11 f+ s0
+s15 = s13 f- s15
+s12 = s13 f/ s11
+s15 = s15 f+ s0
+s14 = s14 f+ s14
+s0 = s0 f* s12
+s15 = s15 f* s12
+s13 = s0 f+ s0
+s14 = s14 f* s12
+*[ram]unique[0x4230:4] = register[0x33c:4]
+*[ram]unique[0x4230:4] = register[0x300:4]
+*[ram]unique[0x4230:4] = register[0x300:4]
+*[ram]unique[0x4230:4] = register[0x334:4]
+*[ram]unique[0x4230:4] = register[0x338:4]
+r3 = *[ram]unique[0x11420:4]
+OV = tmpOV
+*[ram]unique[0x11420:4] = register[0x2c:4]
+return pc
+r1 = ram[0x800f280:4]
+tmpZR = r0 == 0x0
+call ram[0x8015240:4]
+goto ram[0x800f252:4]
+
+OV = tmpOV
+NG = tmpNG
+CALLOTHER 0x3, 0x0, cr2, unique[0x114f0:4]
+NG = tmpNG
+NG = tmpNG
+r0 = zext(unique[0x11eb0:1])
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+CALLOTHER 0x5, 0xf, cr3, r4
+r4 = sext(unique[0x11f50:2])
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+r4 = ram[0x800f2e0:4]
+r1 = ram[0x800f2e4:4]
+r0 = *[ram]unique[0x11420:4]
+call ram[0x8016520:4]
+r2 = *[ram]unique[0x112a0:4]
+r0 = *[ram]unique[0x11420:4]
+r1 = ram[0x800f2e8:4]
+r3 = ram[0x800f2ec:4]
+call ram[0x80239c0:4]
+r2 = *[ram]unique[0x112a0:4]
+r0 = *[ram]unique[0x11420:4]
+r1 = ram[0x800f2f0:4]
+r3 = ram[0x800f2ec:4]
+NG = tmpNG
+call ram[0x80239c0:4]
+r2 = *[ram]unique[0x112a0:4]
+r0 = *[ram]unique[0x11420:4]
+r1 = ram[0x800f2f4:4]
+r3 = ram[0x800f2ec:4]
+NG = tmpNG
+call ram[0x80239c0:4]
+r2 = *[ram]unique[0x112a0:4]
+r0 = *[ram]unique[0x11420:4]
+r3 = ram[0x800f2f8:4]
+r1 = ram[0x800f2fc:4]
+sp = mult_addr
+NG = tmpNG
+goto ram[0x80239c0:4]
+
+r2 = ram[0x800f564:4]
+NG = tmpNG
+r0 = sext(unique[0x11f50:2])
+NG = tmpNG
+r4 = sext(unique[0x11f50:2])
+NG = tmpNG
+r0 = sext(unique[0x11f50:2])
+NG = tmpNG
+r0 = sext(unique[0x11f50:2])
+NG = tmpNG
+r4 = sext(unique[0x11f50:2])
+NG = tmpNG
+r0 = sext(unique[0x11f50:2])
+NG = tmpNG
+r4 = sext(unique[0x11f50:2])
+NG = tmpNG
+r3 = ram[0x800f3a4:4]
+s13 = *[ram]unique[0x42b0:4]
+r3 = *[ram]unique[0x11420:4]
+s14 = *[ram]unique[0x42b0:4]
+tmpZR = r3 == 0x0
+s12 = *[ram]unique[0x4230:4]
+s15 = 0x41400000
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+s12 = 0x3f800000
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+unique[0xfcc0:1] = unique[0xfc90:1] && unique[0xfca0:1]
+s14 = s12
+OV = unique[0x4780:1] & 0x1
+sp = mult_addr
+if (unique[0xf740:1]) goto ram[0x800f356:4]
+r4 = ram[0x800f3b0:4]
+s0 = *[ram]unique[0x42b0:4]
+NG = tmpNG
+*[ram]unique[0x112a0:4] = register[0x2c:4]
+r0 = ram[0x800f3b8:4]
+call ram[0x80211f0:4]
+s0 = *[ram]unique[0x4230:4]
+r0 = ram[0x800f3bc:4]
+sp = mult_addr
+goto ram[0x801f080:4]
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+s15 = s0
+if (unique[0xf890:1]) goto ram[0x800f37a:4]
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+if (unique[0xf740:1]) goto ram[0x800f384:4]
+r4 = ram[0x800f3b0:4]
+s0 = *[ram]unique[0x42b0:4]
+*[ram]unique[0x4230:4] = register[0x33c:4]
+goto ram[0x800f342:4]
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+if (unique[0xf860:1]) goto ram[0x800f336:4]
+s0 = *[ram]unique[0x42b0:4]
+s15 = *[ram]unique[0x42b0:4]
+r4 = ram[0x800f3b0:4]
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+unique[0xfae0:1] = ZR != 0x0
+s0 = s15
+*[ram]unique[0x4230:4] = register[0x338:4]
+goto ram[0x800f342:4]
+

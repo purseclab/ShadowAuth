@@ -1,0 +1,22 @@
+s1 = 0x3fa00000
+s15 = 0x3f400000
+s1 = s0 f* s1
+NG = tmpNG
+s0 = s0 f* s15
+goto ram[0x80301c0:4]
+
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+goto ram[0x80301c0:4]
+
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+NG = tmpNG
+NG = tmpNG
+mult_addr = mult_addr + 0x8

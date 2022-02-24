@@ -1,0 +1,10 @@
+OV = tmpOV
+tmpZR = r2 == 0x0
+goto ram[0x80438d0:4]
+
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr + 0x4
+sp = sp - unique[0xfdd0:4]
+*[ram]unique[0x114b0:4] = register[0x2c:4]
+OV = tmpOV

@@ -1,0 +1,64 @@
+NG = tmpNG
+*[ram]unique[0x17820:4] = register[0x2c:4]
+*[ram]unique[0x11420:4] = register[0x24:4]
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+if (unique[0x11bf0:1]) goto ram[0x802cb7e:4]
+r3 = *[ram]unique[0x11420:4]
+if (unique[0x11bf0:1]) goto ram[0x802cb74:4]
+r3 = *[ram]unique[0x11420:4]
+if (unique[0x11bf0:1]) goto ram[0x802cb7a:4]
+r2 = *[ram]unique[0x11420:4]
+sp = mult_addr
+OV = tmpOV
+r4 = *[ram]unique[0x11420:4]
+*[ram]unique[0x11420:4] = register[0x30:4]
+*[ram]unique[0x11420:4] = register[0x28:4]
+sp = sp + 0x4
+*[ram]unique[0x11420:4] = register[0x20:4]
+*[ram]unique[0x11420:4] = register[0x20:4]
+return pc
+*[ram]unique[0x11420:4] = register[0x20:4]
+*[ram]unique[0x11420:4] = register[0x20:4]
+goto ram[0x802cb5a:4]
+*[ram]unique[0x11420:4] = register[0x20:4]
+return pc
+return pc
+NG = tmpNG
+*[ram]unique[0x17820:4] = register[0x2c:4]
+*[ram]unique[0x11420:4] = register[0x24:4]
+*[ram]unique[0x11420:4] = register[0x28:4]
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+if (unique[0x11bf0:1]) goto ram[0x802cbbe:4]
+r3 = *[ram]unique[0x11420:4]
+if (unique[0x11bf0:1]) goto ram[0x802cbb4:4]
+r3 = *[ram]unique[0x11420:4]
+if (unique[0x11bf0:1]) goto ram[0x802cbba:4]
+r2 = *[ram]unique[0x11420:4]
+sp = mult_addr
+OV = tmpOV
+r4 = *[ram]unique[0x11420:4]
+*[ram]unique[0x11420:4] = register[0x30:4]
+*[ram]unique[0x11420:4] = register[0x28:4]
+sp = sp + 0x4
+*[ram]unique[0x11420:4] = register[0x20:4]
+*[ram]unique[0x11420:4] = register[0x20:4]
+return pc
+*[ram]unique[0x11420:4] = register[0x20:4]
+*[ram]unique[0x11420:4] = register[0x20:4]
+goto ram[0x802cb9a:4]
+*[ram]unique[0x11420:4] = register[0x20:4]
+return pc
+return pc
+r3 = *[ram]unique[0x11420:4]
+sp = mult_addr
+r3 = *[ram]unique[0x11420:4]
+r4 = r0

@@ -1,0 +1,12 @@
+r2 = r0
+sp = mult_addr
+r1 = ram[0x801fbbc:4]
+r0 = ram[0x801fbc0:4]
+call ram[0x8016520:4]
+call ram[0x801fb50:4]
+r2 = ram[0x801fbc4:4]
+r3 = *[ram]unique[0x11420:4]
+OV = tmpOV
+*[ram]unique[0x11420:4] = register[0x2c:4]
+return pc
+

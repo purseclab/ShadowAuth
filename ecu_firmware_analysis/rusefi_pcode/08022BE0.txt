@@ -1,0 +1,44 @@
+sp = mult_addr
+OV = tmpOV
+if (unique[0xf7b0:1]) goto ram[0x8022c22:4]
+goto [pc]
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+OV = tmpOV
+NG = tmpNG
+OV = tmpOV
+r0 = ram[0x8022c34:4]
+return pc
+r0 = ram[0x8022c38:4]
+return pc
+r0 = ram[0x8022c3c:4]
+return pc
+r0 = ram[0x8022c40:4]
+return pc
+r0 = ram[0x8022c44:4]
+return pc
+r0 = ram[0x8022c48:4]
+return pc
+r0 = ram[0x8022c4c:4]
+return pc
+r0 = ram[0x8022c50:4]
+return pc
+r0 = ram[0x8022c54:4]
+return pc
+r0 = ram[0x8022c58:4]
+return pc
+r0 = ram[0x8022c5c:4]
+return pc
+r2 = r0
+r1 = ram[0x8022c60:4]
+tmpZR = r0 == 0x0
+call ram[0x8015240:4]
+r0 = ram[0x8022c34:4]
+return pc
+
+r0 = unique[0x19940:4]
+goto ram[0x8022974:4]
+NG = tmpNG
+if (unique[0xf800:1]) goto ram[0x8022cc8:4]
+NG = tmpNG

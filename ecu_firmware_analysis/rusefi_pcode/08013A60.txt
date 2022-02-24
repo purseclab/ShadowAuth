@@ -1,0 +1,28 @@
+r2 = *[ram]unique[0x11420:4]
+NG = tmpNG
+tmpZR = r1 == 0x0
+OV = tmpOV
+*[ram]unique[0x11420:4] = register[0x2c:4]
+*[ram]unique[0x11420:4] = register[0x24:4]
+*[ram]unique[0x11420:4] = register[0x28:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+return pc
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+r3 = *[ram]unique[0x11420:4]
+s14 = *[ram]unique[0x4230:4]
+s15 = *[ram]unique[0x4230:4]
+mult_addr = mult_addr + 0x8
+s17 = s0 f- s1
+s19 = *[ram]unique[0x41f0:4]
+r3 = *[ram]unique[0x11420:4]
+*[ram]unique[0x4230:4] = register[0x300:4]
+s17 = s17 f* s14
+s15 = s2 f* s15
+r4 = r0
+s0 = s15 f* s17

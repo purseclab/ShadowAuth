@@ -1,0 +1,45 @@
+sp = mult_addr
+sp = sp - unique[0xfdd0:4]
+call ram[0x8024b40:4]
+OV = tmpOV
+unique[0xfac0:1] = ZR != 0x0
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x8024ca4:4]
+r2 = r0
+r3 = r1
+r0 = ram[0x8024cb0:4]
+r1 = ram[0x8024cb4:4]
+call ram[0x8016520:4]
+r0 = unique[0xfdc0:4]
+call ram[0x8024bc0:4]
+r1 = ram[0x8024cb8:4]
+r0 = ram[0x8024cb0:4]
+call ram[0x8016420:4]
+r4 = *[ram]unique[0x12270:4]
+r2 = *[ram]unique[0x12270:4]
+r0 = *[ram]unique[0x114b0:4]
+*[ram]unique[0x114b0:4] = register[0x24:4]
+NG = tmpNG
+r1 = *[ram]unique[0x114b0:4]
+*[ram]unique[0x114b0:4] = register[0x24:4]
+r3 = r3 + r5
+tmpZR = r2 == 0x0
+*[ram]unique[0x17820:4] = register[0x30:4]
+r1 = ram[0x8024cbc:4]
+r0 = ram[0x8024cb0:4]
+*[ram]unique[0x114b0:4] = register[0x34:4]
+call ram[0x80199e0:4]
+r1 = ram[0x8024cc0:4]
+r0 = ram[0x8024cb0:4]
+call ram[0x8016420:4]
+r0 = ram[0x8024cb0:4]
+call ram[0x8014900:4]
+sp = sp + unique[0xfdd0:4]
+return pc
+r1 = ram[0x8024cc4:4]
+r0 = ram[0x8024cb0:4]
+call ram[0x8016520:4]
+sp = sp + unique[0xfdd0:4]
+return pc
+r2 = mult_addr
+NG = tmpNG

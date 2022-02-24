@@ -1,0 +1,58 @@
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+if (unique[0xf7e0:1]) goto ram[0x80149d4:4]
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+if (unique[0xf800:1]) goto ram[0x80149ce:4]
+s3 = s1 f- s3
+s2 = s0 f- s2
+s14 = s3 f/ s2
+CALLOTHER 0x1, 0xa, 0xe, 0x2, cr0, cr0, cr7
+CALLOTHER 0x1, 0xa, 0xe, 0x0, cr0, cr2, cr7
+s0 = s1
+return pc
+s0 = s3
+return pc
+s0 = s1
+return pc
+
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+r3 = *[ram]unique[0x11420:4]
+r4 = r0
+r0 = sext(unique[0x12560:2])
+OV = tmpOV
+sp = sp - unique[0xfdd0:4]
+unique[0xfc40:1] = NG == OV
+tmpZR = r0 == 0x0
+*[ram]unique[0x4230:4] = register[0x300:4]
+*[ram]unique[0x41f0:4] = register[0x304:4]
+call ram[0x8001788:4]
+r3 = 0x8014a28
+r3 = *[ram]unique[0x12270:4]
+call ram[0x800185c:4]
+call ram[0x8001e20:4]
+r3 = *[ram]unique[0x11420:4]
+s1 = *[ram]unique[0x41f0:4]
+r3 = *[ram]unique[0x11420:4]
+s0 = *[ram]unique[0x4230:4]
+s2 = r0
+r0 = r4
+sp = sp + unique[0xfdd0:4]
+sp = mult_addr
+goto [pc]
+
+r1 = unique[0xfdc0:4]
+if (unique[0xf6e0:1]) goto ram[0x8014a10:4]
+*[ram]unique[0x11420:4] = register[0x34:4]
+OV = tmpOV
+r2 = *[ram]unique[0x11420:4]
+*[ram]unique[0x11420:4] = register[0x24:4]
+NG = tmpNG
+r3 = *[ram]unique[0x11420:4]
+*[ram]unique[0x11420:4] = register[0x24:4]
+goto [pc]
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr

@@ -1,0 +1,4 @@
+tmpZR = r3 == 0x0
+sp = mult_addr
+tmpZR = r4 == 0x0
+tmpZR = r5 == 0x0

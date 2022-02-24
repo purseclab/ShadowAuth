@@ -1,0 +1,4 @@
+goto ram[0x8004a9a:4]
+
+r0 = ram[0x8004ab0:4]
+

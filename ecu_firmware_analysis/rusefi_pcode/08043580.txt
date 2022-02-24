@@ -1,0 +1,10 @@
+OV = tmpOV
+tmpZR = r2 == 0x0
+goto ram[0x80434c0:4]
+
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr + 0x4
+sp = sp - unique[0xfdd0:4]
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x8043678:4]

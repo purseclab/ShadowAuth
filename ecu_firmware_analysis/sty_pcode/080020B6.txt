@@ -1,0 +1,168 @@
+unique[0x11bf0:1] = r1 == 0x0
+if (unique[0x11bf0:1]) goto ram[0x80020c8:4]
+
+r2 = ram[0x80022c8:4]
+
+tmpCY = carry(r2, 0xc)
+tmpOV = scarry(r2, 0xc)
+r2 = r2 + 0xc
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0x11420:4] = r2 + 0x0
+r2 = *[ram]unique[0x11420:4]
+
+r2 = r2 | r0
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+r3 = ram[0x80022c8:4]
+
+tmpCY = carry(r3, 0xc)
+tmpOV = scarry(r3, 0xc)
+r3 = r3 + 0xc
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0x11420:4] = r3 + 0x0
+*[ram]unique[0x11420:4] = register[0x28:4]
+
+goto ram[0x80020d6:4]
+
+r2 = ram[0x80022c8:4]
+
+tmpCY = carry(r2, 0xc)
+tmpOV = scarry(r2, 0xc)
+r2 = r2 + 0xc
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0x11420:4] = r2 + 0x0
+r2 = *[ram]unique[0x11420:4]
+
+unique[0x11a40:4] = ~r0
+r2 = r2 & unique[0x11a40:4]
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+r3 = ram[0x80022c8:4]
+
+tmpCY = carry(r3, 0xc)
+tmpOV = scarry(r3, 0xc)
+r3 = r3 + 0xc
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0x11420:4] = r3 + 0x0
+*[ram]unique[0x11420:4] = register[0x28:4]
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+
+unique[0x11bf0:1] = r1 == 0x0
+if (unique[0x11bf0:1]) goto ram[0x80020ea:4]
+
+r2 = ram[0x80022c8:4]
+
+tmpCY = carry(r2, 0x10)
+tmpOV = scarry(r2, 0x10)
+r2 = r2 + 0x10
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0x11420:4] = r2 + 0x0
+r2 = *[ram]unique[0x11420:4]
+
+r2 = r2 | r0
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+r3 = ram[0x80022c8:4]
+
+tmpCY = carry(r3, 0x10)
+tmpOV = scarry(r3, 0x10)
+r3 = r3 + 0x10
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0x11420:4] = r3 + 0x0
+*[ram]unique[0x11420:4] = register[0x28:4]
+
+goto ram[0x80020f8:4]
+
+r2 = ram[0x80022c8:4]
+
+tmpCY = carry(r2, 0x10)
+tmpOV = scarry(r2, 0x10)
+r2 = r2 + 0x10
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0x11420:4] = r2 + 0x0
+r2 = *[ram]unique[0x11420:4]
+
+unique[0x11a40:4] = ~r0
+r2 = r2 & unique[0x11a40:4]
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+r3 = ram[0x80022c8:4]
+
+tmpCY = carry(r3, 0x10)
+tmpOV = scarry(r3, 0x10)
+r3 = r3 + 0x10
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0x11420:4] = r3 + 0x0
+*[ram]unique[0x11420:4] = register[0x28:4]
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+

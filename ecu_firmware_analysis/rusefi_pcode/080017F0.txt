@@ -1,0 +1,16 @@
+OV = tmpOV
+unique[0xfac0:1] = ZR != 0x0
+return pc
+sp = mult_addr
+tmpZR = r5 == 0x0
+goto ram[0x8001816:4]
+OV = tmpOV
+unique[0xfac0:1] = ZR != 0x0
+return pc
+sp = mult_addr
+NG = tmpNG
+if (unique[0xf740:1]) goto ram[0x8001816:4]
+OV = tmpOV
+tmpZR = r1 == 0x0
+tmpZR = r4 == 0x0
+tmpZR = r4 == 0x0

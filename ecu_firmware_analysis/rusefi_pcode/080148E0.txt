@@ -1,0 +1,22 @@
+r2 = zext(unique[0x11eb0:1])
+if (unique[0x11bf0:1]) goto ram[0x80148f2:4]
+r3 = r0
+r1 = zext(unique[0x12150:1])
+OV = tmpOV
+if (unique[0xf6c0:1]) goto ram[0x80148e6:4]
+OV = tmpOV
+return pc
+r0 = r2
+return pc
+
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+r4 = r0
+r0 = *[ram]unique[0x11420:4]
+r7 = ram[0x8014954:4]
+call ram[0x80148e0:4]
+r5 = r0
+call ram[0x8040900:4]

@@ -1,0 +1,10 @@
+if (unique[0x11bf0:1]) goto ram[0x802c8a8:4]
+r3 = ram[0x802c8ac:4]
+goto ram[0x802c7b0:4]
+return pc
+
+OV = tmpOV
+NG = tmpNG
+sp = mult_addr
+r4 = ram[0x802c8e0:4]
+tmpZR = r5 == 0x0

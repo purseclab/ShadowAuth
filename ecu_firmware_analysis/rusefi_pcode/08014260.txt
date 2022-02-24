@@ -1,0 +1,10 @@
+r3 = ram[0x801426c:4]
+*[ram]unique[0x41f0:4] = register[0x300:4]
+goto ram[0x8031860:4]
+
+*[ram]unique[0x11440:4] = unique[0x176d0:2]
+NG = tmpNG
+r3 = ram[0x801427c:4]
+*[ram]unique[0x112a0:4] = register[0x20:4]
+goto ram[0x8031860:4]
+

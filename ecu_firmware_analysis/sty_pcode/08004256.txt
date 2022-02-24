@@ -1,0 +1,119 @@
+r2 = r1
+
+r1 = 0x0
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x11440:4] = r0 + 0x1c
+unique[0x11ef0:2] = *[ram]unique[0x11440:4]
+r1 = zext(unique[0x11ef0:2])
+
+unique[0xff10:4] = 0x0
+unique[0xff30:4] = 0xe
+unique[0x19d20:4] = unique[0xff10:4] + unique[0xff30:4]
+unique[0x19d40:4] = 0x1f - unique[0x19d20:4]
+r1 = r1 << unique[0x19d40:4]
+unique[0x19d40:4] = 0x1f - unique[0xff30:4]
+r1 = r1 >> unique[0x19d40:4]
+
+r3 = zext(0xffff)
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0xff50:4] = 0x20 - 0x8
+unique[0xff60:4] = r2 >> unique[0xff50:4]
+unique[0xff80:4] = unique[0xff60:4] & 0x1
+shift_carry = SUBPIECE unique[0xff80:4], 0x0
+unique[0xffb0:4] = r2 << 0x8
+r3 = r3 & unique[0xffb0:4]
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+r1 = r1 | r3
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x11440:4] = r0 + 0x1c
+unique[0x176d0:2] = SUBPIECE r1, 0x0
+*[ram]unique[0x11440:4] = unique[0x176d0:2]
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+
+r2 = r1
+
+r1 = 0x0
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x11440:4] = r0 + 0x20
+unique[0x11ef0:2] = *[ram]unique[0x11440:4]
+r1 = zext(unique[0x11ef0:2])
+
+r3 = zext(0xfffd)
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+r1 = r1 & r3
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+r1 = r1 | r2
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x11440:4] = r0 + 0x20
+unique[0x176d0:2] = SUBPIECE r1, 0x0
+*[ram]unique[0x11440:4] = unique[0x176d0:2]
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+
+r2 = r1
+
+r1 = 0x0
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x11440:4] = r0 + 0x20
+unique[0x11ef0:2] = *[ram]unique[0x11440:4]
+r1 = zext(unique[0x11ef0:2])
+
+r3 = zext(0xfff7)
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+r1 = r1 & r3
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+r1 = r1 | r2
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x11440:4] = r0 + 0x20
+unique[0x176d0:2] = SUBPIECE r1, 0x0
+*[ram]unique[0x11440:4] = unique[0x176d0:2]
+

@@ -1,0 +1,121 @@
+mult_addr = sp
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x58:4]
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x20:4]
+sp = mult_addr
+
+r2 = sp
+
+r1 = 0x1
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0xfed0:4] = 0x440
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+r0 = unique[0xfed0:4]
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+
+lr = 0x80009fe | 0x1
+ISAModeSwitch = 0x1
+TB = ISAModeSwitch
+call ram[0x8001012:4]
+
+mult_addr = sp
+r3 = *[ram]mult_addr
+mult_addr = mult_addr + 0x4
+pc = *[ram]mult_addr
+mult_addr = mult_addr + 0x4
+sp = mult_addr
+unique[0x0:4] = pc & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = pc & 0xfffffffe
+return pc
+
+mult_addr = sp - 0x4
+*[ram]mult_addr = register[0x58:4]
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x40:4]
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x3c:4]
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x38:4]
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x34:4]
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x30:4]
+mult_addr = mult_addr - 0x4
+sp = mult_addr + 0x4
+
+unique[0x4db0:4] = 0x2 * 0x4
+sp = sp - unique[0x4db0:4]
+mult_addr = sp
+*[ram]mult_addr = register[0x340:8]
+mult_addr = mult_addr + 0x8
+
+CALLOTHER 0x21
+
+r0 = 0x1
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+lr = 0x8000a10 | 0x1
+ISAModeSwitch = 0x1
+TB = ISAModeSwitch
+call ram[0x80019bc:4]
+
+unique[0x4280:4] = 0x8000a10 + 0x4
+unique[0x4290:4] = unique[0x4280:4] & 0xfffffffc
+unique[0x42b0:4] = unique[0x4290:4] + 0x174
+s1 = *[ram]unique[0x42b0:4]
+
+unique[0x2fb0:1] = 0x1
+unique[0x2e50:1] = s0 f< s1
+unique[0x2e70:1] = s0 f== s1
+unique[0x2e90:1] = s1 f<= s0
+unique[0x2ea0:1] = nan(s0)
+unique[0x2eb0:1] = nan(s1)
+unique[0x2ed0:1] = unique[0x2ea0:1] | unique[0x2eb0:1]
+unique[0x2ee0:4] = fpscr & 0xfffffff
+unique[0x2ef0:4] = zext(unique[0x2e50:1])
+unique[0x2f00:4] = unique[0x2ef0:4] << 0x1f
+unique[0x2f10:4] = unique[0x2ee0:4] | unique[0x2f00:4]
+unique[0x2f20:4] = zext(unique[0x2e70:1])
+unique[0x2f30:4] = unique[0x2f20:4] << 0x1e
+unique[0x2f40:4] = unique[0x2f10:4] | unique[0x2f30:4]
+unique[0x2f50:4] = zext(unique[0x2e90:1])
+unique[0x2f60:4] = unique[0x2f50:4] << 0x1d
+unique[0x2f70:4] = unique[0x2f40:4] | unique[0x2f60:4]
+unique[0x2f80:4] = zext(unique[0x2ed0:1])
+unique[0x2f90:4] = unique[0x2f80:4] << 0x1c
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+
+unique[0x46f0:4] = fpscr >> 0x1f
+NG = SUBPIECE unique[0x46f0:4], 0x0
+unique[0x4710:4] = fpscr >> 0x1e
+unique[0x4720:1] = SUBPIECE unique[0x4710:4], 0x0
+ZR = unique[0x4720:1] & 0x1
+unique[0x4740:4] = fpscr >> 0x1d
+unique[0x4750:1] = SUBPIECE unique[0x4740:4], 0x0
+CY = unique[0x4750:1] & 0x1
+unique[0x4770:4] = fpscr >> 0x1c
+unique[0x4780:1] = SUBPIECE unique[0x4770:4], 0x0
+OV = unique[0x4780:1] & 0x1
+
+unique[0xf870:1] = NG != OV
+unique[0xf890:1] = ZR || unique[0xf870:1]
+if (unique[0xf890:1]) goto ram[0x8000a22:4]
+
+r0 = 0x1
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+ZR = tmpZR
+NG = tmpNG
+

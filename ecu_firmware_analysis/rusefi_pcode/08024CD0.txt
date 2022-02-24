@@ -1,0 +1,18 @@
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x8024cde:4]
+OV = tmpOV
+unique[0xfae0:1] = ZR != 0x0
+tmpZR = r0 == 0x0
+tmpZR = r0 == 0x0
+return pc
+NG = tmpNG
+return pc
+
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+if (unique[0x11bd0:1]) goto ram[0x8024cf4:4]
+return pc

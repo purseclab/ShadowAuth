@@ -1,0 +1,56 @@
+sp = mult_addr
+sp = sp - unique[0xfdd0:4]
+NG = tmpNG
+r0 = sp
+call ram[0x8022220:4]
+r3 = zext(unique[0x12120:1])
+if (unique[0x11bf0:1]) goto ram[0x8013f1e:4]
+r3 = ram[0x8013f28:4]
+s14 = *[ram]unique[0x42b0:4]
+s13 = *[ram]unique[0x41f0:4]
+s0 = *[ram]unique[0x4230:4]
+s15 = s13 f/ s14
+s0 = s0 f- s15
+sp = sp + unique[0xfdd0:4]
+return pc
+s0 = *[ram]unique[0x42b0:4]
+sp = sp + unique[0xfdd0:4]
+return pc
+r4 = zext(unique[0x11eb0:1])
+NG = tmpNG
+OV = tmpOV
+OV = tmpOV
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+r0 = ram[0x8013f50:4]
+s1 = s0
+s2 = 0x3f800000
+goto ram[0x8032e40:4]
+
+r4 = zext(unique[0x11ef0:2])
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+r0 = ram[0x8013f70:4]
+s1 = s0
+s2 = 0x3f800000
+goto ram[0x8032e40:4]
+
+r4 = zext(unique[0x11ef0:2])
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG

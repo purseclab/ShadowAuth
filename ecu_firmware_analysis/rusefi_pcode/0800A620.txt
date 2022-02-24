@@ -1,0 +1,30 @@
+sp = mult_addr
+sp = mult_addr
+sp = sp - unique[0xfdd0:4]
+r2 = unique[0xfdc0:4]
+r0 = ram[0x800a640:4]
+r1 = *[ram]unique[0x112d0:4]
+*[ram]unique[0x114b0:4] = register[0x28:4]
+call ram[0x803ea70:4]
+sp = sp + unique[0xfdd0:4]
+sp = sp + 0x4
+sp = sp + unique[0xfdd0:4]
+return pc
+
+r4 = ram[0x800a6d4:4]
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+r1 = ram[0x800a68c:4]
+r4 = ram[0x800a690:4]
+NG = tmpNG
+r3 = zext(unique[0x12150:1])
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+CY = shift_carry

@@ -1,0 +1,48 @@
+sp = mult_addr
+r7 = ram[0x8028f70:4]
+r4 = ram[0x8028f74:4]
+r6 = ram[0x8028f78:4]
+r7 = mult_addr
+tmpZR = r5 == 0x0
+OV = tmpOV
+r5 = mult_addr
+mult_addr = mult_addr + 0x4
+mult_addr = mult_addr + 0x4
+r6 = mult_addr
+tmpZR = r4 == 0x0
+OV = tmpOV
+r4 = mult_addr
+mult_addr = mult_addr + 0x4
+mult_addr = mult_addr + 0x4
+sp = mult_addr
+return pc
+NG = tmpNG
+NG = tmpNG
+r0 = zext(unique[0x11eb0:1])
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+r7 = ram[0x8028fb0:4]
+r4 = ram[0x8028fb4:4]
+r6 = ram[0x8028fb8:4]
+r7 = mult_addr
+tmpZR = r5 == 0x0
+OV = tmpOV
+r5 = mult_addr
+mult_addr = mult_addr + 0x4
+mult_addr = mult_addr + 0x4
+r6 = mult_addr
+tmpZR = r4 == 0x0
+OV = tmpOV
+r4 = mult_addr
+mult_addr = mult_addr + 0x4
+mult_addr = mult_addr + 0x4
+sp = mult_addr
+return pc
+NG = tmpNG
+NG = tmpNG
+r0 = zext(unique[0x11eb0:1])
+NG = tmpNG

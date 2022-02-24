@@ -1,0 +1,97 @@
+unique[0x11bd0:1] = r1 != 0x0
+if (unique[0x11bd0:1]) goto ram[0x8002e1a:4]
+
+unique[0x11420:4] = r0 + 0xc
+r2 = *[ram]unique[0x11420:4]
+
+unique[0xfe50:4] = 0x20
+shift_carry = CY
+r2 = r2 | unique[0xfe50:4]
+tmpCY = shift_carry
+tmpOV = OV
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+
+unique[0x11420:4] = r0 + 0xc
+*[ram]unique[0x11420:4] = register[0x28:4]
+
+goto ram[0x8002e22:4]
+
+unique[0x11420:4] = r0 + 0x10
+r2 = *[ram]unique[0x11420:4]
+
+unique[0xfe50:4] = 0x20
+shift_carry = CY
+r2 = r2 | unique[0xfe50:4]
+tmpCY = shift_carry
+tmpOV = OV
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+
+unique[0x11420:4] = r0 + 0x10
+*[ram]unique[0x11420:4] = register[0x28:4]
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+
+r2 = r0
+
+r0 = 0x0
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x11bd0:1] = r1 != 0x0
+if (unique[0x11bd0:1]) goto ram[0x8002e32:4]
+
+unique[0x11420:4] = r2 + 0xc
+r3 = *[ram]unique[0x11420:4]
+
+unique[0xfe50:4] = 0x3
+shift_carry = CY
+r0 = r3 & unique[0xfe50:4]
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+
+goto ram[0x8002e40:4]
+
+tmpCY = 0x1 <= r1
+tmpOV = sborrow(r1, 0x1)
+unique[0x11d20:4] = r1 - 0x1
+tmpNG = unique[0x11d20:4] s< 0x0
+tmpZR = unique[0x11d20:4] == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0xf6c0:1] = ZR == 0x0
+if (unique[0xf6c0:1]) goto ram[0x8002e3e:4]
+
+unique[0x11420:4] = r2 + 0x10
+r3 = *[ram]unique[0x11420:4]
+
+unique[0xfe50:4] = 0x3
+shift_carry = CY
+r0 = r3 & unique[0xfe50:4]
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+
+goto ram[0x8002e40:4]
+
+r0 = 0x0
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+

@@ -1,0 +1,94 @@
+sp = mult_addr
+mult_addr = mult_addr + 0x8
+s16 = s0
+call ram[0x80007d8:4]
+r3 = ram[0x80005d8:4]
+r3 = sext(unique[0x12420:1])
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x80005ba:4]
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+if (unique[0xf760:1]) goto ram[0x80005ba:4]
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+if (unique[0xf7b0:1]) goto ram[0x80005ba:4]
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+if (unique[0xf6c0:1]) goto ram[0x80005c0:4]
+call ram[0x8002144:4]
+NG = tmpNG
+s0 = *[ram]unique[0x42b0:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+mult_addr = mult_addr + 0x8
+return pc
+call ram[0x8002144:4]
+mult_addr = mult_addr + 0x8
+NG = tmpNG
+*[ram]unique[0x11420:4] = register[0x2c:4]
+r0 = ram[0x80005e0:4]
+sp = mult_addr
+goto ram[0x80013f4:4]
+
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+d6 = d6 & unique[0x2b20:8]
+NG = tmpNG
+r3 = s0
+NG = tmpNG
+if (unique[0xf6a0:1]) goto ram[0x800064a:4]
+OV = tmpOV
+if (unique[0xf820:1]) goto ram[0x8000658:4]
+OV = tmpOV
+if (unique[0xf800:1]) goto ram[0x8000678:4]
+OV = tmpOV
+sp = mult_addr
+if (unique[0xf820:1]) goto ram[0x8000666:4]
+NG = tmpNG
+r2 = ram[0x8000798:4]
+r1 = ram[0x800079c:4]
+r4 = r4 >> unique[0x19d40:4]
+r2 = r2 + r4
+tmpZR = r2 == 0x0
+NG = tmpNG
+tmpZR = r0 == 0x0
+OV = tmpOV
+NG = tmpNG
+r3 = r3 + r5
+s0 = r0
+tmpZR = r5 == 0x0
+s14 = 0x3f800000
+NG = tmpNG
+tmpZR = r3 == 0x0
+s14 = s0 f- s14
+if (unique[0x11bd0:1]) goto ram[0x800067e:4]
+fpscr = unique[0x2f70:4] | unique[0x2f90:4]
+OV = unique[0x4780:1] & 0x1
+if (unique[0xf6c0:1]) goto ram[0x8000704:4]
+OV = tmpOV
+if (unique[0xf8d0:1]) goto ram[0x800075e:4]
+s0 = *[ram]unique[0x42b0:4]
+goto ram[0x800071e:4]
+s14 = *[ram]unique[0x42b0:4]
+s15 = *[ram]unique[0x42b0:4]
+s0 = s14 f/ s15
+return pc
+s15 = s0 f- s0
+s14 = *[ram]unique[0x42b0:4]
+s0 = s15 f/ s14
+return pc
+s15 = *[ram]unique[0x42b0:4]
+s15 = s0 f* s15
+tmpZR = r5 == 0x0
+r3 = s15
+goto ram[0x8000602:4]
+s0 = s0 f+ s0
+return pc
+s15 = 0x40000000
+s15 = s14 f+ s15
+s6 = *[ram]unique[0x42b0:4]
+s9 = *[ram]unique[0x42b0:4]
+s11 = *[ram]unique[0x42b0:4]
+s7 = *[ram]unique[0x42b0:4]
+s10 = *[ram]unique[0x42b0:4]
+s0 = *[ram]unique[0x42b0:4]

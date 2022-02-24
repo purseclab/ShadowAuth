@@ -1,0 +1,10 @@
+r2 = r0
+NG = tmpNG
+r0 = ram[0x8030a1c:4]
+goto ram[0x80309c0:4]
+
+CALLOTHER 0x3, 0x0, cr2, unique[0x11520:4]
+sp = mult_addr + 0x4
+mult_addr = mult_addr + 0x8
+r6 = *[ram]unique[0x112a0:4]
+sp = sp - unique[0xfdd0:4]

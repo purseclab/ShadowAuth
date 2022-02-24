@@ -1,0 +1,25 @@
+r0 = ram[0x8004aa8:4]
+
+unique[0x0:4] = r0 & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = r0 & 0xfffffffe
+lr = 0x8004a84 | 0x1
+call [pc]
+
+r0 = ram[0x8004aac:4]
+
+unique[0x0:4] = r0 & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = r0 & 0xfffffffe
+goto [pc]
+
+goto ram[0x8004a88:4]
+
+goto ram[0x8004a8a:4]
+
+goto ram[0x8004a8c:4]
+
+goto ram[0x8004a8e:4]
+

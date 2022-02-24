@@ -1,0 +1,16 @@
+OV = tmpOV
+if (unique[0xf860:1]) goto ram[0x8034a36:4]
+return pc
+r3 = ram[0x8034a40:4]
+*[ram]unique[0x112a0:4] = register[0x20:4]
+goto ram[0x80349e0:4]
+r0 = zext(unique[0x11eb0:1])
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+r3 = ram[0x8034a68:4]
+OV = tmpOV

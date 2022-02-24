@@ -1,0 +1,6 @@
+*[ram]unique[0x4230:4] = register[0x300:4]
+return pc
+
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG

@@ -1,0 +1,40 @@
+lr = 0x800018c | 0x1
+ISAModeSwitch = 0x1
+TB = ISAModeSwitch
+call ram[0x8000190:4]
+
+lr = 0x8000190 | 0x1
+ISAModeSwitch = 0x1
+TB = ISAModeSwitch
+call ram[0x8000208:4]
+
+r0 = 0x80001bc
+
+mult_addr = r0
+r10 = *[ram]mult_addr
+mult_addr = mult_addr + 0x4
+r11 = *[ram]mult_addr
+mult_addr = mult_addr + 0x4
+
+r10 = r10 + r0
+
+r11 = r11 + r0
+
+unique[0xfe50:4] = 0x1
+shift_carry = CY
+tmpCY = unique[0xfe50:4] <= r10
+tmpOV = sborrow(r10, unique[0xfe50:4])
+r7 = r10 - unique[0xfe50:4]
+tmpNG = r7 s< 0x0
+tmpZR = r7 == 0x0
+
+tmpCY = r11 <= r10
+tmpOV = sborrow(r10, r11)
+unique[0x11da0:4] = r10 - r11
+tmpNG = unique[0x11da0:4] s< 0x0
+tmpZR = unique[0x11da0:4] == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+

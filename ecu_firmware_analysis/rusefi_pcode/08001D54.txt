@@ -1,0 +1,18 @@
+*[ram]unique[0x11320:4] = register[0x58:4]
+call ram[0x8001d1c:4]
+unique[0xfc00:1] = CY && unique[0xfbe0:1]
+tmpZR = r0 == 0x0
+tmpZR = r0 == 0x0
+goto [pc]
+
+*[ram]unique[0x11320:4] = register[0x58:4]
+call ram[0x8001d0c:4]
+unique[0xfc00:1] = CY && unique[0xfbe0:1]
+tmpZR = r0 == 0x0
+tmpZR = r0 == 0x0
+goto [pc]
+
+*[ram]unique[0x11320:4] = register[0x58:4]
+call ram[0x8001d0c:4]
+unique[0xfb20:1] = CY != 0x0
+tmpZR = r0 == 0x0

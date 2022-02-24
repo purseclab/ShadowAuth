@@ -1,0 +1,11 @@
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x802b2ce:4]
+if (unique[0x11bf0:1]) goto ram[0x802b2ca:4]
+goto ram[0x802b190:4]
+r0 = ram[0x802b2d4:4]
+return pc
+r0 = ram[0x802b2d8:4]
+return pc
+
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+NG = tmpNG

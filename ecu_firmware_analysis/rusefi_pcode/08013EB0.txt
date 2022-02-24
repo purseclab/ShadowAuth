@@ -1,0 +1,15 @@
+r0 = zext(unique[0x1a070:1])
+OV = tmpOV
+if (unique[0xf860:1]) goto ram[0x8013ecc:4]
+r3 = ram[0x8013ed0:4]
+tmpZR = r0 == 0x0
+tmpZR = r0 == 0x0
+r3 = *[ram]unique[0x11420:4]
+if (unique[0x11bf0:1]) goto ram[0x8013ecc:4]
+r3 = ram[0x8013ed4:4]
+r0 = *[ram]unique[0x11420:4]
+goto ram[0x8021d50:4]
+return pc
+
+*[ram]unique[0x11440:4] = unique[0x176d0:2]
+NG = tmpNG

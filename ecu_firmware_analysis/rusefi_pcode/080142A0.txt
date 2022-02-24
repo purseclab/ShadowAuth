@@ -1,0 +1,12 @@
+r2 = ram[0x80142ac:4]
+r3 = ram[0x80142b0:4]
+r1 = *[ram]unique[0x11420:4]
+r0 = *[ram]unique[0x11420:4]
+goto ram[0x800b6d0:4]
+r0 = zext(unique[0x11eb0:1])
+NG = tmpNG
+r4 = *[ram]unique[0x11420:4]
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG

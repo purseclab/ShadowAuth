@@ -1,0 +1,10 @@
+NG = tmpNG
+r2 = r1
+r1 = r3
+goto ram[0x8015a20:4]
+
+NG = tmpNG
+NG = tmpNG
+r0 = *[ram]unique[0x11420:4]
+if (unique[0x11bf0:1]) goto ram[0x8015b68:4]
+s14 = *[ram]unique[0x41f0:4]

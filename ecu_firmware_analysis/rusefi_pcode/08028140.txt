@@ -1,0 +1,26 @@
+s12 = *[ram]unique[0x4230:4]
+s15 = *[ram]unique[0x4230:4]
+s14 = *[ram]unique[0x42b0:4]
+s13 = s0 f/ s12
+CALLOTHER 0x1, 0xa, 0xe, 0x4, cr7, cr6, cr7
+s0 = s15
+return pc
+
+NG = tmpNG
+r2 = r2 + unique[0xfd40:4]
+r3 = ram[0x8028178:4]
+s14 = *[ram]unique[0x42b0:4]
+s13 = *[ram]unique[0x4230:4]
+s15 = *[ram]unique[0x42b0:4]
+s0 = s13 f/ s14
+s0 = s0 f* s15
+return pc
+r0 = zext(unique[0x11eb0:1])
+NG = tmpNG
+NG = tmpNG
+OV = tmpOV
+*[ram]unique[0x11480:4] = register[0x30:4]
+OV = tmpOV
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG

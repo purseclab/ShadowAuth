@@ -1,0 +1,42 @@
+r1 = ram[0x802839c:4]
+r2 = ram[0x80283a0:4]
+r3 = ram[0x80283a4:4]
+NG = tmpNG
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+r3 = *[ram]unique[0x11420:4]
+r2 = *[ram]unique[0x11420:4]
+OV = tmpOV
+tmpZR = r3 == 0x0
+OV = tmpOV
+unique[0xfc40:1] = NG == OV
+tmpZR = r3 == 0x0
+OV = tmpOV
+if (unique[0xf860:1]) goto ram[0x8028390:4]
+return pc
+r1 = ram[0x80283a8:4]
+tmpZR = r0 == 0x0
+goto ram[0x8015240:4]
+
+mult_addr = mult_addr + 0x4
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+r3 = mult_addr
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+r5 = ram[0x80283f8:4]
+r4 = *[ram]unique[0x11420:4]
+OV = tmpOV
+if (unique[0xf890:1]) goto ram[0x80283e8:4]
+r2 = r5
+NG = tmpNG
+goto ram[0x80283ca:4]
+OV = tmpOV
+OV = tmpOV
+tmpZR = r2 == 0x0
+if (unique[0xf6a0:1]) goto ram[0x80283e8:4]
+r1 = *[ram]unique[0x11420:4]

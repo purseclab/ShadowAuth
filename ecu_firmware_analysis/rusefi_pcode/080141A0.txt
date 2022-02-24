@@ -1,0 +1,20 @@
+r2 = ram[0x80141b4:4]
+r3 = ram[0x80141b8:4]
+r0 = *[ram]unique[0x11420:4]
+r1 = zext(unique[0x12120:1])
+tmpZR = r0 == 0x0
+OV = tmpOV
+goto ram[0x802cbf0:4]
+NG = tmpNG
+NG = tmpNG
+r0 = zext(unique[0x11eb0:1])
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+r2 = ram[0x80141d4:4]
+r3 = ram[0x80141d8:4]
+r0 = *[ram]unique[0x11420:4]
+r1 = zext(unique[0x12120:1])
+tmpZR = r0 == 0x0
+OV = tmpOV
+goto ram[0x802cbf0:4]

@@ -1,0 +1,103 @@
+r1 = r0
+
+r0 = 0x0
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+r2 = ram[0x8002058:4]
+
+unique[0x11420:4] = r2 + 0x0
+r0 = *[ram]unique[0x11420:4]
+
+unique[0xfe50:4] = 0xf8
+shift_carry = CY
+unique[0x11a60:4] = ~unique[0xfe50:4]
+r0 = r0 & unique[0x11a60:4]
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+
+unique[0xff50:4] = 0x20 - 0x3
+unique[0xff60:4] = r1 >> unique[0xff50:4]
+unique[0xff80:4] = unique[0xff60:4] & 0x1
+shift_carry = SUBPIECE unique[0xff80:4], 0x0
+unique[0xffb0:4] = r1 << 0x3
+r0 = r0 | unique[0xffb0:4]
+tmpCY = shift_carry
+tmpOV = OV
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+
+unique[0x11420:4] = r2 + 0x0
+*[ram]unique[0x11420:4] = register[0x20:4]
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+
+r1 = ram[0x8002068:4]
+
+unique[0x11420:4] = r1 + 0x0
+*[ram]unique[0x11420:4] = register[0x20:4]
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+
+r1 = 0x0
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+r2 = ram[0x8002058:4]
+
+tmpCY = carry(r2, 0x70)
+tmpOV = scarry(r2, 0x70)
+r2 = r2 + 0x70
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0x11460:4] = r2 + 0x0
+unique[0x17690:1] = SUBPIECE r1, 0x0
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+
+unique[0x11460:4] = r2 + 0x0
+unique[0x17690:1] = SUBPIECE r1, 0x0
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+
+tmpCY = 0x1 <= r0
+tmpOV = sborrow(r0, 0x1)
+unique[0x11d20:4] = r0 - 0x1
+tmpNG = unique[0x11d20:4] s< 0x0
+tmpZR = unique[0x11d20:4] == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0xf6a0:1] = ZR != 0x0
+if (unique[0xf6a0:1]) goto ram[0x8001d72:4]
+
+tmpCY = 0x4 <= r0
+tmpOV = sborrow(r0, 0x4)
+unique[0x11d20:4] = r0 - 0x4
+tmpNG = unique[0x11d20:4] s< 0x0
+tmpZR = unique[0x11d20:4] == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0xf6c0:1] = ZR == 0x0
+if (unique[0xf6c0:1]) goto ram[0x8001d86:4]
+

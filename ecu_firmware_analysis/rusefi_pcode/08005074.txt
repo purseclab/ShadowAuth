@@ -1,0 +1,6 @@
+r1 = ram[0x800507c:4]
+goto ram[0x80052b0:4]
+
+r5 = sext(unique[0x11f50:2])
+NG = tmpNG
+sp = mult_addr + 0x4

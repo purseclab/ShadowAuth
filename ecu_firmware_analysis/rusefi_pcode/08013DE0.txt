@@ -1,0 +1,22 @@
+r2 = ram[0x8013df8:4]
+r3 = ram[0x8013dfc:4]
+r1 = *[ram]unique[0x11420:4]
+r3 = *[ram]unique[0x11420:4]
+r0 = r0 + r1
+NG = tmpNG
+*[ram]unique[0x112a0:4] = register[0x20:4]
+*[ram]unique[0x112a0:4] = register[0x24:4]
+return pc
+
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+sp = sp - unique[0xfdd0:4]
+r3 = r1
+r5 = r0
+OV = tmpOV
+r0 = sp
+OV = tmpOV
+call ram[0x801ee20:4]

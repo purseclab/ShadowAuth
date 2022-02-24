@@ -1,0 +1,6 @@
+tmpZR = r12 == 0x0
+goto ram[0x8001c94:4]
+
+tmpZR = r12 == 0x0
+goto ram[0x8001c94:4]
+

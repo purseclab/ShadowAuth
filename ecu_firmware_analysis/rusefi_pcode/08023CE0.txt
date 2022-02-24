@@ -1,0 +1,38 @@
+sp = mult_addr
+r4 = ram[0x8023d08:4]
+r5 = ram[0x8023d0c:4]
+r3 = r0
+r0 = *[ram]unique[0x11420:4]
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+call ram[0x8042b50:4]
+r0 = *[ram]unique[0x11420:4]
+r2 = r5
+NG = tmpNG
+call ram[0x8042910:4]
+r0 = *[ram]unique[0x11420:4]
+sp = mult_addr
+goto ram[0x8042aa0:4]
+
+mult_addr = mult_addr + 0x4
+NG = tmpNG
+r0 = mult_addr
+NG = tmpNG
+r0 = r1
+r1 = r2
+goto ram[0x8023ce0:4]
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+sp = mult_addr
+r4 = ram[0x8023d50:4]
+r6 = ram[0x8023d54:4]
+r5 = r0
+r0 = *[ram]unique[0x11420:4]
+call ram[0x8042b50:4]
+r2 = ram[0x8023d58:4]
+r0 = *[ram]unique[0x11420:4]
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+NG = tmpNG
+call ram[0x8042910:4]

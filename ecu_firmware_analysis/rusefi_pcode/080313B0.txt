@@ -1,0 +1,137 @@
+sp = mult_addr
+NG = tmpNG
+r4 = r0
+NG = tmpNG
+call ram[0x8030240:4]
+r3 = ram[0x8031524:4]
+*[ram]unique[0x11420:4] = register[0x2c:4]
+s1 = *[ram]unique[0x42b0:4]
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+r0 = r4
+s0 = 0x3fa00000
+call ram[0x8030230:4]
+r2 = r5
+r0 = r4
+s0 = *[ram]unique[0x42b0:4]
+NG = tmpNG
+call ram[0x8030a20:4]
+NG = tmpNG
+r0 = r4
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+call ram[0x8030a20:4]
+r2 = r5
+r0 = r4
+s0 = *[ram]unique[0x42b0:4]
+NG = tmpNG
+call ram[0x8030a20:4]
+NG = tmpNG
+r0 = r4
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+call ram[0x8030a20:4]
+r2 = r5
+r0 = r4
+s0 = *[ram]unique[0x42b0:4]
+NG = tmpNG
+call ram[0x8030a20:4]
+NG = tmpNG
+r0 = r4
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+call ram[0x8030a20:4]
+r2 = r5
+r0 = r4
+s0 = *[ram]unique[0x42b0:4]
+NG = tmpNG
+call ram[0x8030a20:4]
+NG = tmpNG
+r0 = r4
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+call ram[0x8030a20:4]
+r2 = r5
+r0 = r4
+s0 = *[ram]unique[0x42b0:4]
+NG = tmpNG
+call ram[0x8030a20:4]
+NG = tmpNG
+r0 = r4
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+call ram[0x8030a20:4]
+r2 = r5
+r0 = r4
+s0 = *[ram]unique[0x42b0:4]
+NG = tmpNG
+call ram[0x8030a20:4]
+NG = tmpNG
+r0 = r4
+r1 = r2
+s0 = 0x3f000000
+call ram[0x8030a20:4]
+r2 = r5
+r0 = r4
+s0 = *[ram]unique[0x42b0:4]
+NG = tmpNG
+call ram[0x8030a20:4]
+NG = tmpNG
+r0 = r4
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+call ram[0x8030a20:4]
+r2 = r5
+r0 = r4
+s0 = *[ram]unique[0x42b0:4]
+NG = tmpNG
+call ram[0x8030a20:4]
+NG = tmpNG
+r0 = r4
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+call ram[0x8030a20:4]
+r2 = r5
+r0 = r4
+s0 = *[ram]unique[0x42b0:4]
+NG = tmpNG
+call ram[0x8030a20:4]
+NG = tmpNG
+r0 = r4
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+call ram[0x8030a20:4]
+r2 = r5
+r0 = r4
+s0 = *[ram]unique[0x42b0:4]
+NG = tmpNG
+call ram[0x8030a20:4]
+NG = tmpNG
+r0 = r4
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+call ram[0x8030a20:4]
+r2 = r5
+r0 = r4
+s0 = *[ram]unique[0x42b0:4]
+NG = tmpNG
+call ram[0x8030a20:4]
+NG = tmpNG
+r0 = r4
+r1 = r2
+s0 = *[ram]unique[0x42b0:4]
+call ram[0x8030a20:4]
+r2 = r5
+r0 = r4
+s0 = *[ram]unique[0x42b0:4]
+NG = tmpNG
+call ram[0x8030a20:4]
+NG = tmpNG
+r0 = r4
+r1 = r2
+sp = mult_addr
+s0 = 0x3f800000
+goto ram[0x8030a20:4]
+NG = tmpNG
+NG = tmpNG
+OV = tmpOV
+OV = tmpOV

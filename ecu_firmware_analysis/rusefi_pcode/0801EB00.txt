@@ -1,0 +1,14 @@
+r3 = ram[0x801eb10:4]
+r0 = sext(unique[0x12560:2])
+OV = tmpOV
+unique[0xfc40:1] = NG == OV
+tmpZR = r0 == 0x0
+return pc
+
+r0 = zext(unique[0x11eb0:1])
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG

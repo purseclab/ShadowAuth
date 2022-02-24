@@ -1,0 +1,4 @@
+NG = tmpNG
+return pc
+sp = mult_addr
+OV = tmpOV

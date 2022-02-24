@@ -1,0 +1,724 @@
+unique[0x11bf0:1] = r1 == 0x0
+if (unique[0x11bf0:1]) goto ram[0x8002afa:4]
+
+unique[0x11420:4] = r0 + 0x0
+r2 = *[ram]unique[0x11420:4]
+
+unique[0xfe50:4] = 0x80
+shift_carry = CY
+r2 = r2 | unique[0xfe50:4]
+tmpCY = shift_carry
+tmpOV = OV
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+
+unique[0x11420:4] = r0 + 0x0
+*[ram]unique[0x11420:4] = register[0x28:4]
+
+unique[0xfed0:4] = 0x184
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+r2 = unique[0xfed0:4]
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+
+unique[0x11480:4] = r2 + r0
+r2 = *[ram]unique[0x11480:4]
+
+unique[0xfed0:4] = 0x100
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+r3 = r2 | unique[0xfed0:4]
+tmpCY = shift_carry
+tmpOV = OV
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0xfed0:4] = 0x184
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+r2 = unique[0xfed0:4]
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+
+unique[0x11480:4] = r2 + r0
+*[ram]unique[0x11480:4] = register[0x2c:4]
+
+unique[0xfed0:4] = 0x194
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+r2 = unique[0xfed0:4]
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+
+unique[0x11480:4] = r2 + r0
+r2 = *[ram]unique[0x11480:4]
+
+unique[0xfed0:4] = 0x100
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+r3 = r2 | unique[0xfed0:4]
+tmpCY = shift_carry
+tmpOV = OV
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0xfed0:4] = 0x194
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+r2 = unique[0xfed0:4]
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+
+unique[0x11480:4] = r2 + r0
+*[ram]unique[0x11480:4] = register[0x2c:4]
+
+unique[0xfed0:4] = 0x1a4
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+r2 = unique[0xfed0:4]
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+
+unique[0x11480:4] = r2 + r0
+r2 = *[ram]unique[0x11480:4]
+
+unique[0xfed0:4] = 0x100
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+r3 = r2 | unique[0xfed0:4]
+tmpCY = shift_carry
+tmpOV = OV
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0xfed0:4] = 0x1a4
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+r2 = unique[0xfed0:4]
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+
+unique[0x11480:4] = r2 + r0
+*[ram]unique[0x11480:4] = register[0x2c:4]
+
+goto ram[0x8002b32:4]
+
+unique[0x11420:4] = r0 + 0x0
+r2 = *[ram]unique[0x11420:4]
+
+unique[0xfe50:4] = 0x80
+shift_carry = CY
+unique[0x11a60:4] = ~unique[0xfe50:4]
+r2 = r2 & unique[0x11a60:4]
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+
+unique[0x11420:4] = r0 + 0x0
+*[ram]unique[0x11420:4] = register[0x28:4]
+
+unique[0xfed0:4] = 0x184
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+r2 = unique[0xfed0:4]
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+
+unique[0x11480:4] = r2 + r0
+r2 = *[ram]unique[0x11480:4]
+
+unique[0xfed0:4] = 0x100
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+unique[0x11a60:4] = ~unique[0xfed0:4]
+r3 = r2 & unique[0x11a60:4]
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0xfed0:4] = 0x184
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+r2 = unique[0xfed0:4]
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+
+unique[0x11480:4] = r2 + r0
+*[ram]unique[0x11480:4] = register[0x2c:4]
+
+unique[0xfed0:4] = 0x194
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+r2 = unique[0xfed0:4]
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+
+unique[0x11480:4] = r2 + r0
+r2 = *[ram]unique[0x11480:4]
+
+unique[0xfed0:4] = 0x100
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+unique[0x11a60:4] = ~unique[0xfed0:4]
+r3 = r2 & unique[0x11a60:4]
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0xfed0:4] = 0x194
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+r2 = unique[0xfed0:4]
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+
+unique[0x11480:4] = r2 + r0
+*[ram]unique[0x11480:4] = register[0x2c:4]
+
+unique[0xfed0:4] = 0x1a4
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+r2 = unique[0xfed0:4]
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+
+unique[0x11480:4] = r2 + r0
+r2 = *[ram]unique[0x11480:4]
+
+unique[0xfed0:4] = 0x100
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+unique[0x11a60:4] = ~unique[0xfed0:4]
+r3 = r2 & unique[0x11a60:4]
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0xfed0:4] = 0x1a4
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+r2 = unique[0xfed0:4]
+tmpNG = r2 s< 0x0
+tmpZR = r2 == 0x0
+
+unique[0x11480:4] = r2 + r0
+*[ram]unique[0x11480:4] = register[0x2c:4]
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+
+mult_addr = sp
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x58:4]
+mult_addr = mult_addr - 0x4
+*[ram]mult_addr = register[0x30:4]
+sp = mult_addr
+
+r2 = r0
+
+r0 = 0x0
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x11420:4] = r2 + 0x8
+r3 = *[ram]unique[0x11420:4]
+
+unique[0xfe90:4] = 0x4000000
+unique[0xfeb0:4] = unique[0xfe90:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfeb0:4], 0x0
+r3 = r3 & unique[0xfe90:4]
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0xfe90:4] = 0x4000000
+unique[0xfeb0:4] = unique[0xfe90:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfeb0:4], 0x0
+tmpCY = unique[0xfe90:4] <= r3
+tmpOV = sborrow(r3, unique[0xfe90:4])
+unique[0x11d40:4] = r3 - unique[0xfe90:4]
+tmpNG = unique[0x11d40:4] s< 0x0
+tmpZR = unique[0x11d40:4] == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0xf6c0:1] = ZR == 0x0
+if (unique[0xf6c0:1]) goto ram[0x8002b48:4]
+
+goto ram[0x8002b6a:4]
+
+unique[0x11420:4] = r2 + 0x8
+r3 = *[ram]unique[0x11420:4]
+
+unique[0xfe90:4] = 0x8000000
+unique[0xfeb0:4] = unique[0xfe90:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfeb0:4], 0x0
+r3 = r3 & unique[0xfe90:4]
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0xfe90:4] = 0x8000000
+unique[0xfeb0:4] = unique[0xfe90:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfeb0:4], 0x0
+tmpCY = unique[0xfe90:4] <= r3
+tmpOV = sborrow(r3, unique[0xfe90:4])
+unique[0x11d40:4] = r3 - unique[0xfe90:4]
+tmpNG = unique[0x11d40:4] s< 0x0
+tmpZR = unique[0x11d40:4] == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0xf6c0:1] = ZR == 0x0
+if (unique[0xf6c0:1]) goto ram[0x8002b58:4]
+
+r0 = 0x1
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+goto ram[0x8002b6a:4]
+
+unique[0x11420:4] = r2 + 0x8
+r3 = *[ram]unique[0x11420:4]
+
+unique[0xfe90:4] = 0x10000000
+unique[0xfeb0:4] = unique[0xfe90:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfeb0:4], 0x0
+r3 = r3 & unique[0xfe90:4]
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0xfe90:4] = 0x10000000
+unique[0xfeb0:4] = unique[0xfe90:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfeb0:4], 0x0
+tmpCY = unique[0xfe90:4] <= r3
+tmpOV = sborrow(r3, unique[0xfe90:4])
+unique[0x11d40:4] = r3 - unique[0xfe90:4]
+tmpNG = unique[0x11d40:4] s< 0x0
+tmpZR = unique[0x11d40:4] == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0xf6c0:1] = ZR == 0x0
+if (unique[0xf6c0:1]) goto ram[0x8002b68:4]
+
+r0 = 0x2
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+goto ram[0x8002b6a:4]
+
+r0 = 0x4
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+tmpCY = 0x4 <= r0
+tmpOV = sborrow(r0, 0x4)
+unique[0x11d20:4] = r0 - 0x4
+tmpNG = unique[0x11d20:4] s< 0x0
+tmpZR = unique[0x11d20:4] == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0xf6a0:1] = ZR != 0x0
+if (unique[0xf6a0:1]) goto ram[0x8002c62:4]
+
+unique[0xfed0:4] = 0x180
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+tmpCY = carry(r2, unique[0xfed0:4])
+tmpOV = scarry(r2, unique[0xfed0:4])
+r3 = r2 + unique[0xfed0:4]
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0xff50:4] = 0x20 - 0x4
+unique[0xff60:4] = r0 >> unique[0xff50:4]
+unique[0xff80:4] = unique[0xff60:4] & 0x1
+shift_carry = SUBPIECE unique[0xff80:4], 0x0
+unique[0xffb0:4] = r0 << 0x4
+unique[0x116d0:4] = unique[0xffb0:4]
+tmpCY = carry(r3, unique[0x116d0:4])
+tmpOV = scarry(r3, unique[0x116d0:4])
+r3 = r3 + unique[0x116d0:4]
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0x11420:4] = r3 + 0x0
+r3 = *[ram]unique[0x11420:4]
+
+unique[0xfe50:4] = 0x1
+shift_carry = CY
+r4 = r3 & unique[0xfe50:4]
+tmpNG = r4 s< 0x0
+tmpZR = r4 == 0x0
+
+unique[0xfed0:4] = 0x180
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+tmpCY = carry(r2, unique[0xfed0:4])
+tmpOV = scarry(r2, unique[0xfed0:4])
+r3 = r2 + unique[0xfed0:4]
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0xff50:4] = 0x20 - 0x4
+unique[0xff60:4] = r0 >> unique[0xff50:4]
+unique[0xff80:4] = unique[0xff60:4] & 0x1
+shift_carry = SUBPIECE unique[0xff80:4], 0x0
+unique[0xffb0:4] = r0 << 0x4
+unique[0x116d0:4] = unique[0xffb0:4]
+tmpCY = carry(r3, unique[0x116d0:4])
+tmpOV = scarry(r3, unique[0x116d0:4])
+r3 = r3 + unique[0x116d0:4]
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0x11420:4] = r3 + 0x0
+*[ram]unique[0x11420:4] = register[0x30:4]
+
+unique[0x11460:4] = r1 + 0x8
+unique[0x11eb0:1] = *[ram]unique[0x11460:4]
+r3 = zext(unique[0x11eb0:1])
+
+unique[0x11bd0:1] = r3 != 0x0
+if (unique[0x11bd0:1]) goto ram[0x8002baa:4]
+
+unique[0x11460:4] = r1 + 0x9
+unique[0x11eb0:1] = *[ram]unique[0x11460:4]
+r3 = zext(unique[0x11eb0:1])
+
+unique[0x11440:4] = r1 + 0x0
+unique[0x11ef0:2] = *[ram]unique[0x11440:4]
+r4 = zext(unique[0x11ef0:2])
+
+unique[0xff50:4] = 0x20 - 0x15
+unique[0xff60:4] = r4 >> unique[0xff50:4]
+unique[0xff80:4] = unique[0xff60:4] & 0x1
+shift_carry = SUBPIECE unique[0xff80:4], 0x0
+unique[0xffb0:4] = r4 << 0x15
+r3 = r3 | unique[0xffb0:4]
+tmpCY = shift_carry
+tmpOV = OV
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0xfed0:4] = 0x180
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+tmpCY = carry(r2, unique[0xfed0:4])
+tmpOV = scarry(r2, unique[0xfed0:4])
+r4 = r2 + unique[0xfed0:4]
+tmpNG = r4 s< 0x0
+tmpZR = r4 == 0x0
+
+unique[0xff50:4] = 0x20 - 0x4
+unique[0xff60:4] = r0 >> unique[0xff50:4]
+unique[0xff80:4] = unique[0xff60:4] & 0x1
+shift_carry = SUBPIECE unique[0xff80:4], 0x0
+unique[0xffb0:4] = r0 << 0x4
+unique[0x116d0:4] = unique[0xffb0:4]
+tmpCY = carry(r4, unique[0x116d0:4])
+tmpOV = scarry(r4, unique[0x116d0:4])
+r4 = r4 + unique[0x116d0:4]
+tmpNG = r4 s< 0x0
+tmpZR = r4 == 0x0
+
+unique[0x11420:4] = r4 + 0x0
+r4 = *[ram]unique[0x11420:4]
+
+r3 = r3 | r4
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0xfed0:4] = 0x180
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+tmpCY = carry(r2, unique[0xfed0:4])
+tmpOV = scarry(r2, unique[0xfed0:4])
+r4 = r2 + unique[0xfed0:4]
+tmpNG = r4 s< 0x0
+tmpZR = r4 == 0x0
+
+unique[0xff50:4] = 0x20 - 0x4
+unique[0xff60:4] = r0 >> unique[0xff50:4]
+unique[0xff80:4] = unique[0xff60:4] & 0x1
+shift_carry = SUBPIECE unique[0xff80:4], 0x0
+unique[0xffb0:4] = r0 << 0x4
+unique[0x116d0:4] = unique[0xffb0:4]
+tmpCY = carry(r4, unique[0x116d0:4])
+tmpOV = scarry(r4, unique[0x116d0:4])
+r4 = r4 + unique[0x116d0:4]
+tmpNG = r4 s< 0x0
+tmpZR = r4 == 0x0
+
+unique[0x11420:4] = r4 + 0x0
+*[ram]unique[0x11420:4] = register[0x2c:4]
+
+goto ram[0x8002bcc:4]
+
+unique[0x11460:4] = r1 + 0x8
+unique[0x11eb0:1] = *[ram]unique[0x11460:4]
+r3 = zext(unique[0x11eb0:1])
+
+unique[0x11420:4] = r1 + 0x4
+r4 = *[ram]unique[0x11420:4]
+
+unique[0xff50:4] = 0x20 - 0x3
+unique[0xff60:4] = r4 >> unique[0xff50:4]
+unique[0xff80:4] = unique[0xff60:4] & 0x1
+shift_carry = SUBPIECE unique[0xff80:4], 0x0
+unique[0xffb0:4] = r4 << 0x3
+r3 = r3 | unique[0xffb0:4]
+tmpCY = shift_carry
+tmpOV = OV
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0x11460:4] = r1 + 0x9
+unique[0x11eb0:1] = *[ram]unique[0x11460:4]
+r4 = zext(unique[0x11eb0:1])
+
+r3 = r3 | r4
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0xfed0:4] = 0x180
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+tmpCY = carry(r2, unique[0xfed0:4])
+tmpOV = scarry(r2, unique[0xfed0:4])
+r4 = r2 + unique[0xfed0:4]
+tmpNG = r4 s< 0x0
+tmpZR = r4 == 0x0
+
+unique[0xff50:4] = 0x20 - 0x4
+unique[0xff60:4] = r0 >> unique[0xff50:4]
+unique[0xff80:4] = unique[0xff60:4] & 0x1
+shift_carry = SUBPIECE unique[0xff80:4], 0x0
+unique[0xffb0:4] = r0 << 0x4
+unique[0x116d0:4] = unique[0xffb0:4]
+tmpCY = carry(r4, unique[0x116d0:4])
+tmpOV = scarry(r4, unique[0x116d0:4])
+r4 = r4 + unique[0x116d0:4]
+tmpNG = r4 s< 0x0
+tmpZR = r4 == 0x0
+
+unique[0x11420:4] = r4 + 0x0
+r4 = *[ram]unique[0x11420:4]
+
+r3 = r3 | r4
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0xfed0:4] = 0x180
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+tmpCY = carry(r2, unique[0xfed0:4])
+tmpOV = scarry(r2, unique[0xfed0:4])
+r4 = r2 + unique[0xfed0:4]
+tmpNG = r4 s< 0x0
+tmpZR = r4 == 0x0
+
+unique[0xff50:4] = 0x20 - 0x4
+unique[0xff60:4] = r0 >> unique[0xff50:4]
+unique[0xff80:4] = unique[0xff60:4] & 0x1
+shift_carry = SUBPIECE unique[0xff80:4], 0x0
+unique[0xffb0:4] = r0 << 0x4
+unique[0x116d0:4] = unique[0xffb0:4]
+tmpCY = carry(r4, unique[0x116d0:4])
+tmpOV = scarry(r4, unique[0x116d0:4])
+r4 = r4 + unique[0x116d0:4]
+tmpNG = r4 s< 0x0
+tmpZR = r4 == 0x0
+
+unique[0x11420:4] = r4 + 0x0
+*[ram]unique[0x11420:4] = register[0x2c:4]
+
+unique[0x11460:4] = r1 + 0xa
+unique[0x11eb0:1] = *[ram]unique[0x11460:4]
+r3 = zext(unique[0x11eb0:1])
+
+unique[0xfe50:4] = 0xf
+shift_carry = CY
+r3 = r3 & unique[0xfe50:4]
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0x11460:4] = r1 + 0xa
+unique[0x17690:1] = SUBPIECE r3, 0x0
+*[ram]unique[0x11460:4] = unique[0x17690:1]
+
+unique[0xfed0:4] = 0x180
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+tmpCY = carry(r2, unique[0xfed0:4])
+tmpOV = scarry(r2, unique[0xfed0:4])
+r3 = r2 + unique[0xfed0:4]
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0xff50:4] = 0x20 - 0x4
+unique[0xff60:4] = r0 >> unique[0xff50:4]
+unique[0xff80:4] = unique[0xff60:4] & 0x1
+shift_carry = SUBPIECE unique[0xff80:4], 0x0
+unique[0xffb0:4] = r0 << 0x4
+unique[0x116d0:4] = unique[0xffb0:4]
+tmpCY = carry(r3, unique[0x116d0:4])
+tmpOV = scarry(r3, unique[0x116d0:4])
+r3 = r3 + unique[0x116d0:4]
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0x11420:4] = r3 + 0x4
+r3 = *[ram]unique[0x11420:4]
+
+unique[0xfe50:4] = 0xf
+shift_carry = CY
+unique[0x11a60:4] = ~unique[0xfe50:4]
+r4 = r3 & unique[0x11a60:4]
+tmpNG = r4 s< 0x0
+tmpZR = r4 == 0x0
+
+unique[0xfed0:4] = 0x180
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+tmpCY = carry(r2, unique[0xfed0:4])
+tmpOV = scarry(r2, unique[0xfed0:4])
+r3 = r2 + unique[0xfed0:4]
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0xff50:4] = 0x20 - 0x4
+unique[0xff60:4] = r0 >> unique[0xff50:4]
+unique[0xff80:4] = unique[0xff60:4] & 0x1
+shift_carry = SUBPIECE unique[0xff80:4], 0x0
+unique[0xffb0:4] = r0 << 0x4
+unique[0x116d0:4] = unique[0xffb0:4]
+tmpCY = carry(r3, unique[0x116d0:4])
+tmpOV = scarry(r3, unique[0x116d0:4])
+r3 = r3 + unique[0x116d0:4]
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0x11420:4] = r3 + 0x4
+*[ram]unique[0x11420:4] = register[0x30:4]
+
+unique[0xfed0:4] = 0x180
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+tmpCY = carry(r2, unique[0xfed0:4])
+tmpOV = scarry(r2, unique[0xfed0:4])
+r3 = r2 + unique[0xfed0:4]
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0xff50:4] = 0x20 - 0x4
+unique[0xff60:4] = r0 >> unique[0xff50:4]
+unique[0xff80:4] = unique[0xff60:4] & 0x1
+shift_carry = SUBPIECE unique[0xff80:4], 0x0
+unique[0xffb0:4] = r0 << 0x4
+unique[0x116d0:4] = unique[0xffb0:4]
+tmpCY = carry(r3, unique[0x116d0:4])
+tmpOV = scarry(r3, unique[0x116d0:4])
+r3 = r3 + unique[0x116d0:4]
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+
+unique[0x11420:4] = r3 + 0x4
+r3 = *[ram]unique[0x11420:4]
+
+unique[0x11460:4] = r1 + 0xa
+unique[0x11eb0:1] = *[ram]unique[0x11460:4]
+r4 = zext(unique[0x11eb0:1])
+
+r3 = r3 | r4
+tmpNG = r3 s< 0x0
+tmpZR = r3 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+unique[0xfed0:4] = 0x180
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+tmpCY = carry(r2, unique[0xfed0:4])
+tmpOV = scarry(r2, unique[0xfed0:4])
+r4 = r2 + unique[0xfed0:4]
+tmpNG = r4 s< 0x0
+tmpZR = r4 == 0x0
+
+unique[0xff50:4] = 0x20 - 0x4
+unique[0xff60:4] = r0 >> unique[0xff50:4]
+unique[0xff80:4] = unique[0xff60:4] & 0x1
+shift_carry = SUBPIECE unique[0xff80:4], 0x0
+unique[0xffb0:4] = r0 << 0x4
+unique[0x116d0:4] = unique[0xffb0:4]
+tmpCY = carry(r4, unique[0x116d0:4])
+tmpOV = scarry(r4, unique[0x116d0:4])
+r4 = r4 + unique[0x116d0:4]
+tmpNG = r4 s< 0x0
+tmpZR = r4 == 0x0
+
+unique[0x11420:4] = r4 + 0x4
+*[ram]unique[0x11420:4] = register[0x2c:4]
+
+unique[0x11460:4] = r1 + 0xe
+unique[0x11eb0:1] = *[ram]unique[0x11460:4]
+r3 = zext(unique[0x11eb0:1])
+
+unique[0x126c0:4] = 0x18 - 0x1
+unique[0x126d0:4] = r3 << unique[0x126c0:4]
+unique[0x126f0:4] = unique[0x126d0:4] & 0x80000000
+unique[0x12700:1] = 0x18 == 0x0
+unique[0x12710:1] = unique[0x12700:1] && CY
+unique[0x12720:1] = 0x18 != 0x0
+unique[0x12730:1] = unique[0x126f0:4] != 0x0
+unique[0x12740:1] = unique[0x12720:1] && unique[0x12730:1]
+tmpCY = unique[0x12710:1] || unique[0x12740:1]
+r4 = r3 << 0x18
+tmpNG = r4 s< 0x0
+tmpZR = r4 == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+
+unique[0x11460:4] = r1 + 0xd
+unique[0x11eb0:1] = *[ram]unique[0x11460:4]
+r3 = zext(unique[0x11eb0:1])
+
+unique[0xff50:4] = 0x20 - 0x10
+unique[0xff60:4] = r3 >> unique[0xff50:4]
+unique[0xff80:4] = unique[0xff60:4] & 0x1
+shift_carry = SUBPIECE unique[0xff80:4], 0x0
+unique[0xffb0:4] = r3 << 0x10
+r4 = r4 | unique[0xffb0:4]
+tmpCY = shift_carry
+tmpOV = OV
+tmpNG = r4 s< 0x0
+tmpZR = r4 == 0x0
+
+goto ram[0x8002c18:4]
+
+unique[0x11420:4] = r0 + 0x40
+*[ram]unique[0x11420:4] = register[0x20:4]
+

@@ -1,0 +1,14 @@
+r12 = r0
+r0 = r2
+r2 = r12
+r12 = r1
+r1 = r3
+r3 = r12
+goto ram[0x8001d1c:4]
+
+sp = mult_addr
+call ram[0x8001c90:4]
+OV = tmpOV
+unique[0xfb40:1] = NG != 0x0
+OV = tmpOV
+return pc

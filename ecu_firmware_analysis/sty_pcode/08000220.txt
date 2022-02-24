@@ -1,0 +1,33 @@
+mult_addr = sp
+r0 = *[ram]mult_addr
+mult_addr = mult_addr + 0x4
+r1 = *[ram]mult_addr
+mult_addr = mult_addr + 0x4
+sp = mult_addr
+
+lr = 0x8000226 | 0x1
+ISAModeSwitch = 0x1
+TB = ISAModeSwitch
+call ram[0x8004b2c:4]
+
+r0 = r0
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+ZR = tmpZR
+NG = tmpNG
+
+r0 = ram[0x80002dc:4]
+
+unique[0x11420:4] = r0 + 0x0
+r4 = *[ram]unique[0x11420:4]
+
+tmpCY = carry(r0, 0x4)
+tmpOV = scarry(r0, 0x4)
+r0 = r0 + 0x4
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+

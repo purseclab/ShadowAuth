@@ -1,0 +1,24 @@
+r3 = ram[0x8028178:4]
+s14 = *[ram]unique[0x42b0:4]
+s13 = *[ram]unique[0x4230:4]
+s15 = *[ram]unique[0x42b0:4]
+s0 = s13 f/ s14
+s0 = s0 f* s15
+return pc
+r0 = zext(unique[0x11eb0:1])
+NG = tmpNG
+NG = tmpNG
+OV = tmpOV
+*[ram]unique[0x11480:4] = register[0x30:4]
+OV = tmpOV
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+NG = tmpNG
+r3 = *[ram]unique[0x11420:4]
+r1 = ram[0x80281cc:4]
+r2 = *[ram]unique[0x11420:4]
+OV = tmpOV
+sp = mult_addr

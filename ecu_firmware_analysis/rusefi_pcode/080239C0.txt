@@ -1,0 +1,21 @@
+sp = mult_addr
+tmpZR = r4 == 0x0
+OV = tmpOV
+r2 = r1
+if (unique[0xf6a0:1]) goto ram[0x80239de:4]
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x80239f2:4]
+OV = tmpOV
+if (unique[0xf6a0:1]) goto ram[0x80239e8:4]
+r1 = ram[0x80239fc:4]
+sp = sp + 0x4
+goto ram[0x8016520:4]
+r1 = ram[0x8023a00:4]
+sp = sp + 0x4
+goto ram[0x8016520:4]
+r1 = ram[0x8023a04:4]
+sp = sp + 0x4
+goto ram[0x8016520:4]
+r1 = ram[0x8023a08:4]
+sp = sp + 0x4
+goto ram[0x8016520:4]

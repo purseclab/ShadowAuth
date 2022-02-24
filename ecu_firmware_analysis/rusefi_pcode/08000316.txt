@@ -1,0 +1,2 @@
+goto ram[0x8000316:4]
+sp = mult_addr + 0x4

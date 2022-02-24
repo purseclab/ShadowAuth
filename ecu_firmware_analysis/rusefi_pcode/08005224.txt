@@ -1,0 +1,8 @@
+r3 = *[ram]unique[0x11420:4]
+if (unique[0x11bf0:1]) goto ram[0x800522a:4]
+return pc
+goto ram[0x8005080:4]
+return pc
+
+return pc
+

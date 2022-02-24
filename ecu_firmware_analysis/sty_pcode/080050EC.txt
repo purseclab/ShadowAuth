@@ -1,0 +1,102 @@
+unique[0x127a0:1] = 0x20 - 0x1
+unique[0x127b0:4] = r1 >> unique[0x127a0:1]
+unique[0x127d0:4] = unique[0x127b0:4] & 0x1
+unique[0x127e0:1] = 0x20 == 0x0
+unique[0x127f0:1] = unique[0x127e0:1] && CY
+unique[0x12800:1] = 0x20 != 0x0
+unique[0x12810:1] = unique[0x127d0:4] != 0x0
+unique[0x12820:1] = unique[0x12800:1] && unique[0x12810:1]
+tmpCY = unique[0x127f0:1] || unique[0x12820:1]
+r0 = r1 >> 0x20
+tmpNG = r0 s< 0x0
+tmpZR = r0 == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+
+unique[0xfed0:4] = 0x200000
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+tmpCY = unique[0xfed0:4] <= r0
+tmpOV = sborrow(r0, unique[0xfed0:4])
+r1 = r0 - unique[0xfed0:4]
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+
+unique[0x14ff0:4] = r1 & 0x1
+shift_carry = SUBPIECE unique[0x14ff0:4], 0x0
+unique[0x15010:4] = zext(CY)
+unique[0x15020:4] = unique[0x15010:4] << 0x1f
+unique[0x15030:4] = r1 >> 0x1
+r1 = unique[0x15020:4] | unique[0x15030:4]
+tmpCY = shift_carry
+tmpOV = OV
+tmpNG = r1 s< 0x0
+tmpZR = r1 == 0x0
+
+unique[0x0:4] = lr & 0x1
+ISAModeSwitch = unique[0x0:4] != 0x0
+TB = ISAModeSwitch
+pc = lr & 0xfffffffe
+return pc
+
+shift_carry = CY
+r12 = r3 | r1
+tmpCY = shift_carry
+tmpOV = OV
+tmpNG = r12 s< 0x0
+tmpZR = r12 == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0xf720:1] = NG != 0x0
+if (unique[0xf720:1]) goto ram[0x800512e:4]
+
+unique[0xfed0:4] = 0x100000
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+tmpCY = carry(r12, unique[0xfed0:4])
+tmpOV = scarry(r12, unique[0xfed0:4])
+unique[0x11cc0:4] = r12 + unique[0xfed0:4]
+tmpNG = unique[0x11cc0:4] s< 0x0
+tmpZR = unique[0x11cc0:4] == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0xfb60:1] = NG != 0x0
+
+unique[0xfed0:4] = 0x100000
+unique[0xfef0:4] = unique[0xfed0:4] >> 0x1f
+shift_carry = SUBPIECE unique[0xfef0:4], 0x0
+unique[0xf0:1] = NG == 0x0
+unique[0x270:1] = !unique[0xf0:1]
+if (unique[0x270:1]) goto ram[0x8005108:4]
+tmpCY = unique[0xfed0:4] <= r12
+tmpOV = sborrow(r12, unique[0xfed0:4])
+unique[0x11d40:4] = r12 - unique[0xfed0:4]
+tmpNG = unique[0x11d40:4] s< 0x0
+tmpZR = unique[0x11d40:4] == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0xf930:1] = NG != 0x0
+if (unique[0xf930:1]) goto ram[0x8005118:4]
+
+tmpCY = r1 <= r3
+tmpOV = sborrow(r3, r1)
+unique[0x11d80:4] = r3 - r1
+tmpNG = unique[0x11d80:4] s< 0x0
+tmpZR = unique[0x11d80:4] == 0x0
+CY = tmpCY
+ZR = tmpZR
+NG = tmpNG
+OV = tmpOV
+
+unique[0xfae0:1] = ZR != 0x0
+
