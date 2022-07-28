@@ -1,5 +1,7 @@
 # ShadowAuth
 
+This is the code repository for our ASIACCS'22 paper: [ShadowAuth: Backward-Compatible Automatic CAN Authentication for Legacy ECUs](https://dl.acm.org/doi/10.1145/3488932.3523263).
+
 ShadowAuth is a packet authentication framework for a CAN bus.
 
 You can freely use this repo to:
